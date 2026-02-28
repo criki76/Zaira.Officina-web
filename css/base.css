@@ -1,0 +1,97 @@
+/* =============================================================================
+   ZAIRA OFFICINA — Base & Reset
+   ─────────────────────────────────────────────────────────────────────────────
+   Reset CSS, stili corpo, overlay rumore di fondo e utility di layout globali.
+   ============================================================================= */
+
+
+/* ── RESET UNIVERSALE ────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ── HTML / SCROLL ───────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ── BODY ────────────────────────────────────────────────────────────────── */
+body {
+  background:   var(--bg);
+  color:        var(--white);
+  font-family:  var(--font-body);
+  font-weight:  400;
+  overflow-x:   hidden;
+  line-height:  1.5;
+}
+
+
+/* ── OVERLAY RUMORE ──────────────────────────────────────────────────────── */
+/*
+   Texture sottile di rumore sovrapposta all'intera pagina.
+   L'SVG inline genera un filtro feTurbulence — nessuna immagine esterna.
+   ✏️  Modifica `opacity` per intensità: 0.02 = quasi invisibile, 0.08 = marcato.
+*/
+body::before {
+  content: '';
+  position:  fixed;
+  inset:     0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity:         0.04;
+  pointer-events:  none;
+  z-index:         var(--z-noise);
+}
+
+
+/* ── UTILITY: SEZIONE GENERICA ───────────────────────────────────────────── */
+/*
+   Ogni sezione usa queste classi condivise per
+   label numerata e titolo principale.
+*/
+section {
+  position: relative;
+}
+
+/* Label piccola sopra il titolo (es. "01 · Filosofia") */
+.section-label {
+  font-family:     var(--font-mono);
+  font-size:       0.68rem;
+  color:           var(--muted);
+  letter-spacing:  0.2em;
+  text-transform:  uppercase;
+  margin-bottom:   1rem;
+  display:         flex;
+  align-items:     center;
+  gap:             0.8rem;
+}
+
+/* Il numero viene da data-num="01" sull'elemento HTML */
+.section-label::before {
+  content:     attr(data-num);
+  color:       var(--accent);
+  font-weight: 700;
+}
+
+/* Titolo grande, uppercase condensed */
+.section-title {
+  font-family:    var(--font-display);
+  font-weight:    900;
+  font-size:      clamp(2rem, 3.5vw, 3rem);
+  text-transform: uppercase;
+  line-height:    1;
+  letter-spacing: -0.01em;
+  margin-bottom:  0.3rem;
+}
+
+/* Linea separatrice orizzontale */
+.divider {
+  width:      100%;
+  height:     1px;
+  background: var(--border);
+}

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ══════════════════════════════════════════════════════════════════════
+       SEO ON-PAGE
+       ─────────────────────────────────────────────────────────────────────
+       REGOLA D'ORO: keyword principale = "sito web Forlì" / "web agency Forlì"
+       Formato title: Keyword principale | Brand  (max 60 caratteri)
+       Meta description: 140-160 caratteri, include keyword + call to action.
+       ✏️  Quando hai il dominio definitivo, aggiorna canonical e og:url.
+       ══════════════════════════════════════════════════════════════════════ -->
+
+    <!-- Titolo pagina — include la keyword locale principale -->
+    <title>Siti web professionali a Forlì | Zaira Officina — Web Agency Forlì-Cesena</title>
+
+    <!-- Meta description — appare nei risultati Google (max 160 caratteri) -->
+    <meta name="description" content="Zaira Officina crea siti web veloci per artigiani, negozi e ristoranti a Forlì e provincia di Forlì-Cesena. Design mobile-first, SEO locale, prezzi chiari. Risposta entro 24h.">
+
+    <!-- Canonical — indica a Google l'URL ufficiale della pagina -->
+    <!-- ✏️  Sostituisci con il dominio reale quando vai online -->
+    <link rel="canonical" href="https://www.zaira-officina.it/">
+
+    <!-- ── OPEN GRAPH (Facebook, WhatsApp, LinkedIn) ──────────────────────── -->
+    <!--
+    Controllano l'anteprima quando il link viene condiviso.
+    ✏️  og:image — carica un'immagine 1200×630px (screenshot del sito)
+        e aggiorna il percorso sotto.
+  -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Zaira Officina">
+    <meta property="og:title" content="Siti web professionali a Forlì | Zaira Officina">
+    <meta property="og:description" content="Siti veloci e chiari per artigiani, negozi e ristoranti a Forlì e provincia Forlì-Cesena. Più contatti, più clienti.">
+    <meta property="og:url" content="https://www.zaira-officina.it/">
+    <!-- <meta property="og:image"   content="https://www.zaira-officina.it/img/og-preview.jpg"> -->
+
+    <!-- ── TWITTER / X CARD ──────────────────────────────────────────────── -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Siti web professionali a Forlì | Zaira Officina">
+    <meta name="twitter:description" content="Web agency a Forlì: siti veloci per artigiani, negozi e ristoranti in tutta la provincia Forlì-Cesena.">
+
+    <!-- ── SCHEMA.ORG — DATI STRUTTURATI (JSON-LD) ───────────────────────── -->
+    <!--
+    ★ FONDAMENTALE per la SEO locale ★
+    Dice a Google esattamente chi siamo, dove siamo e cosa facciamo.
+    Alimenta Google Maps, Knowledge Panel e rich results (stelle, orari...).
+    ✏️  Compila TUTTI i campi "TODO" prima di andare live.
+    ✏️  "hasMap": copia il link da Google Maps (click destro sul pin → Copia link).
+    ✏️  "sameAs": inserisci tutti i profili social e la scheda Google Business.
+  -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Zaira Officina",
+            "description": "Web agency a Forlì specializzata in siti web professionali per artigiani, negozi, ristoranti e liberi professionisti nella provincia di Forlì-Cesena.",
+            "url": "https://www.zaira-officina.it",
+            "logo": "https://www.zaira-officina.it/img/logo.png",
+            "image": "https://www.zaira-officina.it/img/og-preview.jpg",
+            "telephone": "+39-XXX-XXX-XXXX",
+            "email": "ciao@zaira-officina.it",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "TODO: inserisci via e numero civico",
+                "addressLocality": "Forlì",
+                "addressRegion": "FC",
+                "postalCode": "47121",
+                "addressCountry": "IT"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 44.2227,
+                "longitude": 12.0408
+            },
+            "hasMap": "TODO: inserisci link Google Maps",
+            "areaServed": [{
+                "@type": "City",
+                "name": "Forlì"
+            }, {
+                "@type": "City",
+                "name": "Cesena"
+            }, {
+                "@type": "City",
+                "name": "Forlimpopoli"
+            }, {
+                "@type": "City",
+                "name": "Meldola"
+            }, {
+                "@type": "City",
+                "name": "Cesenatico"
+            }, {
+                "@type": "City",
+                "name": "Bertinoro"
+            }, {
+                "@type": "City",
+                "name": "Savignano sul Rubicone"
+            }, {
+                "@type": "City",
+                "name": "Castrocaro Terme"
+            }, {
+                "@type": "AdministrativeArea",
+                "name": "Provincia di Forlì-Cesena"
+            }],
+            "serviceType": [
+                "Realizzazione siti web",
+                "Web design mobile-first",
+                "SEO locale",
+                "E-commerce",
+                "Google Business ottimizzazione"
+            ],
+            "priceRange": "€€",
+            "openingHoursSpecification": [{
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            }],
+            "sameAs": [
+                "TODO: URL pagina Facebook",
+                "TODO: URL profilo Instagram",
+                "TODO: URL scheda Google Business"
+            ]
+        }
+    </script>
+
+    <!-- ── FONT GOOGLE ──────────────────────────────────────────────────────── -->
+    <!--
+    Caricati con display=swap per evitare FOIT (flash of invisible text).
+    ✏️  Per cambiare font: aggiorna qui E in css/variables.css (--font-*)
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Courier+Prime:wght@400;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- ── FOGLI DI STILE ───────────────────────────────────────────────────── -->
+    <!--
+    ORDINE IMPORTANTE — non modificare:
+    1. variables  → token usati da tutto il resto
+    2. base       → reset + utility globali
+    3. componenti specifici
+    4. animations → .is-visible deve venire DOPO opacity:0 nei components
+    5. responsive → sovrascrive tutto per mobile, deve stare per ultimo
+  -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+       NAVIGAZIONE
+       ✏️  Aggiungi voci di menu: duplica un <li> e cambia href + testo.
+            L'href deve corrispondere all'id della sezione (es. #manifesto).
+       ════════════════════════════════════════════════════════════════════════ -->
+    <nav>
+        <a href="#" class="nav-logo">ZAIRA<span>.</span>OFFICINA</a>
+
+        <!-- Menu desktop -->
+        <ul class="nav-links">
+            <li><a href="#manifesto">Filosofia</a></li>
+            <li><a href="#processo">Come lavoriamo</a></li>
+            <li><a href="#prezzi">Servizi</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+
+        <!-- Hamburger — visibile solo su mobile (< 900px) -->
+        <button class="hamburger" aria-label="Apri menu" aria-expanded="false">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+    </nav>
+
+    <!-- Menu overlay mobile -->
+    <div class="nav-mobile-menu" role="dialog" aria-label="Menu di navigazione">
+        <a href="#manifesto">Filosofia</a>
+        <a href="#processo">Come lavoriamo</a>
+        <a href="#prezzi">Servizi</a>
+        <a href="#contatti" class="nav-mobile-cta">Contatti →</a>
+    </div>
+
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+       HERO
+       Struttura: colonna sinistra (titolo + CTA) | colonna destra (stat-blocks)
+       ════════════════════════════════════════════════════════════════════════ -->
+    <div class="hero">
+
+        <!-- Colonna sinistra -->
+        <div class="hero-left">
+            <p class="hero-tag">Un'officina digitale per attività reali<br>a Forlì e dintorni</p>
+
+            <h1 class="hero-title">
+                <!-- Riga 1: sempre visibile -->
+                <span class="line-seek">Ti cercano.</span><br>
+
+                <!-- Riga 2: viene barrata e scompare via CSS animation -->
+                <span class="line-lost">Non ti trovano.</span>
+
+                <!-- Riga 3: entra dal basso dopo la barratura -->
+                <span class="line-solution">Noi ti rendiamo<br>visibili.</span>
+            </h1>
+
+            <p class="hero-sub">
+                <strong>Siti veloci e chiari per chi vuole più contatti, più chiamate, più clienti.</strong><br> Non per impressionare altri designer — per far lavorare meglio la tua attività.
+            </p>
+
+            <a href="#contatti" class="btn-primary">Rendiamoci visibili insieme</a>
+        </div>
+
+        <!-- Colonna destra: stat-blocks -->
+        <div class="hero-right">
+            <div class="stat-block">
+                <div class="stat-num">3s</div>
+                <div>
+                    <div class="stat-label">Tempo di caricamento target</div>
+                    <div class="stat-desc">// performance è rispetto per l'utente</div>
+                </div>
+            </div>
+
+            <div class="stat-block">
+                <div class="stat-num">📱</div>
+                <div>
+                    <div class="stat-label">Mobile prima di tutto</div>
+                    <div class="stat-desc">// ogni progetto nasce dal pollice</div>
+                </div>
+            </div>
+
+            <div class="stat-block">
+                <div class="stat-num">∅</div>
+                <div>
+                    <div class="stat-label">Zero effetti inutili</div>
+                    <div class="stat-desc">// ogni elemento ha uno scopo</div>
+                </div>
+            </div>
+
+            <div class="stat-block">
+                <div class="stat-num">∞</div>
+                <div>
+                    <div class="stat-label">Tecnologia pulita, stabile nel tempo</div>
+                    <div class="stat-desc">// HTML solido, CSS ordinato, JS minimo</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /hero -->
+
+
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+       FOR WHO — Categorie di clienti
+       ✏️  Per aggiungere una categoria: duplica un .for-who-item con icona, nome, ex.
+       ════════════════════════════════════════════════════════════════════════ -->
+    <div class="for-who">
+        <div class="for-who-inner">
+            <p class="for-who-label">Lavoriamo con</p>
+            <div class="for-who-grid">
+
+                <div class="for-who-item">
+                    <span class="for-who-icon" aria-hidden="true">🔨</span>
+                    <span class="for-who-name">Artigiani</span>
+                    <span class="for-who-ex">idraulici, elettricisti, falegnami…</span>
+                </div>
+
+                <div class="for-who-item">
+                    <span class="for-who-icon" aria-hidden="true">🍕</span>
+                    <span class="for-who-name">Ristoranti</span>
+                    <span class="for-who-ex">pizzerie, bar, gastronomie…</span>
+                </div>
+
+                <div class="for-who-item">
+                    <span class="for-who-icon" aria-hidden="true">🛍️</span>
+                    <span class="for-who-name">Negozi</span>
+                    <span class="for-who-ex">abbigliamento, ferramenta, fioristi…</span>
+                </div>
+
+                <div class="for-who-item">
+                    <span class="for-who-icon" aria-hidden="true">💼</span>
+                    <span class="for-who-name">Professionisti</span>
+                    <span class="for-who-ex">studi, consulenti, estetiste…</span>
+                </div>
+
+                <div class="for-who-item">
+                    <span class="for-who-icon" aria-hidden="true">🏥</span>
+                    <span class="for-who-name">Salute &amp; Benessere</span>
+                    <span class="for-who-ex">fisioterapisti, parrucchieri, palestre…</span>
+                </div>
+
+                <!-- CTA: "Sei tu?" -->
+                <div class="for-who-item for-who-cta">
+                    <span class="for-who-icon" aria-hidden="true">→</span>
+                    <span class="for-who-name">Sei tu?</span>
+                    <a href="#contatti" class="for-who-link">Parliamoci</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /for-who -->
+
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+       MANIFESTO — Sezione 01: "Come la pensiamo"
+       ✏️  Per aggiungere un principio: duplica un .manifesto-card.
+       ════════════════════════════════════════════════════════════════════════ -->
+    <section id="manifesto" class="manifesto">
+        <div class="section-label" data-num="01">Filosofia</div>
+        <h2 class="section-title">
+            Come la<br>
+            <span style="color: var(--accent)">pensiamo</span>
+        </h2>
+
+        <div class="manifesto-grid">
+
+            <article class="manifesto-card">
+                <span class="card-icon" aria-hidden="true">⚡</span>
+                <h3 class="card-title">La velocità è rispetto</h3>
+                <p class="card-text">Un sito veloce comunica affidabilità prima ancora delle parole. Rispetto per chi visita, rispetto per chi lavora.</p>
+            </article>
+
+            <article class="manifesto-card">
+                <span class="card-icon" aria-hidden="true">👍</span>
+                <h3 class="card-title">Semplice è professionale</h3>
+                <p class="card-text">Un cliente deve capire subito: chi sei, cosa fai e come contattarti. Se deve cercare troppo, il sito ha già fallito.</p>
+            </article>
+
+            <article class="manifesto-card">
+                <span class="card-icon" aria-hidden="true">📱</span>
+                <h3 class="card-title">Mobile prima di tutto</h3>
+                <p class="card-text">Le persone cercano dal telefono, spesso mentre decidono dove andare o chi chiamare. Ogni progetto nasce pensando al pollice, non al mouse.</p>
+            </article>
+
+            <article class="manifesto-card">
+                <span class="card-icon" aria-hidden="true">🔧</span>
+                <h3 class="card-title">Niente moda. Solo ciò che serve.</h3>
+                <p class="card-text">Animazioni inutili, complicazioni tecniche e soluzioni fragili non fanno parte del nostro lavoro. Ogni elemento deve avere uno scopo.</p>
+            </article>
+
+            <article class="manifesto-card">
+                <span class="card-icon" aria-hidden="true">💻</span>
+                <h3 class="card-title">Tecnologia pulita</h3>
+                <p class="card-text">HTML solido. CSS ordinato. JavaScript solo quando necessario. Meno complessità significa più stabilità nel tempo.</p>
+            </article>
+
+            <article class="manifesto-card">
+                <span class="card-icon" aria-hidden="true">🎯</span>
+                <h3 class="card-title">Il sito è un mezzo</h3>
+                <p class="card-text">L'obiettivo non è pubblicare pagine. L'obiettivo è: più chiamate, più contatti, più clienti.</p>
+            </article>
+
+        </div>
+    </section>
+    <!-- /manifesto -->
+
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+       PROCESSO — Sezione 02: "Come lavoriamo"
+       ✏️  Per modificare gli step: edita testo all'interno di .step-title e .step-text.
+       ════════════════════════════════════════════════════════════════════════ -->
+    <section id="processo" class="process">
+        <div class="process-inner">
+            <div class="section-label" data-num="02">Metodo</div>
+            <h2 class="section-title">
+                Come<br>
+                <span style="color: var(--accent)">lavoriamo</span>
+            </h2>
+
+            <div class="process-steps">
+
+                <div class="step">
+                    <div class="step-num" aria-hidden="true">01</div>
+                    <h3 class="step-title">Ascoltiamo</h3>
+                    <p class="step-text">Prima di scrivere una riga di codice, capiamo la tua attività, i tuoi clienti e cosa vuoi che il sito faccia davvero.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-num" aria-hidden="true">02</div>
+                    <h3 class="step-title">Progettiamo</h3>
+                    <p class="step-text">Struttura chiara, contenuti essenziali, messaggi diretti. Nulla di decorativo se non porta valore concreto.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-num" aria-hidden="true">03</div>
+                    <h3 class="step-title">Costruiamo</h3>
+                    <p class="step-text">Codice pulito, veloce, ottimizzato per mobile. Nessun template gonfiato. Solo ciò che serve al tuo progetto.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-num" aria-hidden="true">04</div>
+                    <h3 class="step-title">Consegniamo</h3>
+                    <p class="step-text">Il sito funziona dal giorno uno. Ti spieghiamo tutto. Restiamo disponibili perché un buon lavoro non finisce alla consegna.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- /processo -->
+
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+       PREZZI — Sezione 03: "Chiari e trasparenti"
+       ✏️  Per modificare i prezzi: aggiorna il testo in .price-tag.
+       ✏️  Per aggiungere/rimuovere feature: edita i <li> in .price-features.
+       ✏️  La card .featured ha sfondo accent — cambia classe per evidenziarne un'altra.
+       ════════════════════════════════════════════════════════════════════════ -->
+    <section id="prezzi" class="pricing">
+        <div class="section-label" data-num="03">Servizi</div>
+        <h2 class="section-title">
+            Chiari e<br>
+            <span style="color: var(--accent)">trasparenti</span>
+        </h2>
+
+        <div class="pricing-cards">
+
+            <!-- Piano: Essenziale -->
+            <div class="price-card">
+                <div class="price-card-tag">Per iniziare</div>
+                <div class="price-card-name">Essenziale</div>
+                <div class="price-tag">€690</div>
+                <div class="price-note">// una volta, nessun canone nascosto</div>
+                <ul class="price-features">
+                    <li>Sito vitrina fino a 5 pagine</li>
+                    <li>Design mobile-first</li>
+                    <li>Ottimizzazione velocità</li>
+                    <li>Google Maps + form contatto</li>
+                    <li>Setup dominio e hosting</li>
+                    <li>1 mese di supporto incluso</li>
+                </ul>
+                <a href="#contatti" class="btn-outline">Chiedi info</a>
+            </div>
+
+            <!-- Piano: Professionale (evidenziato) -->
+            <div class="price-card featured">
+                <div class="price-card-tag">Il più richiesto</div>
+                <div class="price-card-name">Professionale</div>
+                <div class="price-tag">€1.290</div>
+                <div class="price-note">// tutto ciò che serve per fare davvero la differenza</div>
+                <ul class="price-features">
+                    <li>Sito fino a 10 pagine</li>
+                    <li>Scheda Google Business ottimizzata</li>
+                    <li>SEO locale avanzato</li>
+                    <li>Galleria lavori / portfolio</li>
+                    <li>Sezione recensioni</li>
+                    <li>Integrazione WhatsApp</li>
+                    <li>3 mesi di supporto incluso</li>
+                </ul>
+                <a href="#contatti" class="btn-dark">Partiamo insieme</a>
+            </div>
+
+            <!-- Piano: Progetto custom -->
+            <div class="price-card">
+                <div class="price-card-tag">Su misura</div>
+                <div class="price-card-name">Progetto</div>
+                <div class="price-tag">su preventivo</div>
+                <div class="price-note">// per esigenze specifiche e complesse</div>
+                <ul class="price-features">
+                    <li>E-commerce o catalogo prodotti</li>
+                    <li>Prenotazioni online</li>
+                    <li>Area riservata clienti</li>
+                    <li>Integrazioni gestionali</li>
+                    <li>Strategie di contenuto</li>
+                    <li>Supporto continuativo</li>
+                </ul>
+                <a href="#contatti" class="btn-outline">Raccontaci il progetto</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- /prezzi -->
+
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+       RECENSIONI — Sezione 04: "Cosa dicono i clienti"
+       ✏️  Per aggiungere una recensione: duplica un .review-card.
+       ════════════════════════════════════════════════════════════════════════ -->
+    <!-- RECENSIONI (temporaneamente commentata)
+<section class="reviews">
+    <div class="reviews-inner">
+      <div class="section-label" data-num="04">Recensioni reali</div>
+      <h2 class="section-title">
+        Cosa dicono<br>
+        <span style="color: var(--accent)">i clienti</span>
+      </h2>
+
+      <div class="reviews-grid">
+
+        <article class="review-card">
+          <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
+          <blockquote class="review-text">
+            "Finalmente un sito che i miei clienti capiscono al volo. In tre settimane dal lancio ho ricevuto più richieste di preventivo che nei sei mesi precedenti."
+          </blockquote>
+          <div class="review-author">Marco Ferretti</div>
+          <div class="review-role">// Idraulico, Forlì</div>
+        </article>
+
+        <article class="review-card">
+          <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
+          <blockquote class="review-text">
+            "Niente fronzoli, niente perditempo. Mi hanno spiegato tutto chiaramente, il sito è veloce e funziona anche dal telefonino. Esattamente quello che cercavo."
+          </blockquote>
+          <div class="review-author">Laura Colombo</div>
+          <div class="review-role">// Parrucchiera, Cesena</div>
+        </article>
+
+        <article class="review-card">
+          <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
+          <blockquote class="review-text">
+            "Il sito precedente era lento e non si vedeva bene sul telefono. Ora i clienti mi trovano su Google e mi scrivono direttamente su WhatsApp. Ha cambiato tutto."
+          </blockquote>
+          <div class="review-author">Giuseppe Rizzo</div>
+          <div class="review-role">// Officina meccanica, Forlimpopoli</div>
+        </article>
+
+      </div>
+    </div>
+  </section><!-- /reviews -->
+
+
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+       CONTATTI — Sezione 05: "Parliamo del tuo progetto"
+       ✏️  Email: aggiorna href="mailto:..." e il testo visibile.
+       ✏️  WhatsApp: aggiorna href="https://wa.me/39XXXXXXXXXX" con il numero reale.
+       ✏️  Status: cambia .contact-status-dot e il testo per indicare disponibilità.
+       ════════════════════════════════════════════════════════════════════════ -->
+    <section id="contatti" class="contact">
+        <div class="section-label" data-num="05">Contatti</div>
+        <h2 class="section-title">
+            Parliamo del<br>
+            <span style="color: var(--accent)">tuo progetto</span>
+        </h2>
+
+        <div class="contact-grid">
+
+            <!-- Colonna sinistra: informazioni di contatto -->
+            <div class="contact-left">
+                <p style="color: var(--text-low); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2.5rem;">
+                    Siamo a <strong style="color: var(--white)">Forlì</strong> e lavoriamo con attività in tutta la provincia di Forlì-Cesena. Scrivici, ci sentiamo entro 24 ore.
+                </p>
+
+                <div class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">✉</div>
+                    <div>
+                        <div class="contact-label">Email</div>
+                        <!-- ✏️  Cambia l'email qui -->
+                        <div class="contact-value">
+                            <a href="/cdn-cgi/l/email-protection#d2b1bbb3bd92a8b3bba0b3ffbdb4b4bbb1bbbcb3fcbba6"><span class="__cf_email__" data-cfemail="ceada7afa18eb4afa7bcafe3a1a8a8a7ada7a0afe0a7ba">[email&#160;protected]</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">📱</div>
+                    <div>
+                        <div class="contact-label">WhatsApp</div>
+                        <!-- ✏️  Cambia il numero qui (formato internazionale senza +) -->
+                        <div class="contact-value">
+                            <a href="https://wa.me/39XXXXXXXXXX">+39 XXX XXX XXXX</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">📍</div>
+                    <div>
+                        <div class="contact-label">Dove siamo</div>
+                        <div class="contact-value" style="color: var(--text-low);">
+                            Forlì — serviamo tutta la provincia:<br>
+                            <span style="font-size:0.85rem">Cesena · Forlimpopoli · Meldola · Cesenatico · Bertinoro · Savignano · Castrocaro</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Badge disponibilità -->
+                <!-- ✏️  Per indicare "non disponibili": cambia ● in ○ e il testo -->
+                <div class="contact-status">
+                    <div class="contact-status-label">// al momento</div>
+                    <div class="contact-status-text">
+                        <span class="contact-status-dot" aria-label="Disponibili">●</span> Accettiamo nuovi progetti
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonna destra: form di contatto -->
+            <div class="contact-right">
+                <!-- L'id="contact-form" è usato da main.js per agganciare il submit handler -->
+                <form id="contact-form" novalidate>
+
+                    <div class="form-group">
+                        <label for="field-attivita">La tua attività</label>
+                        <input type="text" id="field-attivita" name="attivita" placeholder="Es. Pizzeria Rossi, Studio dentistico…" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="field-contatto">Email o telefono</label>
+                        <input type="text" id="field-contatto" name="contatto" placeholder="Come possiamo contattarti?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="field-tipo">Cosa ti serve?</label>
+                        <select id="field-tipo" name="tipo">
+              <option value="">Seleziona un'opzione</option>
+              <option value="nuovo">Sito nuovo da zero</option>
+              <option value="rifacimento">Rifacimento sito esistente</option>
+              <option value="ecommerce">E-commerce</option>
+              <option value="non-so">Non so ancora — parliamone</option>
+            </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="field-messaggio">Raccontaci qualcosa</label>
+                        <textarea id="field-messaggio" name="messaggio" placeholder="Cosa fa la tua attività? Hai già un sito? Hai esigenze particolari?"></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Invia messaggio →</button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <!-- /contatti -->
+
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════════════════════════ -->
+    <!-- ════════════════════════════════════════════════════════════════════════
+       COPERTURA TERRITORIALE — sezione SEO
+       Dice a Google dove operiamo. Visibile ma discreta.
+       ✏️  Aggiungi o rimuovi comuni in base alle zone che vuoi coprire.
+       ════════════════════════════════════════════════════════════════════════ -->
+    <div style="border-top: 1px solid var(--border); background: var(--bg2); padding: 2rem 3rem;">
+        <div style="max-width: var(--max-width); margin: 0 auto;">
+            <p style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.6rem;">// Realizziamo siti web a</p>
+            <p style="font-size: 0.78rem; color: var(--muted); line-height: 1.9;">
+                <a href="#contatti" style="color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Forlì</a>                ·
+                <a href="#contatti" style="color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Cesena</a>                ·
+                <a href="#contatti" style="color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Forlimpopoli</a>                ·
+                <a href="#contatti" style="color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Meldola</a>                ·
+                <a href="#contatti" style="color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Cesenatico</a>                ·
+                <a href="#contatti" style="color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Bertinoro</a>                ·
+                <a href="#contatti" style="color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Savignano sul Rubicone</a>                ·
+                <a href="#contatti" style="color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Castrocaro Terme</a>                ·
+                <a href="#contatti" style="color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Predappio</a>                ·
+                <a href="#contatti" style="color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Longiano</a>                — e in tutta la provincia di Forlì-Cesena
+            </p>
+        </div>
+    </div>
+
+    <div class="divider" aria-hidden="true"></div>
+    <footer>
+        <div class="footer-logo">ZAIRA<span>.</span>OFFICINA</div>
+        <!--
+      NAP (Name Address Phone) — deve essere identico a Google Business e tutti i profili social.
+      ✏️  Sostituisci indirizzo, telefono e aggiorna l'anno.
+    -->
+        <div style="text-align: right;">
+            <div class="footer-copy">
+                © <span id="footer-year"></span> — Forlì (FC) — Provincia di Forlì-Cesena, Emilia-Romagna
+            </div>
+            <!-- Disclaimer prestazione occasionale — rimuovi quando apri P.IVA -->
+            <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--border); letter-spacing: 0.08em; margin-top: 0.4rem;">
+                Zaira Officina è un progetto freelance indipendente.<br> Collaborazioni svolte come prestazione occasionale ai sensi dell'art. 2222 c.c.
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+       FLOATING CTA BAR — visibile solo su mobile (< 600px)
+       ✏️  Aggiorna href WhatsApp con il numero reale: wa.me/39XXXXXXXXXX
+       ════════════════════════════════════════════════════════════════════════ -->
+    <div class="mobile-cta-bar" aria-hidden="true">
+        <a href="https://wa.me/39XXXXXXXXXX" class="mobile-cta-wa">
+            <!-- Icona WhatsApp SVG inline — nessuna dipendenza esterna -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            WhatsApp
+        </a>
+        <a href="#contatti" class="mobile-cta-form">
+            Scrivici →
+        </a>
+    </div>
+
+    <!-- SCRIPT: caricato in fondo per non bloccare il rendering -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

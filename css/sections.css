@@ -1,0 +1,626 @@
+/* =============================================================================
+   ZAIRA OFFICINA — Sezioni di Pagina
+   ─────────────────────────────────────────────────────────────────────────────
+   Stili per ogni sezione: Strip, For Who, Manifesto, Process,
+   Pricing, Reviews, Contact, Footer.
+   Ogni sezione ha il suo blocco chiaramente delimitato.
+   ============================================================================= */
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   STRIP — Banner scorrevole orizzontale
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.strip {
+  border-top:    1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background:    var(--accent);
+  overflow:      hidden;
+  padding:       0.9rem 0;
+}
+
+/* Il contenitore interno è largo il doppio del visibile,
+   così l'animazione scroll sembra infinita. */
+.strip-inner {
+  display:         flex;
+  gap:             0;
+  animation:       marquee 20s linear infinite;
+  white-space:     nowrap;
+}
+
+.strip-text {
+  font-family:    var(--font-display);
+  font-weight:    800;
+  font-size:      0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color:          #111008;
+  padding:        0 2rem;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FOR WHO — "Lavoriamo con" — griglia di categorie clienti
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.for-who {
+  border-bottom: 1px solid var(--border);
+  background:    var(--bg2);
+  padding:       3rem var(--section-pad-h);
+}
+
+.for-who-inner {
+  max-width: var(--max-width);
+  margin:    0 auto;
+}
+
+/* Label "Lavoriamo con" */
+.for-who-label {
+  font-family:    var(--font-mono);
+  font-size:      0.68rem;
+  color:          var(--muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom:  1.5rem;
+}
+
+/* Griglia 6 colonne — ridotta su mobile in responsive.css */
+.for-who-grid {
+  display:                  grid;
+  grid-template-columns:    repeat(6, 1fr);
+  gap:                      1px;            /* il gap diventa il bordo visibile (bg è border) */
+  background:               var(--border);
+  border:                   1px solid var(--border);
+}
+
+/* Singola cella categoria */
+.for-who-item {
+  background:     var(--bg);
+  padding:        1.5rem 1.2rem;
+  display:        flex;
+  flex-direction: column;
+  gap:            0.3rem;
+  transition:     background var(--transition-fast);
+}
+
+.for-who-item:hover {
+  background: #1a1a12;
+}
+
+/* Variante CTA: bordo accent a sinistra */
+.for-who-item.for-who-cta {
+  border-left: 2px solid var(--accent);
+}
+
+.for-who-icon {
+  font-size:     1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.for-who-name {
+  font-family:    var(--font-display);
+  font-weight:    800;
+  font-size:      1rem;
+  text-transform: uppercase;
+  color:          var(--white);
+  letter-spacing: 0.03em;
+}
+
+.for-who-ex {
+  font-family: var(--font-mono);
+  font-size:   0.72rem;
+  color:       var(--muted);
+  line-height: 1.4;
+}
+
+/* Link "Parliamoci" nella cella CTA */
+.for-who-link {
+  margin-top:     0.5rem;
+  display:        inline-block;
+  font-family:    var(--font-display);
+  font-weight:    800;
+  font-size:      0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color:          var(--accent);
+  text-decoration: none;
+  border-bottom:  1px solid var(--accent);
+  width:          fit-content;
+  transition:     opacity var(--transition-fast);
+}
+
+.for-who-link:hover {
+  opacity: 0.75;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MANIFESTO — "Come la pensiamo" — griglia di principi
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.manifesto {
+  padding:   var(--section-pad-v) var(--section-pad-h);
+  max-width: var(--max-width);
+  margin:    0 auto;
+}
+
+/* Griglia 3 colonne di card */
+.manifesto-grid {
+  display:               grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:                   1px;
+  background:            var(--border);
+  margin-top:            3.5rem;
+  border:                1px solid var(--border);
+}
+
+/* Singola card principio */
+.manifesto-card {
+  background: var(--bg2);
+  padding:    2.2rem 2rem;
+  position:   relative;
+  transition: background var(--transition-medium);
+  overflow:   hidden;
+  /* Stato iniziale per animazione scroll-in (vedi animations.css) */
+  opacity:    0;
+  transform:  translateY(30px);
+}
+
+/* Barra verticale accent che appare al hover */
+.manifesto-card::before {
+  content:    '';
+  position:   absolute;
+  top:        0;
+  left:       0;
+  width:      3px;
+  height:     0;
+  background: var(--accent);
+  transition: height var(--transition-slow) ease;
+}
+
+.manifesto-card:hover {
+  background: #1e1e14;
+}
+
+.manifesto-card:hover::before {
+  height: 100%;
+}
+
+.card-icon {
+  font-size:     1.5rem;
+  margin-bottom: 1rem;
+  display:       block;
+}
+
+.card-title {
+  font-family:    var(--font-display);
+  font-weight:    800;
+  font-size:      1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom:  0.7rem;
+  color:          var(--white);
+}
+
+.card-text {
+  font-size:   0.86rem;
+  color:       var(--text-low);
+  line-height: 1.7;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PROCESS — "Come lavoriamo" — 4 step numerati
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.process {
+  padding:       var(--section-pad-v) var(--section-pad-h);
+  background:    var(--bg2);
+  border-top:    1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.process-inner {
+  max-width: var(--max-width);
+  margin:    0 auto;
+}
+
+/* Griglia 4 step orizzontali */
+.process-steps {
+  display:               grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:                   0;
+  margin-top:            3.5rem;
+  border:                1px solid var(--border);
+}
+
+.step {
+  padding:      2.2rem 2rem;
+  border-right: 1px solid var(--border);
+  position:     relative;
+  /* Stato iniziale per animazione scroll-in */
+  opacity:      0;
+  transform:    translateY(30px);
+}
+
+.step:last-child {
+  border-right: none;
+}
+
+/* Numero grande decorativo (es. "01") */
+.step-num {
+  font-family:  var(--font-display);
+  font-weight:  900;
+  font-size:    3.5rem;
+  color:        var(--border);   /* inizialmente grigio scuro */
+  line-height:  1;
+  margin-bottom: 1rem;
+  transition:   color var(--transition-medium);
+}
+
+/* Al hover il numero diventa accent */
+.step:hover .step-num {
+  color: var(--accent);
+}
+
+.step-title {
+  font-family:    var(--font-display);
+  font-weight:    800;
+  font-size:      1.15rem;
+  text-transform: uppercase;
+  margin-bottom:  0.7rem;
+  color:          var(--white);
+}
+
+.step-text {
+  font-size:   0.84rem;
+  color:       var(--muted);
+  line-height: 1.65;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PRICING — "Chiari e trasparenti" — 3 card prezzi
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.pricing {
+  padding:   var(--section-pad-v) var(--section-pad-h);
+  max-width: var(--max-width);
+  margin:    0 auto;
+}
+
+/* Griglia 3 card prezzi */
+.pricing-cards {
+  display:               grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:                   1px;
+  background:            var(--border);
+  margin-top:            3.5rem;
+  border:                1px solid var(--border);
+}
+
+.price-card {
+  background: var(--bg2);
+  padding:    2.5rem 2.2rem;
+  position:   relative;
+  transition: background var(--transition-medium);
+  /* Stato iniziale per animazione scroll-in */
+  opacity:    0;
+  transform:  translateY(30px);
+}
+
+/* ── Card evidenziata (piano consigliato) ── */
+.price-card.featured {
+  background: var(--accent);
+}
+
+/* Sovrascrive TUTTI i colori testo nella card featured */
+.price-card.featured * {
+  color: #111008 !important;
+}
+
+/*
+  Eccezione: .btn-dark ha sfondo scuro (#111008), quindi il suo
+  testo DEVE essere chiaro — altrimenti risulta nero su nero.
+  Questi selettori più specifici vincono sull'* qui sopra.
+*/
+.price-card.featured .btn-dark {
+  background:   #111008 !important;
+  color:        var(--accent) !important;
+  border-color: #111008 !important;
+}
+
+.price-card.featured .btn-dark:hover {
+  background: var(--bg) !important;
+  color:      var(--accent) !important;
+}
+
+/* Tag sopra il nome del piano (es. "Il più richiesto") */
+.price-card-tag {
+  font-family:    var(--font-mono);
+  font-size:      0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color:          var(--muted);
+  display:        flex;
+  align-items:    center;
+  gap:            0.6rem;
+  margin-bottom:  1.2rem;
+}
+
+.price-card-tag::before {
+  content:  '';
+  display:  inline-block;
+  width:    1.5rem;
+  height:   1px;
+  background: var(--muted);
+}
+
+.price-card.featured .price-card-tag::before {
+  background: #111008;
+}
+
+/* Nome del piano */
+.price-card-name {
+  font-family:    var(--font-display);
+  font-weight:    900;
+  font-size:      1.8rem;
+  text-transform: uppercase;
+  margin-bottom:  0.5rem;
+}
+
+/* Prezzo grande */
+.price-tag {
+  font-family:  var(--font-display);
+  font-weight:  800;
+  font-size:    3rem;
+  color:        var(--accent);
+  line-height:  1;
+  margin-bottom: 0.3rem;
+}
+
+/* Nota sotto il prezzo (es. "// una volta, nessun canone nascosto") */
+.price-note {
+  font-family:   var(--font-mono);
+  font-size:     0.75rem;
+  color:         var(--muted);
+  margin-bottom: 1.8rem;
+}
+
+/* Lista feature incluse */
+.price-features {
+  list-style:     none;
+  display:        flex;
+  flex-direction: column;
+  gap:            0.6rem;
+  margin-bottom:  2.2rem;
+}
+
+.price-features li {
+  font-size:   0.86rem;
+  color:       var(--text-mid);
+  display:     flex;
+  gap:         0.7rem;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+
+/* Freccia prima di ogni feature */
+.price-features li::before {
+  content:     '→';
+  color:       var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.price-card.featured .price-features li::before {
+  color: #111008;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   REVIEWS — "Cosa dicono i clienti" — 3 recensioni
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.reviews {
+  padding:       var(--section-pad-v) var(--section-pad-h);
+  background:    var(--bg2);
+  border-top:    1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.reviews-inner {
+  max-width: var(--max-width);
+  margin:    0 auto;
+}
+
+/* Griglia 3 recensioni */
+.reviews-grid {
+  display:               grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:                   1px;
+  background:            var(--border);
+  margin-top:            3.5rem;
+  border:                1px solid var(--border);
+}
+
+.review-card {
+  background: var(--bg);
+  padding:    2.2rem 2rem;
+  position:   relative;
+  /* Stato iniziale per animazione scroll-in */
+  opacity:    0;
+  transform:  translateY(30px);
+}
+
+/* Stelle (★★★★★) */
+.stars {
+  color:          var(--accent);
+  font-size:      0.85rem;
+  letter-spacing: 0.1em;
+  margin-bottom:  1rem;
+}
+
+/* Testo della recensione */
+.review-text {
+  font-size:     0.9rem;
+  line-height:   1.75;
+  color:         var(--text-mid);
+  margin-bottom: 1.5rem;
+  font-style:    italic;
+}
+
+/* Nome del cliente */
+.review-author {
+  font-family:    var(--font-display);
+  font-weight:    700;
+  font-size:      1rem;
+  text-transform: uppercase;
+  color:          var(--white);
+}
+
+/* Ruolo / città del cliente */
+.review-role {
+  font-family:    var(--font-mono);
+  font-size:      0.68rem;
+  color:          var(--muted);
+  letter-spacing: 0.1em;
+  margin-top:     0.2rem;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CONTACT — "Parliamo del tuo progetto" — form + info
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.contact {
+  padding:   var(--section-pad-v) var(--section-pad-h);
+  max-width: var(--max-width);
+  margin:    0 auto;
+}
+
+/* Griglia 2 colonne: info a sinistra, form a destra */
+.contact-grid {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   0;
+  margin-top:            3.5rem;
+  border:                1px solid var(--border);
+}
+
+.contact-left {
+  padding:      3rem;
+  border-right: 1px solid var(--border);
+}
+
+.contact-right {
+  padding:    3rem;
+  background: var(--bg2);
+}
+
+/* Riga contatto singola (icona + testo) */
+.contact-item {
+  display:     flex;
+  gap:         1.5rem;
+  margin-bottom: 2.5rem;
+  align-items: flex-start;
+}
+
+/* Box icona contatto */
+.contact-icon {
+  width:       2.5rem;
+  height:      2.5rem;
+  border:      1px solid var(--border);
+  display:     flex;
+  align-items: center;
+  justify-content: center;
+  font-size:   1rem;
+  flex-shrink: 0;
+  background:  var(--bg2);
+}
+
+.contact-label {
+  font-family:    var(--font-mono);
+  font-size:      0.68rem;
+  color:          var(--muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom:  0.3rem;
+}
+
+.contact-value {
+  font-size: 1rem;
+  color:     var(--white);
+}
+
+.contact-value a {
+  color:           var(--accent);
+  text-decoration: none;
+  transition:      opacity var(--transition-fast);
+}
+
+.contact-value a:hover {
+  opacity: 0.75;
+}
+
+/* Box disponibilità — "Accettiamo nuovi progetti" */
+.contact-status {
+  margin-top:  2rem;
+  padding:     1.5rem;
+  border:      1px solid var(--border);
+  background:  var(--bg);
+}
+
+.contact-status-label {
+  font-family:    var(--font-mono);
+  font-size:      0.68rem;
+  color:          var(--muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom:  0.5rem;
+}
+
+.contact-status-text {
+  font-family:  var(--font-display);
+  font-weight:  700;
+  font-size:    1.1rem;
+}
+
+/* Pallino verde/rosso indicatore status */
+.contact-status-dot {
+  color: var(--accent); /* verde = disponibile */
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+footer {
+  border-top:  1px solid var(--border);
+  padding:     2rem var(--section-pad-h);
+  display:     flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width:   var(--max-width);
+  margin:      0 auto;
+}
+
+.footer-logo {
+  font-family:    var(--font-display);
+  font-weight:    900;
+  font-size:      1.1rem;
+  color:          var(--white);
+  letter-spacing: 0.1em;
+}
+
+.footer-logo span {
+  color: var(--accent);
+}
+
+.footer-copy {
+  font-family:    var(--font-mono);
+  font-size:      0.68rem;
+  color:          var(--muted);
+  letter-spacing: 0.1em;
+}

@@ -1,0 +1,168 @@
+/* =============================================================================
+   ZAIRA OFFICINA — Hero
+   ─────────────────────────────────────────────────────────────────────────────
+   Prima schermata full-height: titolo animato a sinistra + stat-blocks a destra.
+   ============================================================================= */
+
+
+/* ── WRAPPER HERO ────────────────────────────────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  display:    grid;
+  grid-template-columns: 55fr 45fr; /* sinistra più ampia, destra più compatta */
+  align-items: center;
+  padding:    7rem var(--section-pad-h) 5rem;
+  gap:        5rem;
+  max-width:  var(--max-width);
+  margin:     0 auto;
+  position:   relative;
+}
+
+
+/* ── COLONNA SINISTRA ────────────────────────────────────────────────────── */
+.hero-left {
+  position: relative;
+}
+
+/* Tag piccolo sopra il titolo: "Un'officina digitale..." */
+.hero-tag {
+  font-family:    var(--font-mono);
+  font-size:      0.72rem;
+  color:          var(--accent);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom:  2rem;
+  display:        flex;
+  align-items:    flex-start;  /* allinea in cima quando va su due righe */
+  gap:            0.8rem;
+  line-height:    1.8;
+}
+
+/* Linea decorativa prima del tag */
+.hero-tag::before {
+  content:  '';
+  display:  inline-block;
+  width:    2rem;
+  height:   1px;
+  background: var(--accent);
+}
+
+/* Titolo principale hero */
+.hero-title {
+  font-family:    var(--font-display);
+  font-weight:    900;
+  font-size:      clamp(3.2rem, 5.5vw, 5.5rem);
+  line-height:    1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom:  2.5rem;
+}
+
+/* Riga 1: "Ti cercano." — bianca, sempre visibile */
+.line-seek {
+  color: var(--white);
+}
+
+/*
+   Riga 2: "Non ti trovano." — grigia, viene barrata e poi scompare.
+   L'animazione si attiva dopo 1.3s (strikethrough) e 2s (fadeout).
+   ✏️  Per disabilitare l'animazione: rimuovi le due proprietà `animation`.
+*/
+.line-lost {
+  color:    var(--muted);
+  position: relative;
+  display:  inline-block;
+  animation: fadeOutLine 0.4s 2s ease forwards;
+}
+
+/* Barra rossa che attraversa "Non ti trovano." */
+.line-lost::after {
+  content:    '';
+  position:   absolute;
+  left:       0;
+  top:        52%;
+  width:      0;
+  height:     3px;
+  background: var(--accent2);
+  animation:  strikethrough 0.5s 1.3s ease forwards;
+}
+
+/* Riga 3: "Noi ti rendiamo visibili." — entra dal basso dopo la barratura */
+.line-solution {
+  color:     var(--accent);
+  display:   block;
+  opacity:   0;
+  transform: translateY(60px);
+  animation: slideUpSolution 0.6s 2.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+/* ── SOTTOTITOLO HERO ────────────────────────────────────────────────────── */
+.hero-sub {
+  font-size:     1rem;
+  color:         var(--text-mid);
+  line-height:   1.8;
+  max-width:     460px;
+  margin-bottom: 3rem;
+  padding-left:  1.2rem;
+  border-left:   2px solid var(--border);
+}
+
+.hero-sub strong {
+  color:       var(--white);
+  font-weight: 500;
+}
+
+
+/* ── COLONNA DESTRA: STAT BLOCKS ─────────────────────────────────────────── */
+.hero-right {
+  display:        flex;
+  flex-direction: column;
+  gap:            0;
+  border:         1px solid var(--border);
+}
+
+/* Singolo blocco statistica */
+.stat-block {
+  padding:     1.6rem 1.8rem;
+  border-bottom: 1px solid var(--border);
+  display:     flex;
+  align-items: center;
+  gap:         1.5rem;
+  background:  var(--bg2);
+  transition:  background var(--transition-medium);
+}
+
+.stat-block:last-child {
+  border-bottom: none;
+}
+
+.stat-block:hover {
+  background: #1f1f16;
+}
+
+/* Numero / icona grande a sinistra del blocco */
+.stat-num {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size:   2rem;
+  color:       var(--accent);
+  min-width:   2.8rem;
+  line-height: 1;
+}
+
+/* Testo principale del blocco */
+.stat-label {
+  font-size:   0.92rem;
+  color:       var(--white);
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+/* Sotto-descrizione del blocco */
+.stat-desc {
+  font-family: var(--font-mono);
+  font-size:   0.72rem;
+  color:       var(--muted);
+  margin-top:  0.25rem;
+}

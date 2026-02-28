@@ -1,0 +1,168 @@
+/* =============================================================================
+   ZAIRA OFFICINA — Componenti Riutilizzabili
+   ─────────────────────────────────────────────────────────────────────────────
+   Bottoni, elementi del form e altri componenti condivisi tra le sezioni.
+   Ogni componente è autonomo e può essere usato ovunque nella pagina.
+   ============================================================================= */
+
+
+/* ── BOTTONI ─────────────────────────────────────────────────────────────── */
+/*
+   3 varianti:
+     .btn-primary   — sfondo accent, CTA principale
+     .btn-outline   — solo bordo accent, secondario
+     .btn-dark      — sfondo scuro con testo accent, usato su sfondo chiaro
+*/
+
+/* Base comune a tutti i bottoni */
+.btn-primary,
+.btn-outline,
+.btn-dark {
+  display:         inline-block;
+  font-family:     var(--font-display);
+  font-weight:     800;
+  font-size:       0.85rem;
+  letter-spacing:  0.15em;
+  text-transform:  uppercase;
+  text-decoration: none;
+  padding:         0.8rem 2rem;
+  transition:      all var(--transition-fast);
+  cursor:          pointer;
+}
+
+/* ── Primario (hero CTA) ── */
+.btn-primary {
+  background:  var(--accent);
+  color:       #111008;
+  font-size:   0.95rem;
+  padding:     1rem 2.5rem;
+  position:    relative;
+  border:      none;
+}
+
+/* Ombra decorativa offset */
+.btn-primary::after {
+  content:    '';
+  position:   absolute;
+  bottom:     -4px;
+  right:      -4px;
+  width:      100%;
+  height:     100%;
+  border:     1px solid var(--accent);
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background: var(--white);
+  color:      #111008;
+}
+
+.btn-primary:hover::after {
+  bottom: -6px;
+  right:  -6px;
+}
+
+/* ── Outline ── */
+.btn-outline {
+  border: 1px solid var(--accent);
+  color:  var(--accent);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color:      #111008;
+}
+
+/* ── Dark (usato nella card featured) ── */
+.btn-dark {
+  border:      1px solid #111008;
+  background:  #111008;
+  color:       var(--accent);
+  font-size:   0.85rem;
+}
+
+.btn-dark:hover {
+  background: var(--bg);
+  color:      var(--accent);
+}
+
+
+/* ── FORM ────────────────────────────────────────────────────────────────── */
+
+/* Gruppo: label + campo */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display:        block;
+  font-family:    var(--font-mono);
+  font-size:      0.68rem;
+  color:          var(--muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom:  0.5rem;
+}
+
+/* Stili condivisi per input, textarea e select */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width:       100%;
+  background:  var(--bg);
+  border:      1px solid var(--border);
+  color:       var(--white);
+  padding:     0.9rem 1rem;
+  font-family: var(--font-body);
+  font-size:   0.9rem;
+  outline:     none;
+  transition:  border-color var(--transition-fast);
+  /* Manteniamo il design sharp (no radius) */
+  border-radius: 0;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--accent);
+}
+
+/* Textarea: altezza fissa, resize solo verticale */
+.form-group textarea {
+  height:  120px;
+  resize:  vertical;
+}
+
+/* Stile del dropdown */
+.form-group select option {
+  background: var(--bg);
+}
+
+/* Bottone submit del form */
+.form-submit {
+  background:     var(--accent);
+  color:          #111008;
+  border:         none;
+  padding:        1rem 2.5rem;
+  font-family:    var(--font-display);
+  font-weight:    800;
+  font-size:      0.95rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor:         pointer;
+  transition:     all var(--transition-fast);
+  width:          100%;
+  margin-top:     0.5rem;
+  border-radius:  0;
+}
+
+.form-submit:hover {
+  background: var(--white);
+}
+
+/* Stato "inviato" — applicato via JS */
+.form-submit.is-sent {
+  background: #2a7a3a;
+  color:      #fff;
+}

@@ -1,0 +1,600 @@
+/* =============================================================================
+   ZAIRA OFFICINA — Responsive / Media Queries  [v2 — mobile-first overhaul]
+   ─────────────────────────────────────────────────────────────────────────────
+   Strategia: desktop-first, si riduce verso il mobile.
+   Breakpoints:
+     1024px — tablet landscape
+      900px — tablet portrait / small laptop
+      600px — mobile
+      400px — mobile piccolo
+   ============================================================================= */
+
+
+/* ── TABLET LANDSCAPE (< 1024px) ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  .hero {
+    padding-left:  2rem;
+    padding-right: 2rem;
+  }
+
+  .manifesto,
+  .pricing,
+  .contact {
+    padding-left:  2rem;
+    padding-right: 2rem;
+  }
+
+  .process {
+    padding-left:  2rem;
+    padding-right: 2rem;
+  }
+}
+
+
+/* ── TABLET PORTRAIT / SMALL DESKTOP (< 900px) ───────────────────────────── */
+@media (max-width: 900px) {
+
+  /* ── NAV: mostra hamburger, nascondi link ── */
+  .nav-links {
+    display: none; /* sostituito dal menu mobile in nav.css */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* ── HERO: una colonna ── */
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top:           6rem;
+    padding-bottom:        3rem;
+    gap:                   3rem;
+  }
+
+  .hero-right {
+    margin-top: 0;
+  }
+
+  /* ── FOR WHO: 3 colonne ── */
+  .for-who-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ── MANIFESTO: 2 colonne ── */
+  .manifesto-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* ── PROCESS: 2×2 ── */
+  .process-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .process-steps .step {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .process-steps .step:nth-child(3),
+  .process-steps .step:nth-child(4) {
+    border-bottom: none;
+  }
+
+  /* ── PRICING: una card per riga ── */
+  .pricing-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── REVIEWS: una recensione per riga ── */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── CONTACT: info sopra, form sotto ── */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-left {
+    border-right:  none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    flex-direction: column;
+    gap:            1rem;
+    text-align:     center;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MOBILE  (< 600px)
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+
+  /* ═══════════════════ GLOBAL ════════════════════════════════════════════ */
+
+  /* Padding orizzontale ridotto su mobile */
+  :root {
+    --section-pad-h: 1.25rem;
+    --section-pad-v: 3.5rem;
+  }
+
+  /* Spazio per la floating bar in fondo */
+  body {
+    padding-bottom: 72px;
+  }
+
+  /* Titoli sezione leggermente più piccoli */
+  .section-title {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+
+  /* ═══════════════════ NAV ════════════════════════════════════════════════ */
+
+  nav {
+    padding: 1rem 1.25rem;
+  }
+
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+
+
+  /* ═══════════════════ HERO ═══════════════════════════════════════════════ */
+
+  .hero {
+    padding-top:    5.5rem;
+    padding-left:   1.25rem;
+    padding-right:  1.25rem;
+    padding-bottom: 2.5rem;
+    gap:            2rem;
+  }
+
+  .hero-tag {
+    font-size:    0.65rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .hero-title {
+    font-size:     clamp(2.8rem, 12vw, 3.8rem);
+    margin-bottom: 1.8rem;
+  }
+
+  .hero-sub {
+    font-size:     0.92rem;
+    margin-bottom: 2rem;
+  }
+
+  /* CTA button piena larghezza su mobile */
+  .btn-primary {
+    width:      100%;
+    text-align: center;
+    padding:    1.1rem 2rem;
+    font-size:  0.9rem;
+  }
+
+  /* Stat-blocks: più compatti su mobile */
+  .stat-block {
+    padding: 1.2rem 1.25rem;
+    gap:     1rem;
+  }
+
+  .stat-num {
+    font-size: 1.6rem;
+    min-width: 2.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .stat-desc {
+    font-size: 0.65rem;
+  }
+
+
+  /* ═══════════════════ FOR WHO ════════════════════════════════════════════ */
+
+  .for-who {
+    padding: 2rem 1.25rem;
+  }
+
+  /* 2×3 — più leggibile su schermi stretti */
+  .for-who-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .for-who-item {
+    padding: 1.2rem 1rem;
+  }
+
+  .for-who-icon {
+    font-size:     1.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .for-who-name {
+    font-size: 0.88rem;
+  }
+
+  .for-who-ex {
+    font-size: 0.65rem;
+  }
+
+
+  /* ═══════════════════ MANIFESTO ══════════════════════════════════════════ */
+
+  .manifesto {
+    padding-left:  1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Una card per riga — più leggibile */
+  .manifesto-grid {
+    grid-template-columns: 1fr;
+    margin-top: 2.5rem;
+  }
+
+  .manifesto-card {
+    padding: 1.8rem 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+  }
+
+  .card-text {
+    font-size: 0.88rem;
+  }
+
+
+  /* ═══════════════════ PROCESS ════════════════════════════════════════════ */
+
+  .process {
+    padding-left:  1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Uno step per riga con freccia di collegamento */
+  .process-steps {
+    grid-template-columns: 1fr;
+    margin-top: 2.5rem;
+  }
+
+  .step {
+    padding:      1.8rem 1.5rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    position:     relative;
+  }
+
+  .step:last-child {
+    border-bottom: none;
+  }
+
+  /* Freccia verticale di collegamento tra gli step */
+  .step:not(:last-child)::after {
+    content:   '↓';
+    position:  absolute;
+    bottom:    -0.8rem;
+    left:      1.5rem;
+    font-size: 0.9rem;
+    color:     var(--accent);
+    z-index:   1;
+    background: var(--bg2);
+    padding:   0 0.3rem;
+    line-height: 1;
+  }
+
+  .step-num {
+    font-size:    2.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .step-title {
+    font-size: 1.05rem;
+  }
+
+  .step-text {
+    font-size: 0.86rem;
+  }
+
+
+  /* ═══════════════════ PRICING ════════════════════════════════════════════ */
+
+  .pricing {
+    padding-left:  1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .pricing-cards {
+    margin-top: 2.5rem;
+  }
+
+  .price-card {
+    padding: 2rem 1.5rem;
+  }
+
+  /* La card featured (oro) ha un bordo evidenziato su mobile */
+  .price-card.featured {
+    border-left: 4px solid #111008;
+  }
+
+  .price-card-name {
+    font-size: 1.5rem;
+  }
+
+  .price-tag {
+    font-size: 2.5rem;
+  }
+
+  /* Bottoni piena larghezza nelle card prezzi */
+  .price-card .btn-outline,
+  .price-card .btn-dark {
+    width:      100%;
+    text-align: center;
+    padding:    0.9rem 1.5rem;
+    display:    block;
+  }
+
+
+  /* ═══════════════════ CONTACT ════════════════════════════════════════════ */
+
+  .contact {
+    padding-left:  1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .contact-grid {
+    margin-top: 2.5rem;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-item {
+    gap:           1rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .contact-icon {
+    width:  2.2rem;
+    height: 2.2rem;
+  }
+
+  .contact-value {
+    font-size: 0.92rem;
+  }
+
+  .contact-status {
+    margin-top: 1.5rem;
+    padding:    1.2rem;
+  }
+
+  /* ── Form: FIX iOS zoom (font-size minimo 16px) ── */
+  /*
+     iOS fa lo zoom automatico se il campo ha font-size < 16px.
+     Qui lo forziamo a 16px per evitarlo senza disabilitare lo zoom dell'utente.
+  */
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size:    16px; /* NON ridurre sotto 16px — altrimenti iOS fa zoom */
+    padding:      0.85rem 0.9rem;
+  }
+
+  .form-group label {
+    font-size: 0.65rem;
+  }
+
+  .form-submit {
+    font-size: 0.9rem;
+    padding:   1.1rem 2rem;
+  }
+
+  /* Nasconde l'email Cloudflare offuscata su mobile se troppo lunga */
+  .contact-value a {
+    word-break: break-all;
+  }
+
+
+  /* ═══════════════════ STRIP ══════════════════════════════════════════════ */
+
+  /* Velocità strip leggermente più alta su mobile */
+  .strip-inner {
+    animation-duration: 14s;
+  }
+
+  .strip-text {
+    font-size: 0.72rem;
+    padding:   0 1.5rem;
+  }
+
+
+  /* ═══════════════════ FOOTER ══════════════════════════════════════════════ */
+
+  footer {
+    padding-left:  1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 1.5rem;
+  }
+
+  /* Copertura territoriale SEO */
+  body > div[style*="padding: 2rem 3rem"] {
+    padding: 1.5rem 1.25rem !important;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MOBILE PICCOLO (< 400px)
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 400px) {
+
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  /* For who: 2 celle per riga, più compatte */
+  .for-who-item {
+    padding: 1rem 0.8rem;
+  }
+
+  .for-who-name {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FLOATING CONTACT BAR — barra fissa in fondo su mobile
+   ─────────────────────────────────────────────────────────────────────────
+   Visibile solo su < 600px. Contiene WhatsApp + "Scrivici".
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.mobile-cta-bar {
+  display:  none; /* nascosta su desktop */
+}
+
+@media (max-width: 600px) {
+
+  .mobile-cta-bar {
+    display:         flex;
+    position:        fixed;
+    bottom:          0;
+    left:            0;
+    right:           0;
+    z-index:         200;
+    background:      var(--bg);
+    border-top:      1px solid var(--border);
+    padding:         0.75rem 1.25rem;
+    gap:             0.75rem;
+    align-items:     center;
+    /* Piccola ombra verso l'alto per staccarsi dal contenuto */
+    box-shadow:      0 -4px 20px rgba(0,0,0,0.4);
+  }
+
+  /* Bottone WhatsApp — verde */
+  .mobile-cta-wa {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    gap:             0.5rem;
+    background:      #1fae55;
+    color:           #fff;
+    font-family:     var(--font-display);
+    font-weight:     800;
+    font-size:       0.82rem;
+    letter-spacing:  0.08em;
+    text-transform:  uppercase;
+    text-decoration: none;
+    padding:         0.7rem 1.2rem;
+    flex:            1;
+    min-height:      44px; /* touch target minimo */
+    transition:      opacity 0.2s;
+  }
+
+  .mobile-cta-wa:hover,
+  .mobile-cta-wa:active {
+    opacity: 0.88;
+  }
+
+  /* Bottone "Scrivici" — accent */
+  .mobile-cta-form {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    gap:             0.5rem;
+    background:      var(--accent);
+    color:           #111008;
+    font-family:     var(--font-display);
+    font-weight:     800;
+    font-size:       0.82rem;
+    letter-spacing:  0.08em;
+    text-transform:  uppercase;
+    text-decoration: none;
+    padding:         0.7rem 1.2rem;
+    flex:            1.2;
+    min-height:      44px;
+    transition:      opacity 0.2s;
+  }
+
+  .mobile-cta-form:hover,
+  .mobile-cta-form:active {
+    opacity: 0.88;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MENU MOBILE OVERLAY
+   ─────────────────────────────────────────────────────────────────────────
+   Aperto/chiuso via JS aggiungendo .nav-open su <nav>.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+
+  /* Il menu mobile è nascosto di default */
+  .nav-mobile-menu {
+    position:        fixed;
+    top:             0;
+    left:            0;
+    right:           0;
+    bottom:          0;
+    background:      rgba(17, 16, 8, 0.98);
+    backdrop-filter: blur(10px);
+    z-index:         90; /* sotto la nav (z-index 100) */
+    display:         flex;
+    flex-direction:  column;
+    align-items:     center;
+    justify-content: center;
+    gap:             0;
+    /* Animazione chiusura */
+    opacity:         0;
+    pointer-events:  none;
+    transform:       translateY(-8px);
+    transition:      opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  /* Stato aperto — aggiunto da JS */
+  .nav-mobile-menu.is-open {
+    opacity:        1;
+    pointer-events: auto;
+    transform:      translateY(0);
+  }
+
+  .nav-mobile-menu a {
+    font-family:    var(--font-display);
+    font-weight:    900;
+    font-size:      clamp(2rem, 10vw, 3rem);
+    text-transform: uppercase;
+    color:          var(--white);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    padding:        1rem 2rem;
+    width:          100%;
+    text-align:     center;
+    border-bottom:  1px solid var(--border);
+    transition:     color 0.2s;
+  }
+
+  .nav-mobile-menu a:first-child {
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-mobile-menu a:hover,
+  .nav-mobile-menu a:active {
+    color: var(--accent);
+  }
+
+  /* Tag "Contatti" nel menu evidenziato in accent */
+  .nav-mobile-menu a.nav-mobile-cta {
+    color:        var(--accent);
+    border-color: var(--accent);
+  }
+}

@@ -1,0 +1,83 @@
+/* =============================================================================
+   ZAIRA OFFICINA — Animazioni & Keyframes
+   ─────────────────────────────────────────────────────────────────────────────
+   Tutti i @keyframes del progetto in un solo posto.
+   Le classi .is-visible vengono aggiunte da JS (main.js) via IntersectionObserver.
+   ─────────────────────────────────────────────────────────────────────────────
+   ✏️  Per rallentare un'animazione: aumenta la durata nelle proprietà `animation`
+       presenti nei singoli componenti (hero.css, sections.css, ecc.).
+   ✏️  Per disabilitare le animazioni scroll: commenta il blocco .is-visible.
+   ============================================================================= */
+
+
+/* ── HERO: entrata da sotto ──────────────────────────────────────────────── */
+.hero-left { animation: fadeIn 0.8s 0.1s both; }
+.hero-right { animation: fadeIn 0.8s 0.3s both; }
+
+@keyframes fadeIn {
+  from {
+    opacity:   0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity:   1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ── HERO: barra che barra "Non ti trovano." ─────────────────────────────── */
+@keyframes strikethrough {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+
+/* ── HERO: scomparsa riga barrata ────────────────────────────────────────── */
+@keyframes fadeOutLine {
+  to {
+    opacity:    0;
+    max-height: 0;
+    margin:     0;
+    padding:    0;
+    overflow:   hidden;
+    display:    block;
+  }
+}
+
+
+/* ── HERO: soluzione che entra dal basso ─────────────────────────────────── */
+@keyframes slideUpSolution {
+  to {
+    opacity:   1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ── STRIP: testo scorrevole all'infinito ────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* -50% perché il contenuto è duplicato */
+}
+
+
+/* ── SCROLL-IN: classe aggiunta da JS all'entrata nel viewport ───────────── */
+/*
+   Elementi con opacity:0 e transform:translateY(30px) in sections.css
+   diventano visibili quando JS aggiunge .is-visible.
+   La transizione è definita qui globalmente.
+*/
+.is-visible {
+  opacity:    1 !important;
+  transform:  translateY(0) !important;
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/*
+   Versione con delay per elementi adiacenti nella stessa griglia.
+   ✏️  Aggiungi class="animate-delay-1" sull'elemento HTML per uno stagger.
+*/
+.animate-delay-1.is-visible { transition-delay: 0.1s; }
+.animate-delay-2.is-visible { transition-delay: 0.2s; }
+.animate-delay-3.is-visible { transition-delay: 0.3s; }
