@@ -96,7 +96,7 @@ export default async function handler(req, res) {
         'Content-Type':  'application/json',
       },
       body: JSON.stringify({
-        from:    'Zaira Officina <noreply@zaira-officina.it>',
+        from:    'Zaira Officina <noreply@zairaofficina.it>',
         to:      [process.env.CONTACT_EMAIL || 'richieste.zairaoficina@gmail.com'],
         subject: `Nuova richiesta da ${attivita}`,
         html:    emailHtml,
