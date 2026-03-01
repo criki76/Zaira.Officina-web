@@ -153,6 +153,7 @@
     <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/cookie.css">
 </head>
 
 <body>
@@ -689,4 +690,32 @@
             WhatsApp
         </a>
         <a href="#contatti" class="mobile-cta-form">
-            Sc
+            Scrivici →
+        </a>
+    </div>
+
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+       BANNER COOKIE — GDPR
+       Appare solo se l'utente non ha ancora espresso preferenza.
+       La scelta viene salvata in localStorage con chiave "cookie_consent".
+       ════════════════════════════════════════════════════════════════════════ -->
+    <div id="cookie-banner" role="dialog" aria-label="Informativa cookie" aria-live="polite">
+        <div class="cookie-inner">
+            <p class="cookie-text">
+                Usiamo <strong>cookie tecnici</strong> necessari al funzionamento del sito. Nessun tracciamento, nessuna profilazione.
+            </p>
+            <div class="cookie-actions">
+                <button id="cookie-accept" class="cookie-btn cookie-btn--accept">Accetta</button>
+                <button id="cookie-reject" class="cookie-btn cookie-btn--reject">Solo necessari</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SCRIPT: caricato in fondo per non bloccare il rendering -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

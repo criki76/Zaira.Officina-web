@@ -155,6 +155,33 @@ function initScrollAnimations() {
 }
 
 
+/* ─── BANNER COOKIE ─────────────────────────────────────────────────────── */
+
+function initCookieBanner() {
+  const banner  = document.querySelector('#cookie-banner');
+  const btnOk   = document.querySelector('#cookie-accept');
+  const btnNo   = document.querySelector('#cookie-reject');
+
+  if (!banner) return;
+
+  // Se l'utente ha già scelto, non mostrare il banner
+  if (localStorage.getItem('cookie_consent')) return;
+
+  // Mostra il banner con piccolo ritardo per evitare flash all'avvio
+  setTimeout(() => banner.classList.add('is-visible'), 600);
+
+  function dismiss(choice) {
+    localStorage.setItem('cookie_consent', choice);
+    banner.classList.remove('is-visible');
+    // Rimuove dal DOM dopo la transizione
+    setTimeout(() => banner.remove(), 400);
+  }
+
+  if (btnOk) btnOk.addEventListener('click', () => dismiss('accepted'));
+  if (btnNo) btnNo.addEventListener('click', () => dismiss('rejected'));
+}
+
+
 /* ─── INIT ──────────────────────────────────────────────────────────────── */
 
 function init() {
@@ -175,6 +202,9 @@ function init() {
 
   // Animazioni scroll
   initScrollAnimations();
+
+  // Banner cookie GDPR
+  initCookieBanner();
 }
 
 document.addEventListener('DOMContentLoaded', init);
