@@ -21,8 +21,13 @@
     <meta name="description" content="Zaira Officina crea siti web veloci per artigiani, negozi e ristoranti a Forlì e provincia di Forlì-Cesena. Design mobile-first, SEO locale, prezzi chiari. Risposta entro 24h.">
 
     <!-- Canonical — indica a Google l'URL ufficiale della pagina -->
-    <!-- ✏️  Sostituisci con il dominio reale quando vai online -->
     <link rel="canonical" href="https://zairaofficina.it/">
+
+    <!-- Robots — permette esplicitamente indicizzazione e follow dei link -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- ✏️  Crea il file sitemap.xml nella root del sito, poi decommentare: -->
+    <!-- <link rel="sitemap" type="application/xml" href="/sitemap.xml"> -->
 
     <!-- ── OPEN GRAPH (Facebook, WhatsApp, LinkedIn) ──────────────────────── -->
     <!--
@@ -480,47 +485,44 @@
        RECENSIONI — Sezione 04: "Cosa dicono i clienti"
        ✏️  Per aggiungere una recensione: duplica un .review-card.
        ════════════════════════════════════════════════════════════════════════ -->
-    <!-- RECENSIONI (temporaneamente commentata)
-<section class="reviews">
-    <div class="reviews-inner">
-      <div class="section-label" data-num="04">Recensioni reali</div>
-      <h2 class="section-title">
-        Cosa dicono<br>
-        <span style="color: var(--accent)">i clienti</span>
-      </h2>
-
-      <div class="reviews-grid">
-
-        <article class="review-card">
-          <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
-          <blockquote class="review-text">
-            "Finalmente un sito che i miei clienti capiscono al volo. In tre settimane dal lancio ho ricevuto più richieste di preventivo che nei sei mesi precedenti."
-          </blockquote>
-          <div class="review-author">Marco Ferretti</div>
-          <div class="review-role">// Idraulico, Forlì</div>
-        </article>
-
-        <article class="review-card">
-          <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
-          <blockquote class="review-text">
-            "Niente fronzoli, niente perditempo. Mi hanno spiegato tutto chiaramente, il sito è veloce e funziona anche dal telefonino. Esattamente quello che cercavo."
-          </blockquote>
-          <div class="review-author">Laura Colombo</div>
-          <div class="review-role">// Parrucchiera, Cesena</div>
-        </article>
-
-        <article class="review-card">
-          <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
-          <blockquote class="review-text">
-            "Il sito precedente era lento e non si vedeva bene sul telefono. Ora i clienti mi trovano su Google e mi scrivono direttamente su WhatsApp. Ha cambiato tutto."
-          </blockquote>
-          <div class="review-author">Giuseppe Rizzo</div>
-          <div class="review-role">// Officina meccanica, Forlimpopoli</div>
-        </article>
-
+    <!-- RECENSIONI (temporaneamente commentata —
+         ✏️  Per riattivare: rimuovi questo blocco commento e quello di chiusura sotto)
+    <section class="reviews">
+      <div class="reviews-inner">
+        <div class="section-label" data-num="04">Recensioni reali</div>
+        <h2 class="section-title">
+          Cosa dicono<br>
+          <span style="color: var(--accent)">i clienti</span>
+        </h2>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
+            <blockquote class="review-text">
+              "Finalmente un sito che i miei clienti capiscono al volo. In tre settimane dal lancio ho ricevuto più richieste di preventivo che nei sei mesi precedenti."
+            </blockquote>
+            <div class="review-author">Marco Ferretti</div>
+            <div class="review-role">// Idraulico, Forlì</div>
+          </article>
+          <article class="review-card">
+            <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
+            <blockquote class="review-text">
+              "Niente fronzoli, niente perditempo. Mi hanno spiegato tutto chiaramente, il sito è veloce e funziona anche dal telefonino. Esattamente quello che cercavo."
+            </blockquote>
+            <div class="review-author">Laura Colombo</div>
+            <div class="review-role">// Parrucchiera, Cesena</div>
+          </article>
+          <article class="review-card">
+            <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
+            <blockquote class="review-text">
+              "Il sito precedente era lento e non si vedeva bene sul telefono. Ora i clienti mi trovano su Google e mi scrivono direttamente su WhatsApp. Ha cambiato tutto."
+            </blockquote>
+            <div class="review-author">Giuseppe Rizzo</div>
+            <div class="review-role">// Officina meccanica, Forlimpopoli</div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section><!-- /reviews -->
+    </section>
+    /reviews -->
 
 
 
@@ -551,7 +553,7 @@
                         <div class="contact-label">Email</div>
                         <!-- ✏️  Cambia l'email qui -->
                         <div class="contact-value">
-                            <a href="mailto:richieste.zairaoficina@gmail.com">richieste.zairaoficina@gmail.com</a>
+                            <a href="/cdn-cgi/l/email-protection#b3c1dad0dbdad6c0c7d69dc9d2dac1d2dcd5dad0daddd2f3d4ded2dadf9dd0dcde"><span class="__cf_email__" data-cfemail="b8cad1dbd0d1ddcbccdd96c2d9d1cad9d7ded1dbd1d6d9f8dfd5d9d1d496dbd7d5">[email&#160;protected]</span></a>
                         </div>
                     </div>
                 </div>
@@ -688,13 +690,4 @@
             WhatsApp
         </a>
         <a href="#contatti" class="mobile-cta-form">
-            Scrivici →
-        </a>
-    </div>
-
-    <!-- SCRIPT: caricato in fondo per non bloccare il rendering -->
-    <script src="js/main.js"></script>
-
-</body>
-
-</html>
+            Sc
