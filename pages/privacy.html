@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy | Zaira Officina — Web Agency Forlì-Cesena</title>
+    <meta name="description" content="Informativa sulla privacy di Zaira Officina. Come trattiamo i tuoi dati personali in conformità al GDPR (Regolamento UE 2016/679).">
+    <link rel="canonical" href="https://zairaofficina.it/pages/privacy.html">
+    <meta name="robots" content="noindex, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Zaira Officina">
+    <meta property="og:title" content="Privacy Policy | Zaira Officina">
+    <meta property="og:url" content="https://zairaofficina.it/pages/privacy.html">
+
+    <!-- Font — stessi del sito principale -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Courier+Prime:wght@400;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS del progetto — percorso relativo dalla cartella pages/ -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- Stili specifici di questa pagina -->
+    <style>
+
+        /* ── HERO PAGINA ─────────────────────────────────────────────── */
+        .page-hero {
+            padding: 8rem var(--section-pad-h) 3rem;
+            border-bottom: 1px solid var(--border);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .page-tag {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .page-tag::before {
+            content: '';
+            display: inline-block;
+            width: 2rem;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .page-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 900;
+            line-height: 1;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .page-meta {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        /* ── CONTENUTO ───────────────────────────────────────────────── */
+        .privacy-content {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 4rem var(--section-pad-h) 6rem;
+        }
+
+        .privacy-section {
+            margin-bottom: 3.5rem;
+            padding-bottom: 3.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .privacy-section:last-child {
+            border-bottom: none;
+        }
+
+        .section-num {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-content h2 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .privacy-content p {
+            color: var(--text-low);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .privacy-content p strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .privacy-content em {
+            font-style: italic;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .privacy-content ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .privacy-content ul li {
+            color: var(--text-low);
+            font-size: 0.95rem;
+            padding: 0.35rem 0 0.35rem 1.5rem;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .privacy-content ul li::before {
+            content: '//';
+            font-family: var(--font-mono);
+            color: var(--accent);
+            font-size: 0.7rem;
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+        }
+
+        .privacy-content a {
+            color: var(--white);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color var(--transition-fast);
+        }
+
+        .privacy-content a:hover { color: var(--accent); }
+
+        /* Box evidenziato */
+        .highlight-box {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+            color: var(--text-low);
+            line-height: 1.7;
+        }
+
+        .highlight-box strong {
+            color: var(--white);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        /* Tabella titolare */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.88rem;
+        }
+
+        .data-table td {
+            padding: 0.8rem 1rem;
+            border: 1px solid var(--border);
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        .data-table td:first-child {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            width: 35%;
+            background: var(--bg2);
+        }
+
+        .data-table td:last-child { color: var(--text-low); }
+
+        /* Link "Torna al sito" nella nav */
+        .nav-back {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--muted);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: color var(--transition-fast);
+        }
+
+        .nav-back:hover { color: var(--accent); }
+
+        /* ── RESPONSIVE ──────────────────────────────────────────────── */
+        @media (max-width: 600px) {
+            .page-hero { padding: 6rem 1.5rem 2rem; }
+            .privacy-content { padding: 2.5rem 1.5rem 4rem; }
+            .data-table td:first-child { width: 38%; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGAZIONE -->
+    <nav>
+        <a href="../" class="nav-logo">ZAIRA<span>.</span>OFFICINA</a>
+        <a href="../" class="nav-back">← Torna al sito</a>
+    </nav>
+
+    <!-- HERO PAGINA -->
+    <div class="page-hero">
+        <p class="page-tag">Informativa legale</p>
+        <h1 class="page-title">Privacy<br>Policy</h1>
+        <p class="page-meta">// Ultimo aggiornamento: marzo 2026 — Versione 1.0</p>
+    </div>
+
+    <!-- CONTENUTO -->
+    <main class="privacy-content">
+
+        <!-- 01 — Titolare -->
+        <div class="privacy-section">
+            <p class="section-num">// 01</p>
+            <h2>Titolare del trattamento</h2>
+            <p>Ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR), ti informiamo che il titolare del trattamento dei dati personali raccolti tramite il sito <strong>zairaofficina.it</strong> è:</p>
+            <table class="data-table">
+                <tr><td>Titolare</td><td>Zaira Officina — progetto freelance indipendente</td></tr>
+                <tr><td>Sede operativa</td><td>Forlì (FC) — Emilia-Romagna, Italia</td></tr>
+                <tr><td>Email</td><td><a href="mailto:richieste.zairaoficina@gmail.com">richieste.zairaoficina@gmail.com</a></td></tr>
+                <tr><td>Telefono / WhatsApp</td><td><a href="https://wa.me/393930719544">+39 393 071 9544</a></td></tr>
+                <tr><td>Regime fiscale</td><td>Prestazione occasionale ai sensi dell'art. 2222 c.c.</td></tr>
+            </table>
+        </div>
+
+        <!-- 02 — Dati raccolti -->
+        <div class="privacy-section">
+            <p class="section-num">// 02</p>
+            <h2>Dati personali raccolti</h2>
+            <p>Il sito raccoglie le seguenti categorie di dati:</p>
+            <p><strong>Dati forniti volontariamente dall'utente (modulo di contatto)</strong></p>
+            <ul>
+                <li>Nome dell'attività o professione</li>
+                <li>Indirizzo email e/o numero di telefono</li>
+                <li>Tipo di servizio richiesto</li>
+                <li>Testo libero del messaggio</li>
+            </ul>
+            <p><strong>Dati di navigazione (tecnici)</strong></p>
+            <ul>
+                <li>Indirizzo IP del dispositivo</li>
+                <li>Tipo di browser e sistema operativo</li>
+                <li>Pagine visitate e orario della visita</li>
+                <li>Riferimento della pagina di provenienza (referrer)</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>// Nessun cookie di profilazione</strong>
+                Il sito non utilizza cookie di profilazione o tracciamento di terze parti a fini pubblicitari. Non viene effettuata alcuna attività di remarketing o targeting comportamentale.
+            </div>
+        </div>
+
+        <!-- 03 — Finalità -->
+        <div class="privacy-section">
+            <p class="section-num">// 03</p>
+            <h2>Finalità e base giuridica del trattamento</h2>
+            <p><strong>Risposta alle richieste di contatto</strong><br>
+            I dati inviati tramite il modulo o via WhatsApp/email vengono utilizzati esclusivamente per rispondere alla tua richiesta e, se del caso, per avviare una collaborazione professionale.<br>
+            <em>Base giuridica: esecuzione di misure precontrattuali su richiesta dell'interessato (art. 6, par. 1, lett. b GDPR)</em></p>
+            <p><strong>Adempimenti di legge</strong><br>
+            I dati possono essere conservati per ottemperare a obblighi fiscali, contabili o normativi previsti dalla legislazione italiana.<br>
+            <em>Base giuridica: obbligo legale (art. 6, par. 1, lett. c GDPR)</em></p>
+            <p><strong>Navigazione sul sito</strong><br>
+            I dati tecnici di navigazione vengono raccolti automaticamente dai sistemi informatici per garantire il corretto funzionamento del sito.<br>
+            <em>Base giuridica: legittimo interesse (art. 6, par. 1, lett. f GDPR)</em></p>
+        </div>
+
+        <!-- 04 — Conservazione -->
+        <div class="privacy-section">
+            <p class="section-num">// 04</p>
+            <h2>Tempi di conservazione</h2>
+            <p>I dati vengono conservati per il tempo strettamente necessario alle finalità per cui sono stati raccolti:</p>
+            <ul>
+                <li><strong>Richieste di contatto senza esito contrattuale:</strong> 12 mesi dalla ricezione del messaggio</li>
+                <li><strong>Dati relativi a rapporti contrattuali:</strong> 10 anni dalla conclusione della prestazione, come previsto dalla normativa fiscale italiana</li>
+                <li><strong>Dati tecnici di navigazione:</strong> fino a 30 giorni, gestiti dal provider di hosting</li>
+            </ul>
+            <p>Trascorsi tali periodi, i dati vengono eliminati o resi anonimi in modo irreversibile.</p>
+        </div>
+
+        <!-- 05 — Condivisione -->
+        <div class="privacy-section">
+            <p class="section-num">// 05</p>
+            <h2>Condivisione dei dati con terze parti</h2>
+            <p>I dati personali non vengono venduti, ceduti o comunicati a terzi per finalità di marketing. Possono essere condivisi esclusivamente con:</p>
+            <ul>
+                <li><strong>Provider di hosting</strong> — per la gestione tecnica del sito web</li>
+                <li><strong>Google LLC</strong> — tramite Google Fonts, i font vengono caricati da server Google che possono registrare l'indirizzo IP del visitatore. Consulta la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy di Google</a></li>
+                <li><strong>Autorità competenti</strong> — in caso di obbligo di legge o richiesta dell'autorità giudiziaria</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>// Trasferimento extra-UE</strong>
+                Google LLC ha sede negli Stati Uniti. Il trasferimento dei dati avviene nel rispetto delle garanzie previste dal GDPR (decisioni di adeguatezza, clausole contrattuali standard). Per dettagli, consulta le policy di Google.
+            </div>
+        </div>
+
+        <!-- 06 — Diritti -->
+        <div class="privacy-section">
+            <p class="section-num">// 06</p>
+            <h2>I tuoi diritti</h2>
+            <p>Ai sensi degli artt. 15-22 del GDPR, hai il diritto di:</p>
+            <ul>
+                <li><strong>Accesso:</strong> ottenere conferma che siano o meno in corso trattamenti di dati personali che ti riguardano</li>
+                <li><strong>Rettifica:</strong> richiedere la correzione di dati inesatti o incompleti</li>
+                <li><strong>Cancellazione ("diritto all'oblio"):</strong> richiedere la cancellazione dei dati, nei casi previsti dalla legge</li>
+                <li><strong>Limitazione:</strong> richiedere la limitazione del trattamento in determinate circostanze</li>
+                <li><strong>Portabilità:</strong> ricevere i dati in formato strutturato e leggibile da dispositivo automatico</li>
+                <li><strong>Opposizione:</strong> opporti al trattamento in qualsiasi momento, ove basato sul legittimo interesse</li>
+                <li><strong>Revoca del consenso:</strong> dove il trattamento è basato sul consenso, ritirarlo in qualsiasi momento</li>
+            </ul>
+            <p>Per esercitare i tuoi diritti, scrivi a <a href="mailto:richieste.zairaoficina@gmail.com">richieste.zairaoficina@gmail.com</a>. Risponderemo entro 30 giorni dalla ricezione della richiesta.</p>
+            <p>Hai inoltre il diritto di proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a>).</p>
+        </div>
+
+        <!-- 07 — Cookie -->
+        <div class="privacy-section">
+            <p class="section-num">// 07</p>
+            <h2>Cookie</h2>
+            <p>Il sito utilizza esclusivamente <strong>cookie tecnici</strong>, indispensabili per il corretto funzionamento delle pagine. Non vengono utilizzati cookie di profilazione, analitici di terze parti o sistemi di tracciamento comportamentale.</p>
+            <p>I cookie tecnici non richiedono il consenso dell'utente ai sensi della normativa vigente (art. 122 D.Lgs. 196/2003 e Linee Guida Cookie del Garante).</p>
+            <p>Puoi configurare o disabilitare i cookie direttamente dalle impostazioni del tuo browser. La disabilitazione potrebbe compromettere la corretta fruizione del sito.</p>
+        </div>
+
+        <!-- 08 — Sicurezza -->
+        <div class="privacy-section">
+            <p class="section-num">// 08</p>
+            <h2>Sicurezza dei dati</h2>
+            <p>Adottiamo misure tecniche e organizzative adeguate per proteggere i dati personali da accessi non autorizzati, perdita, distruzione o divulgazione accidentale, in conformità all'art. 32 del GDPR. Il sito è servito esclusivamente tramite <strong>protocollo HTTPS</strong> con certificato SSL.</p>
+        </div>
+
+        <!-- 09 — Modifiche -->
+        <div class="privacy-section">
+            <p class="section-num">// 09</p>
+            <h2>Modifiche alla presente informativa</h2>
+            <p>Questa informativa può essere aggiornata periodicamente per riflettere modifiche alle nostre pratiche o per ottemperare a nuovi obblighi normativi. La data dell'ultimo aggiornamento è sempre indicata in cima alla pagina.</p>
+            <p>Ti invitiamo a consultare regolarmente questa pagina.</p>
+        </div>
+
+        <!-- 10 — Contatti -->
+        <div class="privacy-section">
+            <p class="section-num">// 10</p>
+            <h2>Contatti per la privacy</h2>
+            <p>Per qualsiasi domanda relativa al trattamento dei tuoi dati personali o per esercitare i tuoi diritti, puoi contattarci:</p>
+            <div class="highlight-box">
+                <strong>// Contatto privacy</strong>
+                Email: <a href="mailto:richieste.zairaoficina@gmail.com">richieste.zairaoficina@gmail.com</a><br>
+                WhatsApp: <a href="https://wa.me/393930719544">+39 393 071 9544</a><br>
+                Sede: Forlì (FC) — Provincia di Forlì-Cesena, Emilia-Romagna, Italia
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <div class="divider" aria-hidden="true"></div>
+    <footer style="padding: 2rem var(--section-pad-h); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div style="font-family: var(--font-display); font-weight: 900; font-size: 1.1rem; letter-spacing: 0.1em; color: var(--white);">
+            ZAIRA<span style="color: var(--accent);">.</span>OFFICINA
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); letter-spacing: 0.08em; text-align: right; line-height: 1.8;">
+            <a href="../" style="color: var(--muted); text-decoration: none;"
+               onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">← Torna al sito</a>
+            &nbsp;·&nbsp;
+            Regolamento UE 2016/679 (GDPR) — D.Lgs. 196/2003
+        </div>
+    </footer>
+
+</body>
+</html>
