@@ -429,11 +429,35 @@
 
 /* ── BUNDLE OFFERTA LANCIO ───────────────────────────────────────────────── */
 
+.price-bundle-hint {
+  font-family:    var(--font-mono);
+  font-size:      0.65rem;
+  color:          var(--accent);
+  letter-spacing: 0.08em;
+  margin-top:     1.2rem;
+  opacity:        0.8;
+}
+
+.price-card.featured .price-bundle-hint {
+  color:   #111008;
+  opacity: 0.6;
+}
+
 .pricing-bundle {
-  margin-top:  1px;
+  margin-top:  0;
   border:      1px solid var(--accent);
-  padding:     2.5rem 2.2rem;
+  border-top:  2px solid var(--accent);
+  padding:     2rem 2.2rem;
   background:  var(--bg2);
+}
+
+.bundle-top {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  margin-bottom:   1.2rem;
+  flex-wrap:       wrap;
+  gap:             1rem;
 }
 
 .bundle-label {
@@ -442,7 +466,6 @@
   color:          var(--accent);
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin-bottom:  1.5rem;
   display:        flex;
   align-items:    center;
   gap:            0.6rem;
@@ -456,7 +479,29 @@
   background: var(--accent);
 }
 
-.bundle-inner {
+.bundle-prices {
+  display:     flex;
+  align-items: baseline;
+  gap:         1rem;
+}
+
+.bundle-price-old {
+  font-family:     var(--font-mono);
+  font-size:       0.9rem;
+  color:           var(--muted);
+  text-decoration: line-through;
+  letter-spacing:  0.05em;
+}
+
+.bundle-price {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size:   2.8rem;
+  color:       var(--accent);
+  line-height: 1;
+}
+
+.bundle-bottom {
   display:         flex;
   align-items:     center;
   justify-content: space-between;
@@ -469,9 +514,9 @@
   font-weight:    900;
   font-size:      1.8rem;
   text-transform: uppercase;
-  color:          var(--white);
+  color:          var(--accent);
   letter-spacing: 0.02em;
-  margin-bottom:  0.6rem;
+  margin-bottom:  0.5rem;
 }
 
 .bundle-desc {
@@ -486,28 +531,7 @@
 }
 
 .bundle-right {
-  display:        flex;
-  flex-direction: column;
-  align-items:    flex-end;
-  gap:            0.4rem;
-  flex-shrink:    0;
-}
-
-.bundle-price-old {
-  font-family:     var(--font-mono);
-  font-size:       0.9rem;
-  color:           var(--muted);
-  text-decoration: line-through;
-  letter-spacing:  0.05em;
-}
-
-.bundle-price {
-  font-family:   var(--font-display);
-  font-weight:   900;
-  font-size:     3rem;
-  color:         var(--accent);
-  line-height:   1;
-  margin-bottom: 1rem;
+  flex-shrink: 0;
 }
 
 
