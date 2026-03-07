@@ -289,10 +289,10 @@
   margin:    0 auto;
 }
 
-/* Griglia 4 card prezzi */
+/* Griglia 3 card prezzi */
 .pricing-cards {
   display:               grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap:                   1px;
   background:            var(--border);
   margin-top:            3.5rem;
