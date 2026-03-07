@@ -387,6 +387,15 @@
   margin-bottom: 1.8rem;
 }
 
+/* Nota consegna sotto le feature del pacchetto */
+.price-delivery {
+  font-family:   var(--font-mono);
+  font-size:     0.65rem;
+  color:         var(--muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
 /* Lista feature incluse */
 .price-features {
   list-style:     none;

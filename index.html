@@ -411,73 +411,90 @@
 
     <!-- ════════════════════════════════════════════════════════════════════════
        PREZZI — Sezione 03: "Chiari e trasparenti"
-       ✏️  Per modificare i prezzi: aggiorna il testo in .price-tag.
-       ✏️  Per aggiungere/rimuovere feature: edita i <li> in .price-features.
-       ✏️  La card .featured ha sfondo accent — cambia classe per evidenziarne un'altra.
+       4 pacchetti: Essenziale, Attività che lavora, Visibilità Locale, Manutenzione
        ════════════════════════════════════════════════════════════════════════ -->
-    <section id="prezzi" class="pricing">
-        <div class="section-label" data-num="03">Servizi</div>
-        <h2 class="section-title">
-            Chiari e<br>
-            <span style="color: var(--accent)">trasparenti</span>
-        </h2>
+<section id="prezzi" class="pricing">
+    <div class="section-label" data-num="03">Servizi</div>
+    <h2 class="section-title">
+        Chiari e<br>
+        <span style="color: var(--accent)">trasparenti</span>
+    </h2>
 
-        <div class="pricing-cards">
+    <div class="pricing-cards">
 
-            <!-- Piano: Essenziale -->
-            <div class="price-card">
-                <div class="price-card-tag">Per iniziare</div>
-                <div class="price-card-name">Essenziale</div>
-                <div class="price-tag">€690</div>
-                <div class="price-note">// una volta, nessun canone nascosto</div>
-                <ul class="price-features">
-                    <li>Sito vitrina fino a 5 pagine</li>
-                    <li>Design mobile-first</li>
-                    <li>Ottimizzazione velocità</li>
-                    <li>Google Maps + form contatto</li>
-                    <li>Setup dominio e hosting</li>
-                    <li>1 mese di supporto incluso</li>
-                </ul>
-                <a href="#contatti" class="btn-outline">Chiedi info</a>
-            </div>
-
-            <!-- Piano: Professionale (evidenziato) -->
-            <div class="price-card featured">
-                <div class="price-card-tag">Il più richiesto</div>
-                <div class="price-card-name">Professionale</div>
-                <div class="price-tag">€1.290</div>
-                <div class="price-note">// tutto ciò che serve per fare davvero la differenza</div>
-                <ul class="price-features">
-                    <li>Sito fino a 10 pagine</li>
-                    <li>Scheda Google Business ottimizzata</li>
-                    <li>SEO locale avanzato</li>
-                    <li>Galleria lavori / portfolio</li>
-                    <li>Sezione recensioni</li>
-                    <li>Integrazione WhatsApp</li>
-                    <li>3 mesi di supporto incluso</li>
-                </ul>
-                <a href="#contatti" class="btn-dark">Partiamo insieme</a>
-            </div>
-
-            <!-- Piano: Progetto custom -->
-            <div class="price-card">
-                <div class="price-card-tag">Su misura</div>
-                <div class="price-card-name">Progetto</div>
-                <div class="price-tag">su preventivo</div>
-                <div class="price-note">// per esigenze specifiche e complesse</div>
-                <ul class="price-features">
-                    <li>E-commerce o catalogo prodotti</li>
-                    <li>Prenotazioni online</li>
-                    <li>Area riservata clienti</li>
-                    <li>Integrazioni gestionali</li>
-                    <li>Strategie di contenuto</li>
-                    <li>Supporto continuativo</li>
-                </ul>
-                <a href="#contatti" class="btn-outline">Raccontaci il progetto</a>
-            </div>
-
+        <!-- Pacchetto 1 — Presenza Essenziale -->
+        <div class="price-card">
+            <div class="price-card-tag">Per chi parte da zero</div>
+            <div class="price-card-name">Presenza Essenziale</div>
+            <div class="price-tag">€590</div>
+            <div class="price-note">// una volta, nessun canone nascosto</div>
+            <ul class="price-features">
+                <li>Sito veloce — HTML, CSS, JS puro</li>
+                <li>Mobile perfetto</li>
+                <li>Cosa fai · dove sei · come contattarti</li>
+                <li>WhatsApp cliccabile + Google Maps</li>
+                <li>Modulo contatto</li>
+                <li>SEO base + indicizzazione Google</li>
+            </ul>
+            <div class="price-delivery">// consegna 5–7 giorni</div>
+            <a href="#contatti" class="btn-outline">Chiedi info</a>
         </div>
-    </section>
+
+        <!-- Pacchetto 2 — Attività che lavora (evidenziato) -->
+        <div class="price-card featured">
+            <div class="price-card-tag">Il più richiesto</div>
+            <div class="price-card-name">Attività che lavora</div>
+            <div class="price-tag">€1.100</div>
+            <div class="price-note">// il sito che porta clienti, non solo presenza</div>
+            <ul class="price-features">
+                <li>Tutto il pacchetto Essenziale</li>
+                <li>Strategia homepage per convertire</li>
+                <li>Sezione servizi o offerte</li>
+                <li>Recensioni integrate</li>
+                <li>Call to action studiata</li>
+                <li>SEO locale strutturato</li>
+                <li>Collegamento Google Business Profile</li>
+            </ul>
+            <div class="price-delivery">// consegna 7–10 giorni</div>
+            <a href="#contatti" class="btn-dark">Partiamo insieme</a>
+        </div>
+
+        <!-- Pacchetto 3 — Visibilità Locale -->
+        <div class="price-card">
+            <div class="price-card-tag">Spesso sottovalutato</div>
+            <div class="price-card-name">Visibilità Locale</div>
+            <div class="price-tag">€350</div>
+            <div class="price-note">// per molte attività porta più clienti del sito</div>
+            <ul class="price-features">
+                <li>Ottimizzazione Google Business Profile</li>
+                <li>Categorie e descrizione SEO</li>
+                <li>Caricamento foto</li>
+                <li>Servizi e prodotti inseriti</li>
+                <li>Ottimizzazione ricerca locale</li>
+                <li>Guida per raccogliere recensioni</li>
+            </ul>
+            <div class="price-delivery">// consegna 48–72 ore · in bundle −50€</div>
+            <a href="#contatti" class="btn-outline">Chiedi info</a>
+        </div>
+
+        <!-- Pacchetto 4 — Manutenzione Officina -->
+        <div class="price-card">
+            <div class="price-card-tag">Canone mensile</div>
+            <div class="price-card-name">Manutenzione Officina</div>
+            <div class="price-tag">€39<span style="font-size:1rem; font-weight:400">/mese</span></div>
+            <div class="price-note">// come una macchina, anche il sito va controllato</div>
+            <ul class="price-features">
+                <li>Aggiornamenti e piccole modifiche</li>
+                <li>Controllo form contatti</li>
+                <li>Controllo indicizzazione Google</li>
+                <li>Supporto rapido via WhatsApp</li>
+            </ul>
+            <div class="price-delivery">// solo su siti realizzati da Zaira Officina</div>
+            <a href="#contatti" class="btn-outline">Attiva</a>
+        </div>
+
+    </div>
+</section>
     <!-- /prezzi -->
 
 
@@ -597,12 +614,14 @@
                     <div class="form-group">
                         <label for="field-tipo">Cosa ti serve?</label>
                         <select id="field-tipo" name="tipo">
-              <option value="">Seleziona un'opzione</option>
-              <option value="nuovo">Sito nuovo da zero</option>
-              <option value="rifacimento">Rifacimento sito esistente</option>
-              <option value="ecommerce">E-commerce</option>
-              <option value="non-so">Non so ancora — parliamone</option>
-            </select>
+                            <option value="">Seleziona un'opzione</option>
+                            <option value="nuovo">Sito nuovo da zero</option>
+                            <option value="rifacimento">Rifacimento sito esistente</option>
+                            <option value="google-business">Google Business Profile</option>
+                            <option value="manutenzione">Manutenzione sito</option>
+                            <option value="ecommerce">E-commerce</option>
+                            <option value="non-so">Non so ancora — parliamone</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
