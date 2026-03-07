@@ -23,6 +23,7 @@ const ANIMATED_SELECTORS = [
   '.step',
   '.review-card',
   '.price-card',
+  '.pricing-bundle',
 ];
 
 const OBSERVER_OPTIONS = {
