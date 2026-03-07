@@ -80,6 +80,16 @@
     border-bottom: none;
   }
 
+  /* ── PORTFOLIO: una colonna ── */
+  .portfolio-card {
+    grid-template-columns: 1fr;
+  }
+
+  .card-right {
+    border-left: none;
+    border-top:  1px solid var(--border);
+  }
+
   /* ── PRICING: 2 card per riga su tablet ── */
   .pricing-cards {
     grid-template-columns: 1fr 1fr;
@@ -120,6 +130,21 @@
   :root {
     --section-pad-h: 1.25rem;
     --section-pad-v: 3.5rem;
+  }
+
+  /* ── PORTFOLIO: padding ridotto ── */
+  .portfolio {
+    padding-left:  1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .card-left,
+  .card-right {
+    padding: 1.8rem 1.5rem;
+  }
+
+  .card-client {
+    font-size: 2rem;
   }
 
   /* Spazio per la floating bar in fondo */

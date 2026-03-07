@@ -24,6 +24,7 @@ const ANIMATED_SELECTORS = [
   '.review-card',
   '.price-card',
   '.pricing-bundle',
+  '.portfolio-card',
 ];
 
 const OBSERVER_OPTIONS = {

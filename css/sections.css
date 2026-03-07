@@ -280,6 +280,174 @@
 
 
 /* ═══════════════════════════════════════════════════════════════════════════
+   PORTFOLIO — "Un progetto alla volta"
+   ✏️  Duplica .portfolio-card per aggiungere nuovi progetti.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.portfolio {
+  padding:   var(--section-pad-v) var(--section-pad-h);
+  max-width: var(--max-width);
+  margin:    0 auto;
+}
+
+/* Card orizzontale: info a sinistra, stats a destra */
+.portfolio-card {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   0;
+  border:                1px solid var(--border);
+  background:            var(--bg2);
+  position:              relative;
+  transition:            background var(--transition-medium);
+  overflow:              hidden;
+  margin-top:            3.5rem;
+  /* Stato iniziale per animazione scroll-in */
+  opacity:               0;
+  transform:             translateY(30px);
+}
+
+.portfolio-card:hover {
+  background: #1e1e14;
+}
+
+/* Barra accent sinistra al hover */
+.portfolio-card::before {
+  content:    '';
+  position:   absolute;
+  top:        0;
+  left:       0;
+  width:      3px;
+  height:     0;
+  background: var(--accent);
+  transition: height var(--transition-slow) ease;
+}
+
+.portfolio-card:hover::before {
+  height: 100%;
+}
+
+/* Colonna sinistra */
+.card-left {
+  padding:        2.5rem 2.2rem;
+  display:        flex;
+  flex-direction: column;
+  gap:            0;
+}
+
+/* Tag categoria */
+.card-tag {
+  font-family:    var(--font-mono);
+  font-size:      0.65rem;
+  color:          var(--muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom:  1.2rem;
+  display:        flex;
+  align-items:    center;
+  gap:            0.6rem;
+}
+
+.card-tag::before {
+  content:    '';
+  display:    inline-block;
+  width:      1.5rem;
+  height:     1px;
+  background: var(--muted);
+}
+
+/* Nome cliente */
+.card-client {
+  font-family:    var(--font-display);
+  font-weight:    900;
+  font-size:      2.8rem;
+  text-transform: uppercase;
+  color:          var(--white);
+  letter-spacing: 0.02em;
+  line-height:    1;
+  margin-bottom:  0.4rem;
+}
+
+/* Tipo attività */
+.card-type {
+  font-family:    var(--font-mono);
+  font-size:      0.72rem;
+  color:          var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom:  1.5rem;
+}
+
+/* Descrizione */
+.card-desc {
+  font-size:   0.88rem;
+  color:       var(--text-low);
+  line-height: 1.7;
+}
+
+/* Colonna destra */
+.card-right {
+  padding:         2.5rem 2.2rem;
+  border-left:     1px solid var(--border);
+  display:         flex;
+  flex-direction:  column;
+  gap:             1.5rem;
+  justify-content: center;
+}
+
+/* Griglia stat-box */
+.card-stats {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   1px;
+  background:            var(--border);
+  border:                1px solid var(--border);
+}
+
+.card-stat {
+  background: var(--bg);
+  padding:    1.2rem;
+}
+
+.card-stat-num {
+  font-family:   var(--font-display);
+  font-weight:   900;
+  font-size:     1.8rem;
+  color:         var(--accent);
+  line-height:   1;
+  margin-bottom: 0.3rem;
+}
+
+.card-stat-label {
+  font-family:    var(--font-mono);
+  font-size:      0.62rem;
+  color:          var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height:    1.4;
+}
+
+/* Link vedi progetto */
+.card-link {
+  display:         block;
+  font-family:     var(--font-display);
+  font-weight:     800;
+  font-size:       0.82rem;
+  letter-spacing:  0.12em;
+  text-transform:  uppercase;
+  color:           var(--accent);
+  text-decoration: none;
+  border:          1px solid var(--accent);
+  padding:         0.9rem 1.5rem;
+  text-align:      center;
+  transition:      all var(--transition-fast);
+}
+
+.card-link:hover {
+  background: var(--accent);
+  color:      #111008;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
    PRICING — "Chiari e trasparenti" — 3 card prezzi
    ═══════════════════════════════════════════════════════════════════════════ */
 
