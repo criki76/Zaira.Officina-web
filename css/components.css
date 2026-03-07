@@ -166,3 +166,85 @@
   background: #2a7a3a;
   color:      #fff;
 }
+
+/* ── BUNDLE OFFERTA LANCIO ─────────────────────────────── */
+/* Striscia sotto le pricing-cards */
+.pricing-bundle {
+    max-width: var(--max-width);
+    margin: 2rem auto 0;
+    border: 1px solid var(--accent);
+    padding: 2rem 2.5rem;
+}
+
+/* Etichetta in alto */
+.bundle-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+/* Layout orizzontale: testo a sinistra, prezzo a destra */
+.bundle-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.bundle-title {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.bundle-desc {
+    font-size: 0.9rem;
+    color: var(--text-low);
+    line-height: 1.6;
+    max-width: 460px;
+}
+
+.bundle-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+/* Prezzo barrato */
+.bundle-price-old {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--muted);
+    text-decoration: line-through;
+}
+
+/* Prezzo offerta */
+.bundle-price {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+    .bundle-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bundle-right {
+        align-items: flex-start;
+        width: 100%;
+    }
+}
