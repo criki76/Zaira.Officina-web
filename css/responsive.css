@@ -336,7 +336,9 @@
     padding-right: 1.25rem;
   }
 
+  /* 1 colonna su mobile */
   .pricing-cards {
+    grid-template-columns: 1fr;
     margin-top: 2.5rem;
   }
 
@@ -344,9 +346,9 @@
     padding: 2rem 1.5rem;
   }
 
-  /* La card featured (oro) ha un bordo evidenziato su mobile */
   .price-card.featured {
-    border-left: 4px solid #111008;
+    border-left:  4px solid #111008;
+    border-top:   none;
   }
 
   .price-card-name {
@@ -357,7 +359,7 @@
     font-size: 2.5rem;
   }
 
-  /* Bottoni piena larghezza nelle card prezzi */
+  /* Bottoni piena larghezza */
   .price-card .btn-outline,
   .price-card .btn-dark {
     width:      100%;
@@ -369,6 +371,18 @@
   /* ── Bundle mobile ── */
   .pricing-bundle {
     padding: 1.8rem 1.5rem;
+  }
+
+  .bundle-top {
+    flex-direction: column;
+    align-items:    flex-start;
+    gap:            0.8rem;
+  }
+
+  .bundle-bottom {
+    flex-direction: column;
+    align-items:    flex-start;
+    gap:            1.5rem;
   }
 
   .bundle-inner {
@@ -384,6 +398,10 @@
 
   .bundle-price {
     font-size: 2.4rem;
+  }
+
+  .bundle-desc {
+    max-width: 100%;
   }
 
   .pricing-bundle .btn-primary {
