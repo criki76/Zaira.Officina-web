@@ -13,43 +13,43 @@
  *        Valore: re_xxxxxxxxxxxx  (la chiave che ti ha dato Resend)
  *   4. Su Vercel → Settings → Environment Variables → aggiungi:
  *        Nome:  CONTACT_EMAIL
- *        Valore: richieste.zairaoficina@gmail.com
+ *        Valore: info@zairaofficina.it
  *   5. Redeploy — fatto.
  *
  * In locale per testare:
  *   Crea un file .env.local nella root con:
  *     RESEND_API_KEY=re_xxxxxxxxxxxx
- *     CONTACT_EMAIL=richieste.zairaoficina@gmail.com
+ *     CONTACT_EMAIL=info@zairaofficina.it
  * =============================================================================
  */
 
 export default async function handler(req, res) {
 
-  // ── Solo POST ──────────────────────────────────────────────────────────
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Metodo non consentito' });
-  }
+    // ── Solo POST ──────────────────────────────────────────────────────────
+    if (req.method !== 'POST') {
+        return res.status(405).json({ error: 'Metodo non consentito' });
+    }
 
-  // ── Leggi i campi dal body ─────────────────────────────────────────────
-  const { attivita, contatto, tipo, messaggio } = req.body;
+    // ── Leggi i campi dal body ─────────────────────────────────────────────
+    const { attivita, contatto, tipo, messaggio } = req.body;
 
-  // Validazione minima
-  if (!attivita || !contatto) {
-    return res.status(400).json({ error: 'Campi obbligatori mancanti' });
-  }
+    // Validazione minima
+    if (!attivita || !contatto) {
+        return res.status(400).json({ error: 'Campi obbligatori mancanti' });
+    }
 
-  // Mappa il valore del select in testo leggibile
-  const tipoLabel = {
-    'nuovo':       'Sito nuovo da zero',
-    'rifacimento': 'Rifacimento sito esistente',
-    'ecommerce':   'E-commerce',
-    'non-so':      'Non so ancora — parliamone',
-  }[tipo] || 'Non specificato';
+    // Mappa il valore del select in testo leggibile
+    const tipoLabel = {
+        'nuovo': 'Sito nuovo da zero',
+        'rifacimento': 'Rifacimento sito esistente',
+        'ecommerce': 'E-commerce',
+        'non-so': 'Non so ancora — parliamone',
+    }[tipo] || 'Non specificato';
 
-  // ── Componi la mail ────────────────────────────────────────────────────
-  const emailHtml = `
+    // ── Componi la mail ────────────────────────────────────────────────────
+    const emailHtml = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #111008; color: #f0ede6; padding: 2rem; border-radius: 4px;">
-      
+
       <div style="border-bottom: 2px solid #e8a227; padding-bottom: 1rem; margin-bottom: 1.5rem;">
         <h2 style="color: #e8a227; margin: 0; font-size: 1.4rem; letter-spacing: 0.05em;">
           ZAIRA<span style="color:#f0ede6">.</span>OFFICINA
@@ -97,7 +97,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from:    'Zaira Officina <noreply@zairaofficina.it>',
-        to:      [process.env.CONTACT_EMAIL || 'richieste.zairaoficina@gmail.com'],
+        to:      [process.env.CONTACT_EMAIL || 'info@zairaofficina.it'],
         subject: `Nuova richiesta da ${attivita}`,
         html:    emailHtml,
         // Reply-to: se il contatto è una mail, rispondi direttamente al cliente
