@@ -55,6 +55,11 @@
     .for-who-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    /* ── SERVICES ENTRY: 2 colonne su tablet ── */
+    .services-entry-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
     /* ── MANIFESTO: 2 colonne ── */
     .manifesto-grid {
         grid-template-columns: 1fr 1fr;
@@ -221,6 +226,15 @@
     }
     .for-who-ex {
         font-size: 0.65rem;
+    }
+    /* ═══════════════════ SERVICES ENTRY ════════════════════════════════════ */
+    .services-entry-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 2rem;
+    }
+    .services-entry-card {
+        padding: 20px;
     }
     /* ═══════════════════ MANIFESTO ══════════════════════════════════════════ */
     .manifesto {

@@ -46,10 +46,13 @@
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16.png">
+
+    <!-- TODO: sostituire con font self-hosted in ../css/fonts.css per PageSpeed Mobile ≥90 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="../css/sito-attivo.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/sito-attivo.css">
 </head>
 
 <body>
@@ -59,7 +62,7 @@
     <!-- HEADER -->
     <header class="hdr">
         <div class="hdr-inner">
-    <a href="../index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <span class="logo-name">Zaira<span>.</span>Officina</span>
                 <span class="logo-tag">Un'officina digitale per attività reali</span>
             </a>
@@ -145,7 +148,8 @@
                     <p>Da zero richieste online a 3–5 contatti a settimana. Senza fare pubblicità.</p>
                 </article>
             </div>
-            <p style="margin-top:24px; font-size:15px; color:var(--muted); font-weight:300; font-style:italic;">Il problema non è avere un sito. È averne uno che non lavora.</p>
+            <!-- era: style="margin-top:24px; font-size:15px; color:var(--muted); font-weight:300; font-style:italic;" -->
+            <p class="proof-note">Il problema non è avere un sito. È averne uno che non lavora.</p>
         </div>
     </section>
 
@@ -158,64 +162,64 @@
 
                 <div class="servizio-card">
                     <svg class="servizio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
-        </svg>
+                        <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+                    </svg>
                     <h3>Hosting e dominio .it</h3>
                     <p>Inclusi nel canone. Ci penso io: registrazione, rinnovo annuale, configurazione DNS. Tu non apri nessun pannello.</p>
                 </div>
 
                 <div class="servizio-card">
                     <svg class="servizio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
                     <h3>Certificato SSL</h3>
                     <p>Il lucchetto verde è incluso e automatico. Il tuo sito è sempre sicuro e non compare nei browser come "non sicuro".</p>
                 </div>
 
                 <div class="servizio-card">
                     <svg class="servizio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
-        </svg>
+                        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                    </svg>
                     <h3>Modifiche ai contenuti</h3>
                     <p>Fino a 2 ore al mese per aggiornare testi, immagini, orari, recapiti, promozioni. Mi scrivi, lo faccio io.</p>
                 </div>
 
                 <div class="servizio-card">
                     <svg class="servizio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-        </svg>
+                        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                    </svg>
                     <h3>Assistenza diretta</h3>
                     <p>Via WhatsApp o email. Nessun ticket, nessuna chiamata a vuoto. Una persona sola che conosce il tuo sito.</p>
                 </div>
 
                 <div class="servizio-card">
                     <svg class="servizio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
-        </svg>
+                        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                    </svg>
                     <h3>Manutenzione tecnica</h3>
                     <p>Aggiornamenti tecnici ordinari, monitoraggio, interventi di continuità. Tutto senza che tu debba sapere cosa significa.</p>
                 </div>
 
                 <div class="servizio-card">
                     <svg class="servizio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
-        </svg>
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
                     <h3>Backup periodici</h3>
                     <p>Il sito viene salvato regolarmente. In caso di problemi si ripristina. Per dormire sonni tranquilli.</p>
                 </div>
 
                 <div class="servizio-card">
                     <svg class="servizio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/>
-        </svg>
+                        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/>
+                    </svg>
                     <h3>Audit SEO (dal 13° mese)</h3>
                     <p>Dal 13° mese incluso un audit SEO trimestrale gratuito per migliorare la visibilità locale del tuo sito.</p>
                 </div>
 
                 <div class="servizio-card">
                     <svg class="servizio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-        </svg>
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
                     <h3>Priorità ordinaria</h3>
                     <p>Dal 13° mese le tue richieste hanno priorità sulle nuove attivazioni. Chi rimane conta di più.</p>
                 </div>
@@ -229,34 +233,59 @@
         <div class="wrap">
             <p class="section-label">// il prezzo</p>
             <h2>Due numeri. Nient'altro.<span>Per iniziare a portare clienti.</span></h2>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--gap); background:var(--border); margin-bottom:32px;">
-                <div style="background:var(--bg); padding:40px 36px; position:relative; overflow:hidden;">
-                    <div style="position:absolute; top:0; left:0; right:0; height:3px; background:var(--accent);"></div>
-                    <p style="font-family:'Courier Prime',monospace; font-size:11px; color:var(--muted); letter-spacing:.15em; text-transform:uppercase; margin-bottom:12px;">Una volta sola</p>
-                    <p style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:72px; color:var(--accent); line-height:1;">€149</p>
-                    <p style="font-size:15px; color:var(--muted); font-weight:300; margin-top:12px; line-height:1.7;">Attivazione iniziale. Copre avvio del progetto, sviluppo del sito e messa online.</p>
+
+            <!-- era: style="display:grid; grid-template-columns:1fr 1fr; gap:var(--gap); background:var(--border); margin-bottom:32px;" -->
+            <div class="price-split">
+
+                <!-- Attivazione -->
+                <!-- era: style="background:var(--bg); padding:40px 36px; position:relative; overflow:hidden;" -->
+                <div class="price-cell">
+                    <!-- era: style="position:absolute; top:0; left:0; right:0; height:3px; background:var(--accent);" -->
+                    <div class="price-bar price-bar--accent"></div>
+                    <!-- era: style="font-family:'Courier Prime',...; font-size:11px; color:var(--muted); ...;" -->
+                    <p class="price-cell-label">Una volta sola</p>
+                    <!-- era: style="font-family:'Barlow Condensed',...; font-weight:900; font-size:72px; color:var(--accent); line-height:1;" -->
+                    <p class="price-cell-num price-cell-num--accent">€149</p>
+                    <!-- era: style="font-size:15px; color:var(--muted); font-weight:300; margin-top:12px; line-height:1.7;" -->
+                    <p class="price-cell-desc">Attivazione iniziale. Copre avvio del progetto, sviluppo del sito e messa online.</p>
                 </div>
-                <div style="background:var(--bg); padding:40px 36px; position:relative; overflow:hidden;">
-                    <div style="position:absolute; top:0; left:0; right:0; height:3px; background:var(--border);"></div>
-                    <p style="font-family:'Courier Prime',monospace; font-size:11px; color:var(--muted); letter-spacing:.15em; text-transform:uppercase; margin-bottom:12px;">Ogni mese</p>
-                    <p style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:72px; color:var(--text); line-height:1;">€49</p>
-                    <p style="font-size:15px; color:var(--muted); font-weight:300; margin-top:12px; line-height:1.7;">Tutto quello che serve perché il sito funzioni davvero.<br>Sempre aggiornato. Sempre seguito.</p>
+
+                <!-- Canone mensile -->
+                <div class="price-cell">
+                    <!-- era: style="position:absolute; top:0; left:0; right:0; height:3px; background:var(--border);" -->
+                    <div class="price-bar price-bar--border"></div>
+                    <p class="price-cell-label">Ogni mese</p>
+                    <!-- era: color:var(--text) -->
+                    <p class="price-cell-num price-cell-num--text">€49</p>
+                    <p class="price-cell-desc">Tutto quello che serve perché il sito funzioni davvero.<br>Sempre aggiornato. Sempre seguito.</p>
                 </div>
+
             </div>
-            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:40px;">
-                <p style="font-size:15px; color:var(--muted); font-weight:300;">
-                    Vuoi vedere <strong style="color:var(--text); font-weight:500;">quanto ti costa davvero</strong> in 3 anni?
-                    <a href="analisi-economica.html" style="color:var(--accent); text-decoration:none; margin-left:4px;">Guarda tutti i numeri →</a>
+            <!-- /price-split -->
+
+            <!-- era: style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:40px;" -->
+            <div class="price-meta-row">
+                <!-- era: style="font-size:15px; color:var(--muted); font-weight:300;" -->
+                <p class="price-meta-text">
+                    Vuoi vedere <strong class="price-meta-strong">quanto ti costa davvero</strong> in 3 anni?
+                    <!-- era: style="color:var(--accent); text-decoration:none; margin-left:4px;" -->
+                    <a href="analisi-economica.html" class="price-meta-link">Guarda tutti i numeri →</a>
                 </p>
-                <p style="font-family:'Courier Prime',monospace; font-size:11px; color:var(--muted); letter-spacing:.08em;">Min. 12 mesi · Disdici dopo con 30 giorni di preavviso</p>
+                <!-- era: style="font-family:'Courier Prime',...; font-size:11px; color:var(--muted); letter-spacing:.08em;" -->
+                <p class="price-meta-note">Min. 12 mesi · Disdici dopo con 30 giorni di preavviso</p>
             </div>
-            <div style="border-top:var(--gap) solid var(--border); padding-top:36px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
-                <p style="font-size:18px; font-weight:300; color:var(--muted); line-height:1.6;">
+
+            <!-- era: style="border-top:var(--gap) solid var(--border); padding-top:36px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;" -->
+            <div class="price-bottom">
+                <!-- era: style="font-size:18px; font-weight:300; color:var(--muted); line-height:1.6;" -->
+                <p class="price-bottom-text">
                     Non è il costo il problema.<br>
-                    <strong style="color:var(--text); font-weight:500;">È quanto ti sta facendo perdere oggi.</strong>
+                    <!-- era: style="color:var(--text); font-weight:500;" -->
+                    <strong class="price-bottom-strong">È quanto ti sta facendo perdere oggi.</strong>
                 </p>
                 <a href="https://wa.me/393930719544?text=Ciao%20Cristian%2C%20voglio%20capire%20se%20Sito%20Attivo%20fa%20per%20me." class="btn-p" target="_blank" rel="noopener">Scrivimi su WhatsApp</a>
             </div>
+
         </div>
     </section>
 
@@ -328,9 +357,9 @@
 
                 <div class="faq-item">
                     <button class="faq-q">
-          <span class="faq-q-text">Posso smettere quando voglio?</span>
-          <span class="faq-icon">+</span>
-        </button>
+                        <span class="faq-q-text">Posso smettere quando voglio?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
                     <div class="faq-a">
                         Dopo i primi 12 mesi, sì: basta un preavviso scritto di 30 giorni via email o PEC. Nei primi 12 mesi il servizio ha durata minima per coprire i costi di avvio — in caso di interruzione anticipata restano dovuti i canoni maturati fino alla scadenza.
                         <a href="sito-attivo-termini.html#s4" class="faq-ref">→ Art. 4 e 16 dei Termini</a>
@@ -339,9 +368,9 @@
 
                 <div class="faq-item">
                     <button class="faq-q">
-          <span class="faq-q-text">Il sito e il dominio sono miei?</span>
-          <span class="faq-icon">+</span>
-        </button>
+                        <span class="faq-q-text">Il sito e il dominio sono miei?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
                     <div class="faq-a">
                         Il dominio è intestato a te fin dall'inizio. Dopo 12 mesi puoi richiedere la cessione finale del progetto con il credito maturato, ricevendo i file trasferibili e le informazioni tecniche per il passaggio. Dopo 36 mesi di abbonamento la cessione è gratuita.
                         <a href="sito-attivo-termini.html#s6" class="faq-ref">→ Art. 6, 8 e 12 dei Termini</a>
@@ -350,9 +379,9 @@
 
                 <div class="faq-item">
                     <button class="faq-q">
-          <span class="faq-q-text">Le modifiche sono davvero incluse?</span>
-          <span class="faq-icon">+</span>
-        </button>
+                        <span class="faq-q-text">Le modifiche sono davvero incluse?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
                     <div class="faq-a">
                         Sì, fino a 2 ore al mese per aggiornamenti a testi, immagini, orari e contatti già presenti. Mi scrivi e lo faccio io. Oltre le 2 ore o per nuove pagine e funzionalità, valutiamo insieme un preventivo a parte.
                         <a href="sito-attivo-termini.html#s9" class="faq-ref">→ Art. 9 dei Termini</a>
@@ -361,9 +390,9 @@
 
                 <div class="faq-item">
                     <button class="faq-q">
-          <span class="faq-q-text">Cosa succede se non pago in tempo?</span>
-          <span class="faq-icon">+</span>
-        </button>
+                        <span class="faq-q-text">Cosa succede se non pago in tempo?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
                     <div class="faq-a">
                         Dopo 10 giorni di ritardo posso sospendere assistenza e aggiornamenti. Dopo 30 giorni il sito può essere temporaneamente offline. Restano dovuti tutti gli importi maturati fino a quel momento.
                         <a href="sito-attivo-termini.html#s15" class="faq-ref">→ Art. 15 dei Termini</a>
@@ -372,9 +401,9 @@
 
                 <div class="faq-item">
                     <button class="faq-q">
-          <span class="faq-q-text">Chi si occupa della privacy del mio sito?</span>
-          <span class="faq-icon">+</span>
-        </button>
+                        <span class="faq-q-text">Chi si occupa della privacy del mio sito?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
                     <div class="faq-a">
                         Tu sei il Titolare del trattamento dei dati. Posso fornirti un modello generico di informativa privacy come supporto operativo, ma la verifica finale e la responsabilità legale spettano a te o al tuo consulente.
                         <a href="sito-attivo-termini.html#s19" class="faq-ref">→ Art. 19 dei Termini</a>
@@ -383,9 +412,9 @@
 
                 <div class="faq-item">
                     <button class="faq-q">
-          <span class="faq-q-text">Quanto tempo ci vuole per andare online?</span>
-          <span class="faq-icon">+</span>
-        </button>
+                        <span class="faq-q-text">Quanto tempo ci vuole per andare online?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
                     <div class="faq-a">
                         Se i materiali sono pronti (logo, testi, foto), di solito tra 3 e 7 giorni lavorativi dall'attivazione. Il sito parte solo dopo la ricezione del pagamento dell'attivazione iniziale.
                     </div>
@@ -393,9 +422,9 @@
 
                 <div class="faq-item">
                     <button class="faq-q">
-          <span class="faq-q-text">Ho già un sito. Posso passare a Sito Attivo?</span>
-          <span class="faq-icon">+</span>
-        </button>
+                        <span class="faq-q-text">Ho già un sito. Posso passare a Sito Attivo?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
                     <div class="faq-a">
                         Sì. Lo guardo e ti dico onestamente se conviene migliorarlo o ripartire da zero. Nessun costo di analisi preliminare.
                     </div>
@@ -450,10 +479,11 @@
             <p class="section-label">// prossimo passo</p>
             <h2>Un'unica cosa<br><span>da fare adesso.</span></h2>
             <p class="cta-sub">Scrivimi. Ti dico subito se <strong>Sito Attivo</strong> è la formula giusta per la tua attività. Nessun impegno, rispondo entro 24 ore lavorative.</p>
-            <p style="font-size:14px; color:var(--muted); font-weight:300; max-width:480px; margin-bottom:32px; line-height:1.7; border-left:3px solid var(--border); padding-left:16px;">Non lavoro con tutti. Se hai un'attività reale e vuoi che il sito inizi a lavorare per te, allora ha senso parlarne.</p>
+            <!-- era: style="font-size:14px; color:var(--muted); font-weight:300; max-width:480px; margin-bottom:32px; line-height:1.7; border-left:3px solid var(--border); padding-left:16px;" -->
+            <p class="cta-disclaimer">Non lavoro con tutti. Se hai un'attività reale e vuoi che il sito inizi a lavorare per te, allora ha senso parlarne.</p>
             <div class="cta-btns">
                 <a href="https://wa.me/393930719544?text=Ciao%20Cristian%2C%20sono%20interessato%20a%20Sito%20Attivo.%20Possiamo%20parlarne%3F" class="btn-p" target="_blank" rel="noopener">Scrivimi su WhatsApp</a>
-                <a href="mailto:info@zairaofficina.it?subject=Sito%20Attivo%20%E2%80%94%20Informazioni" class="btn-s">Oppure via email</a>
+                <a href="mailto:info@zairaofficina.it" class="btn-s">Oppure via email</a>
             </div>
             <div class="cta-steps">
                 <div class="cta-step">
@@ -469,31 +499,34 @@
                     <span class="step-text">Attivazione con €149 — sito online in pochi giorni</span>
                 </div>
             </div>
-            <p class="cta-note">Servizio rivolto a professionisti e attività (B2B). — <a href="sito-attivo-termini.html" style="color:var(--muted);text-decoration:none;">Termini e condizioni completi</a></p>
+            <!-- era: <a style="color:var(--muted);text-decoration:none;"> -->
+            <p class="cta-note">Servizio rivolto a professionisti e attività (B2B). — <a href="sito-attivo-termini.html" class="link-muted">Termini e condizioni completi</a></p>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
         <div class="footer-logo">ZAIRA<span>.</span>OFFICINA</div>
-        <div style="text-align: right;">
+        <!-- era: style="text-align: right;" -->
+        <div class="footer-right">
             <div class="footer-copy">
                 © <span id="footer-year"></span> — Forlì (FC) — Provincia di Forlì-Cesena, Emilia-Romagna
             </div>
-            <div style="margin-top: 0.5rem;">
-                <a href="privacy.html" style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'"
-                    onmouseout="this.style.color='var(--muted)'">Privacy Policy</a>
+            <!-- era: style="margin-top: 0.5rem;" -->
+            <div class="footer-link-wrap">
+                <!-- era: style="font-family:...; color:...; ..." onmouseover="..." onmouseout="..." -->
+                <a href="privacy.html" class="footer-privacy-link">Privacy Policy</a>
             </div>
             <!-- Disclaimer prestazione occasionale — rimuovi quando apri P.IVA -->
-            <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--border); letter-spacing: 0.08em; margin-top: 0.4rem;">
-                Zaira Officina è un'attività freelance indipendente.<br> Collaborazioni svolte come prestazione occasionale ai sensi dell'art. 2222 c.c.
+            <!-- era: style="font-family:...; font-size:...; color:...; letter-spacing:...; margin-top:..." -->
+            <div class="footer-disclaimer">
+                Zaira Officina è un'attività freelance indipendente.<br>Collaborazioni svolte come prestazione occasionale ai sensi dell'art. 2222 c.c.
             </div>
         </div>
     </footer>
 
-
     <script>
-        // Scroll progress
+        // Scroll progress bar
         const prog = document.getElementById('prog');
         window.addEventListener('scroll', () => {
             const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
@@ -511,6 +544,28 @@
                 if (!isOpen) item.classList.add('open');
             });
         });
+
+        // Footer anno dinamico
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.nav-mobile-menu');
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', () => {
+                const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+                hamburger.setAttribute('aria-expanded', !expanded);
+                mobileMenu.classList.toggle('open');
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
     </script>
+
 </body>
+
 </html>

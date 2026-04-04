@@ -247,6 +247,7 @@ body::before {
     text-transform: uppercase;
     margin-top: 2px;
 }
+
 .price-note {
     font-family: 'Courier Prime', monospace;
     font-size: 13px;
@@ -1326,19 +1327,25 @@ footer {
 .hamburger.is-open .hamburger-bar:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }
+
 .hamburger.is-open .hamburger-bar:nth-child(2) {
     opacity: 0;
 }
+
 .hamburger.is-open .hamburger-bar:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
 }
+
 .hamburger.is-open .hamburger-bar {
     background: var(--accent);
 }
 
 .nav-mobile-menu {
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(17, 16, 8, 0.98);
     backdrop-filter: blur(10px);
     z-index: 90;
@@ -1394,5 +1401,258 @@ footer {
     }
     .hamburger {
         display: flex;
+    }
+}
+
+
+/* ══════════════════════════════════════════════════════════════════════════
+   PATCH — classi estratte da inline style in sito-attivo.html
+   Aggiungere in fondo a css/sito-attivo.css
+   ══════════════════════════════════════════════════════════════════════════ */
+
+
+/* ── SEZIONE "PERCHÉ FUNZIONA" ──────────────────────────────────────────── */
+
+.proof-note {
+    margin-top: 24px;
+    font-size: 15px;
+    color: var(--muted);
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+/* ── SEZIONE PREZZO ─────────────────────────────────────────────────────── */
+
+
+/* Griglia a due colonne attivazione / canone */
+
+.price-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    background: var(--border);
+    margin-bottom: 32px;
+}
+
+
+/* Singola cella prezzo */
+
+.price-cell {
+    background: var(--bg);
+    padding: 40px 36px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Barra colorata in cima alla cella */
+
+.price-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+}
+
+.price-bar--accent {
+    background: var(--accent);
+}
+
+.price-bar--border {
+    background: var(--border);
+}
+
+
+/* Etichetta mono sopra il numero */
+
+.price-cell-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+
+/* Numero grande */
+
+.price-cell-num {
+    font-family: var(--font-title);
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 1;
+}
+
+.price-cell-num--accent {
+    color: var(--accent);
+}
+
+.price-cell-num--text {
+    color: var(--text);
+}
+
+
+/* Descrizione sotto il numero */
+
+.price-cell-desc {
+    font-size: 15px;
+    color: var(--muted);
+    font-weight: 300;
+    margin-top: 12px;
+    line-height: 1.7;
+}
+
+
+/* Riga meta: link analisi + nota minima */
+
+.price-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.price-meta-text {
+    font-size: 15px;
+    color: var(--muted);
+    font-weight: 300;
+}
+
+.price-meta-strong {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.price-meta-link {
+    color: var(--accent);
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.price-meta-note {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+}
+
+
+/* Riga inferiore: frase + CTA */
+
+.price-bottom {
+    border-top: var(--gap) solid var(--border);
+    padding-top: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.price-bottom-text {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.price-bottom-strong {
+    color: var(--text);
+    font-weight: 500;
+}
+
+
+/* ── CTA FINALE ─────────────────────────────────────────────────────────── */
+
+
+/* Nota disclaimer con bordo sinistro */
+
+.cta-disclaimer {
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 300;
+    max-width: 480px;
+    margin-bottom: 32px;
+    line-height: 1.7;
+    border-left: 3px solid var(--border);
+    padding-left: 16px;
+}
+
+
+/* Link neutro senza decorazione */
+
+.link-muted {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.link-muted:hover {
+    color: var(--accent);
+}
+
+
+/* ── FOOTER ─────────────────────────────────────────────────────────────── */
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-link-wrap {
+    margin-top: 0.5rem;
+}
+
+
+/* Link Privacy Policy — hover via CSS, niente onmouseover */
+
+.footer-privacy-link {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1px;
+    transition: color 0.2s;
+}
+
+.footer-privacy-link:hover {
+    color: var(--accent);
+}
+
+
+/* Disclaimer prestazione occasionale */
+
+.footer-disclaimer {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--border);
+    letter-spacing: 0.08em;
+    margin-top: 0.4rem;
+}
+
+
+/* ── RESPONSIVE — price-split su mobile ────────────────────────────────── */
+
+@media (max-width: 600px) {
+    .price-split {
+        grid-template-columns: 1fr;
+    }
+    .price-cell {
+        padding: 28px 20px;
+    }
+    .price-cell-num {
+        font-size: 56px;
+    }
+    .price-meta-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .price-bottom {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
