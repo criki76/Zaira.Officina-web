@@ -1295,3 +1295,104 @@ footer {
         align-items: flex-start;
     }
 }
+
+
+/* ─── HAMBURGER (mobile) ─── */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.hamburger .hamburger-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    transition: transform 0.25s ease, opacity 0.2s ease;
+    transform-origin: center;
+}
+
+.hamburger.is-open .hamburger-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.is-open .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.is-open .hamburger-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+.hamburger.is-open .hamburger-bar {
+    background: var(--accent);
+}
+
+.nav-mobile-menu {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(17, 16, 8, 0.98);
+    backdrop-filter: blur(10px);
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.nav-mobile-menu.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.nav-mobile-menu a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 10vw, 3rem);
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.2s;
+}
+
+.nav-mobile-menu a:first-child {
+    border-top: 1px solid var(--border);
+}
+
+.nav-mobile-menu a:hover,
+.nav-mobile-menu a:active {
+    color: var(--accent);
+}
+
+.nav-mobile-menu a.nav-mobile-cta {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .hdr-cta {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
