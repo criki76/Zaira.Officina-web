@@ -20,7 +20,7 @@
 }
 
 /* Su mobile: sale dal basso senza coprire il floating CTA */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #cookie-banner {
         bottom: 72px; /* altezza mobile-cta-bar (~68px) + margine */
         padding: 1rem 1.2rem;

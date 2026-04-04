@@ -501,7 +501,7 @@
     /* nascosta su desktop */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .mobile-cta-bar {
         display: flex;
         position: fixed;
