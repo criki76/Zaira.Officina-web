@@ -445,8 +445,12 @@
         padding-bottom: 1.5rem;
     }
     /* Copertura territoriale SEO */
-    body>div[style*="padding: 2rem 3rem"] {
-        padding: 1.5rem 1.25rem !important;
+    .territory-block {
+        padding: 1.5rem 1.25rem;
+    }
+    /* Wrapper link condizioni pricing */
+    .pz-conditions-wrap {
+        padding: 28px 1.25rem 0;
     }
 }
 

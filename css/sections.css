@@ -1395,3 +1395,153 @@ footer {
     color: var(--accent);
     letter-spacing: 0.05em;
 }
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION TITLE — span accent (sostituisce tutti gli style="color:var(--accent)"
+   nei titoli h2.section-title)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.section-title span {
+    color: var(--accent);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CONTACT — elementi che erano inline styled
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.contact-intro {
+    color: var(--text-low);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.contact-city {
+    color: var(--white);
+}
+
+.contact-value-muted {
+    color: var(--text-low);
+}
+
+.contact-cities {
+    font-size: 0.85rem;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TERRITORY BLOCK — copertura geografica SEO
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.territory-block {
+    border-top: 1px solid var(--border);
+    background: var(--bg2);
+    padding: 2rem 3rem;
+}
+
+.territory-block-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.territory-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+}
+
+.territory-cities {
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.territory-link {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1px;
+    transition: color var(--transition-fast);
+}
+
+.territory-link:hover {
+    color: var(--accent);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FOOTER — elementi che erano inline styled
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-legal {
+    margin-top: 0.5rem;
+}
+
+.footer-legal-link {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1px;
+    transition: color var(--transition-fast);
+}
+
+.footer-legal-link:hover {
+    color: var(--accent);
+}
+
+.footer-disclaimer {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--border);
+    letter-spacing: 0.08em;
+    margin-top: 0.4rem;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PRICING — link condizioni fornitura
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.pz-conditions-wrap {
+    text-align: center;
+    padding: 28px 20px 0;
+}
+
+.pz-conditions-link {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2px;
+    transition: color var(--transition-fast);
+}
+
+.pz-conditions-link:hover {
+    color: var(--accent);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   COOKIE BANNER — link privacy
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.cookie-privacy-link {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+}
