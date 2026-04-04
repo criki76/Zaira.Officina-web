@@ -493,7 +493,8 @@
 /* ═══════════════════════════════════════════════════════════════════════════
    FLOATING CONTACT BAR — barra fissa in fondo su mobile
    ─────────────────────────────────────────────────────────────────────────
-   Visibile solo su < 600px. Contiene WhatsApp + "Scrivici".
+   Visibile su < 900px (breakpoint hamburger menu).
+   Contiene WhatsApp + "Scrivici".
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .mobile-cta-bar {
@@ -501,7 +502,7 @@
     /* nascosta su desktop */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .mobile-cta-bar {
         display: flex;
         position: fixed;
@@ -512,10 +513,9 @@
         background: var(--bg);
         border-top: 1px solid var(--border);
         padding: 0.75rem 1.25rem;
-        /* spazio per la gesture bar Android/iPhone */
-        padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
         gap: 0.75rem;
         align-items: center;
+        /* Piccola ombra verso l'alto per staccarsi dal contenuto */
         box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
     }
     /* Bottone WhatsApp — verde */

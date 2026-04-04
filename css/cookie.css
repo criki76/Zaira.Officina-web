@@ -19,23 +19,23 @@
     transform: translateY(0);
 }
 
+
 /* Su mobile: sale dal basso senza coprire il floating CTA */
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
     #cookie-banner {
-        bottom: 72px; /* altezza mobile-cta-bar (~68px) + margine */
+        bottom: 72px;
+        /* altezza mobile-cta-bar (~68px) + margine */
         padding: 1rem 1.2rem;
     }
-
     .cookie-inner {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.75rem;
     }
-
     .cookie-actions {
         width: 100%;
     }
-
     .cookie-btn {
         flex: 1;
         text-align: center;
