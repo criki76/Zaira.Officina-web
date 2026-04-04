@@ -82,6 +82,19 @@
     .pricing-cards {
         grid-template-columns: 1fr 1fr;
     }
+    /* ── SITO ATTIVO: 2 card per riga su tablet ── */
+    .sa-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .sa-header {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .sa-header-right {
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     /* ── REVIEWS: una recensione per riga ── */
     .reviews-grid {
         grid-template-columns: 1fr;
@@ -279,6 +292,38 @@
     .pricing-cards {
         grid-template-columns: 1fr;
         margin-top: 2.5rem;
+    }
+    /* ── SITO ATTIVO mobile ── */
+    .sa-block {
+        padding: 1.8rem 1.25rem;
+    }
+    .sa-cards {
+        grid-template-columns: 1fr;
+    }
+    .sa-header-right {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .sa-card {
+        padding: 1.8rem 1.5rem;
+    }
+    .sa-featured {
+        border-left: 4px solid #111008;
+        border-top: none;
+    }
+    .sa-monthly {
+        font-size: 2.4rem;
+    }
+    .sa-card .btn-outline,
+    .sa-card .btn-dark {
+        width: 100%;
+        text-align: center;
+        padding: 0.9rem 1.5rem;
+        display: block;
+    }
+    .pricing-divider {
+        margin: 2.5rem 0 1.5rem;
     }
     .price-card {
         padding: 2rem 1.5rem;

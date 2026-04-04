@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condizioni di Fornitura — Sito Web | Zaira Officina</title>
+    <meta name="description" content="Condizioni di fornitura per la realizzazione di siti web con pagamento una tantum. Zaira Officina, Forlimpopoli (FC).">
+    <link rel="canonical" href="https://zairaofficina.it/pages/fornitura-termini.html">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #111008;
+            --bg2: #181510;
+            --accent: #e8a227;
+            --accent-dim: rgba(232, 162, 39, 0.12);
+            --text: #e8e4d9;
+            --muted: #7a7567;
+            --border: rgba(232, 162, 39, 0.18);
+            --gap: 1px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Barlow', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.4;
+        }
+
+        /* MARQUEE */
+        .marquee-strip {
+            background: var(--accent);
+            color: var(--bg);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 13px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 8px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            z-index: 10;
+        }
+
+        .marquee-inner {
+            display: inline-block;
+            animation: marquee 24s linear infinite;
+        }
+
+        .marquee-inner span { margin: 0 40px; }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* HEADER */
+        header {
+            position: relative;
+            z-index: 10;
+            border-bottom: var(--gap) solid var(--border);
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 22px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .logo span { color: var(--accent); }
+
+        .header-badge {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            z-index: 5;
+            padding: 80px 40px 60px;
+            border-bottom: var(--gap) solid var(--border);
+        }
+
+        .hero-label {
+            font-family: 'Courier Prime', monospace;
+            font-size: 12px;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-label::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .hero h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: clamp(52px, 8vw, 96px);
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            margin-bottom: 32px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent);
+            display: block;
+        }
+
+        .hero-intro {
+            max-width: 560px;
+            font-weight: 300;
+            font-size: 17px;
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .meta-item strong {
+            display: block;
+            color: var(--text);
+            font-size: 13px;
+            margin-top: 2px;
+        }
+
+        /* IN BREVE */
+        .inbreve {
+            position: relative;
+            z-index: 5;
+            margin: 0;
+            padding: 48px 40px;
+            border-bottom: var(--gap) solid var(--border);
+            background: var(--accent-dim);
+        }
+
+        .inbreve-label {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .inbreve-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--gap);
+            background: var(--border);
+        }
+
+        .inbreve-item {
+            background: var(--bg);
+            padding: 20px 24px;
+            font-size: 15px;
+            font-weight: 300;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inbreve-item::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 3px;
+            background: var(--accent);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.25s ease;
+        }
+
+        .inbreve-item:hover::before { transform: scaleY(1); }
+
+        .inbreve-item .check {
+            color: var(--accent);
+            font-family: 'Courier Prime', monospace;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+
+        /* LAYOUT */
+        .page-layout {
+            position: relative;
+            z-index: 5;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            min-height: 100vh;
+            border-bottom: var(--gap) solid var(--border);
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            border-right: var(--gap) solid var(--border);
+            padding: 40px 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+
+        .sidebar::-webkit-scrollbar { display: none; }
+
+        .sidebar-title {
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0 24px 16px;
+            border-bottom: var(--gap) solid var(--border);
+            margin-bottom: 8px;
+        }
+
+        .nav-item {
+            display: block;
+            padding: 10px 24px;
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--muted);
+            text-decoration: none;
+            border-left: 2px solid transparent;
+            transition: all 0.2s;
+            line-height: 1.4;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            color: var(--text);
+            border-left-color: var(--accent);
+            background: var(--accent-dim);
+        }
+
+        .nav-item .num {
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            color: var(--accent);
+            margin-right: 8px;
+        }
+
+        /* CONTENT */
+        .content {
+            padding: 60px 56px;
+            max-width: 800px;
+        }
+
+        .section {
+            margin-bottom: 72px;
+            padding-bottom: 72px;
+            border-bottom: var(--gap) solid var(--border);
+        }
+
+        .section:last-child { border-bottom: none; }
+
+        .section-num {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-num::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .section h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            line-height: 1;
+            margin-bottom: 28px;
+            color: var(--text);
+        }
+
+        .section h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            margin: 32px 0 12px;
+        }
+
+        .section p {
+            color: var(--muted);
+            font-weight: 300;
+            margin-bottom: 16px;
+            font-size: 15.5px;
+        }
+
+        .section p strong { color: var(--text); font-weight: 500; }
+
+        .section ul { list-style: none; margin: 16px 0; }
+
+        .section ul li {
+            padding: 8px 0 8px 20px;
+            position: relative;
+            color: var(--muted);
+            font-weight: 300;
+            font-size: 15px;
+            border-bottom: var(--gap) solid rgba(232, 162, 39, 0.07);
+        }
+
+        .section ul li:last-child { border-bottom: none; }
+
+        .section ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-family: 'Courier Prime', monospace;
+        }
+
+        /* HIGHLIGHT */
+        .highlight {
+            border-left: 3px solid var(--accent);
+            padding: 16px 20px;
+            background: var(--accent-dim);
+            margin: 24px 0;
+            font-size: 14.5px;
+            color: var(--text);
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        /* PRICING */
+        .pricing-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: var(--gap) solid var(--border);
+            gap: 16px;
+        }
+
+        .pricing-row:last-child { border-bottom: none; }
+
+        .pricing-label {
+            font-size: 15px;
+            color: var(--muted);
+            font-weight: 300;
+        }
+
+        .pricing-val {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+
+        /* PIANO CARDS */
+        .piano-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--gap);
+            background: var(--border);
+            margin: 24px 0;
+        }
+
+        .piano-card {
+            background: var(--bg2);
+            padding: 28px 20px;
+            position: relative;
+            transition: background 0.2s;
+        }
+
+        .piano-card:hover { background: var(--accent-dim); }
+
+        .piano-card.featured { background: var(--accent-dim); }
+
+        .piano-name {
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .piano-prezzo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 42px;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .piano-note {
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .piano-consegna {
+            font-size: 13px;
+            color: var(--muted);
+            font-weight: 300;
+        }
+
+        /* FAQ */
+        .faq-section {
+            position: relative;
+            z-index: 5;
+            padding: 80px 40px;
+            border-top: var(--gap) solid var(--border);
+            background: var(--bg2);
+        }
+
+        .faq-label {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .faq-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: clamp(36px, 5vw, 64px);
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 56px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: var(--gap);
+            background: var(--border);
+        }
+
+        .faq-item {
+            background: var(--bg);
+            padding: 32px 28px;
+            cursor: pointer;
+            transition: background 0.2s;
+            position: relative;
+        }
+
+        .faq-item:hover { background: var(--accent-dim); }
+
+        .faq-q {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: var(--text);
+            margin-bottom: 12px;
+            padding-right: 32px;
+            line-height: 1.2;
+        }
+
+        .faq-icon {
+            position: absolute;
+            top: 32px; right: 28px;
+            color: var(--accent);
+            font-family: 'Courier Prime', monospace;
+            font-size: 18px;
+            transition: transform 0.2s;
+        }
+
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        .faq-a {
+            font-size: 14.5px;
+            color: var(--muted);
+            font-weight: 300;
+            line-height: 1.75;
+            display: none;
+            margin-top: 8px;
+            border-top: var(--gap) solid var(--border);
+            padding-top: 16px;
+        }
+
+        .faq-item.open .faq-a { display: block; }
+
+        /* CTA */
+        .cta-section {
+            position: relative;
+            z-index: 5;
+            padding: 80px 40px;
+            border-top: var(--gap) solid var(--border);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .cta-text h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: clamp(32px, 4vw, 52px);
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .cta-text p {
+            color: var(--muted);
+            font-weight: 300;
+            font-size: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 16px 36px;
+            text-decoration: none;
+            background: var(--accent);
+            color: var(--bg);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn:hover { background: var(--text); color: var(--bg); }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            margin-left: 12px;
+        }
+
+        .btn-ghost:hover { background: var(--accent); color: var(--bg); }
+
+        /* FOOTER */
+        footer {
+            position: relative;
+            z-index: 5;
+            border-top: var(--gap) solid var(--border);
+            padding: 32px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-brand {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 16px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text);
+        }
+
+        .footer-brand span { color: var(--accent); }
+
+        .footer-info {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+            text-align: right;
+        }
+
+        /* SCROLL PROGRESS */
+        .scroll-progress {
+            position: fixed;
+            top: 0; left: 0;
+            height: 2px;
+            background: var(--accent);
+            z-index: 100;
+            width: 0%;
+            transition: width 0.1s;
+        }
+
+        /* BACK TO TOP */
+        .back-top {
+            position: fixed;
+            bottom: 32px; right: 32px;
+            width: 44px; height: 44px;
+            background: var(--accent);
+            color: var(--bg);
+            border: none;
+            cursor: pointer;
+            font-family: 'Courier Prime', monospace;
+            font-size: 18px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            transition: background 0.2s;
+        }
+
+        .back-top:hover { background: var(--text); }
+        .back-top.visible { display: flex; }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+            .page-layout { grid-template-columns: 1fr; }
+            .sidebar { display: none; }
+            .content { padding: 40px 24px; }
+            header { padding: 16px 24px; }
+            .hero { padding: 56px 24px 40px; }
+            .inbreve { padding: 40px 24px; }
+            .piano-grid { grid-template-columns: 1fr; }
+            .faq-section { padding: 56px 24px; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .cta-section { grid-template-columns: 1fr; padding: 56px 24px; }
+            footer { padding: 24px; flex-direction: column; text-align: center; }
+            .footer-info { text-align: center; }
+            .hero-meta { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scroll-progress" id="progress"></div>
+
+    <!-- HEADER -->
+    <header>
+    <a href="../index.html" class="logo">Zaira<span>.</span>Officina</a>
+        <span class="header-badge">Documento legale — Rev. Apr 2026</span>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-label">Sito Web — Pagamento una tantum</div>
+        <h1>Condizioni<br><em>di fornitura</em></h1>
+        <p class="hero-intro">
+            Paghi una volta, il sito è tuo. Ecco tutto quello che devi sapere prima di partire: cosa include, cosa non include, come funziona il pagamento e cosa succede dopo la consegna.
+        </p>
+        <div class="hero-meta">
+            <div class="meta-item">Versione<strong>Aprile 2026</strong></div>
+            <div class="meta-item">Revisione<strong>1.0</strong></div>
+            <div class="meta-item">Aggiornamento<strong>Aprile 2026</strong></div>
+        </div>
+    </div>
+
+    <!-- IN BREVE -->
+    <div class="inbreve">
+        <div class="inbreve-label">// in breve</div>
+        <div class="inbreve-grid">
+            <div class="inbreve-item"><span class="check">50%</span>acconto prima dell'avvio</div>
+            <div class="inbreve-item"><span class="check">50%</span>saldo alla consegna</div>
+            <div class="inbreve-item"><span class="check">✓</span>Proprietà codice dopo saldo completo</div>
+            <div class="inbreve-item"><span class="check">2</span>round di revisione inclusi</div>
+            <div class="inbreve-item"><span class="check">5–10gg</span>tempi di consegna indicativi</div>
+            <div class="inbreve-item"><span class="check">✗</span>Hosting e dominio non inclusi</div>
+            <div class="inbreve-item"><span class="check">✗</span>Manutenzione non inclusa</div>
+            <div class="inbreve-item"><span class="check">€29</span>manutenzione opzionale /mese</div>
+        </div>
+        <p style="margin-top:28px; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:22px; text-transform:uppercase; letter-spacing:0.03em; color:var(--text);">
+            Non stai acquistando un servizio.<br>
+            <span style="color:var(--accent);">Stai commissionando un prodotto finito. Il codice è tuo.</span>
+        </p>
+    </div>
+
+    <!-- LAYOUT -->
+    <div class="page-layout">
+
+        <!-- SIDEBAR -->
+        <nav class="sidebar">
+            <div class="sidebar-title">Indice</div>
+            <a href="#s1" class="nav-item"><span class="num">01</span>Destinatari</a>
+            <a href="#s2" class="nav-item"><span class="num">02</span>Piani e prezzi</a>
+            <a href="#s3" class="nav-item"><span class="num">03</span>Pagamento</a>
+            <a href="#s4" class="nav-item"><span class="num">04</span>Cosa include</a>
+            <a href="#s5" class="nav-item"><span class="num">05</span>Cosa non include</a>
+            <a href="#s6" class="nav-item"><span class="num">06</span>Revisioni</a>
+            <a href="#s7" class="nav-item"><span class="num">07</span>Tempi di consegna</a>
+            <a href="#s8" class="nav-item"><span class="num">08</span>Proprietà del codice</a>
+            <a href="#s9" class="nav-item"><span class="num">09</span>Contenuti del cliente</a>
+            <a href="#s10" class="nav-item"><span class="num">10</span>Manutenzione post-consegna</a>
+            <a href="#s11" class="nav-item"><span class="num">11</span>Garanzie</a>
+            <a href="#s12" class="nav-item"><span class="num">12</span>Responsabilità</a>
+            <a href="#s13" class="nav-item"><span class="num">13</span>Privacy e GDPR</a>
+            <a href="#s14" class="nav-item"><span class="num">14</span>Referenza e portfolio</a>
+            <a href="#s15" class="nav-item"><span class="num">15</span>Foro competente</a>
+        </nav>
+
+        <!-- CONTENUTO -->
+        <main class="content">
+
+            <div class="section" id="s1">
+                <div class="section-num">01</div>
+                <h2>Destinatari del servizio</h2>
+                <p>Il servizio di realizzazione sito web con pagamento una tantum è rivolto esclusivamente a <strong>professionisti, titolari di attività commerciali, artigiani, liberi professionisti e persone giuridiche (B2B)</strong>.</p>
+                <p>Non è destinato a consumatori privati ai sensi del Codice del Consumo (D.Lgs. 206/2005). Il cliente, accettando il preventivo, dichiara di agire nell'ambito della propria attività professionale o imprenditoriale.</p>
+            </div>
+
+            <div class="section" id="s2">
+                <div class="section-num">02</div>
+                <h2>Piani e prezzi</h2>
+                <p>Il servizio è disponibile nei seguenti piani. Il prezzo concordato è quello indicato nel preventivo scritto inviato al cliente prima dell'avvio.</p>
+                <div class="piano-grid">
+                    <div class="piano-card">
+                        <div class="piano-name">// piano base</div>
+                        <div class="piano-prezzo">€690</div>
+                        <div class="piano-note">Sito Vetrina</div>
+                        <div class="piano-consegna">Consegna 5–7 giorni</div>
+                    </div>
+                    <div class="piano-card featured">
+                        <div class="piano-name">// piano principale</div>
+                        <div class="piano-prezzo">€990</div>
+                        <div class="piano-note">Sito per farti scegliere</div>
+                        <div class="piano-consegna">Consegna 7–10 giorni</div>
+                    </div>
+                    <div class="piano-card">
+                        <div class="piano-name">// bundle completo</div>
+                        <div class="piano-prezzo">€1.190</div>
+                        <div class="piano-note">Sito + Google Business</div>
+                        <div class="piano-consegna">Consegna 7–10 giorni</div>
+                    </div>
+                </div>
+                <p>I prezzi si intendono al netto di IVA dove applicabile. Il piano effettivamente applicato è quello specificato nel preventivo firmato dal cliente.</p>
+            </div>
+
+            <div class="section" id="s3">
+                <div class="section-num">03</div>
+                <h2>Pagamento</h2>
+                <div class="pricing-row">
+                    <div class="pricing-label">Acconto iniziale (prima dell'avvio)</div>
+                    <div class="pricing-val">50%</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="pricing-label">Saldo alla consegna</div>
+                    <div class="pricing-val">50%</div>
+                </div>
+                <div class="highlight">
+                    Nessuna attività viene avviata prima della ricezione dell'acconto del 50%. La consegna dei file e la messa online avvengono esclusivamente dopo il saldo completo.
+                </div>
+                <p>Il pagamento può avvenire tramite bonifico bancario, link di pagamento o altra modalità concordata per iscritto prima dell'avvio.</p>
+                <p>In caso di mancato pagamento del saldo entro <strong>15 giorni dalla consegna</strong>, Zaira Officina si riserva di sospendere la pubblicazione del sito fino al completamento del pagamento.</p>
+            </div>
+
+            <div class="section" id="s4">
+                <div class="section-num">04</div>
+                <h2>Cosa include</h2>
+                <ul>
+                    <li>Realizzazione del sito secondo il piano scelto</li>
+                    <li>Sviluppo HTML, CSS, JS puro — nessun CMS pesante</li>
+                    <li>Design mobile-first, ottimizzato per ogni schermo</li>
+                    <li>Integrazione WhatsApp cliccabile e Google Maps</li>
+                    <li>Modulo di contatto funzionante</li>
+                    <li>SEO base: meta title, description, struttura heading</li>
+                    <li>Certificato SSL (se il cliente usa hosting che lo supporta)</li>
+                    <li>Consegna dei file sorgente (.html, .css, .js)</li>
+                    <li>2 round di revisione inclusi (vedi sezione 06)</li>
+                    <li><strong>Piano Sito per farti scegliere</strong>: homepage studiata per convertire, sezione servizi, recensioni, CTA, SEO locale, Google Business collegato</li>
+                    <li><strong>Bundle</strong>: tutto il piano principale + ottimizzazione Google Business Profile completa</li>
+                </ul>
+            </div>
+
+            <div class="section" id="s5">
+                <div class="section-num">05</div>
+                <h2>Cosa non include</h2>
+                <ul>
+                    <li>Hosting e server — a carico del cliente</li>
+                    <li>Dominio — a carico del cliente</li>
+                    <li>Manutenzione e aggiornamenti post-consegna</li>
+                    <li>Modifiche ai contenuti dopo la consegna</li>
+                    <li>Nuove pagine o funzionalità non concordate nel preventivo</li>
+                    <li>Integrazione con sistemi gestionali o e-commerce</li>
+                    <li>Produzione di testi, fotografie o contenuti grafici</li>
+                    <li>Campagne pubblicitarie o posizionamento a pagamento</li>
+                </ul>
+                <div class="highlight">
+                    Qualsiasi attività non inclusa nel preventivo viene quotata separatamente e richiede approvazione scritta prima dell'esecuzione.
+                </div>
+            </div>
+
+            <div class="section" id="s6">
+                <div class="section-num">06</div>
+                <h2>Revisioni incluse</h2>
+                <p>Sono inclusi <strong>2 round di revisione</strong> dopo la prima consegna. Per revisione si intende una raccolta consolidata di feedback inviata in un'unica comunicazione scritta.</p>
+                <h3>Cosa rientra nelle revisioni</h3>
+                <ul>
+                    <li>Correzione testi e contenuti</li>
+                    <li>Aggiustamenti grafici e di layout</li>
+                    <li>Modifiche a colori, font, spaziature</li>
+                    <li>Piccole variazioni strutturali nelle sezioni esistenti</li>
+                </ul>
+                <h3>Non rientra nelle revisioni</h3>
+                <ul>
+                    <li>Cambio completo di impostazione grafica o struttura</li>
+                    <li>Aggiunta di nuove sezioni o pagine</li>
+                    <li>Nuove funzionalità non previste nel preventivo</li>
+                </ul>
+                <p>I round di revisione devono essere utilizzati entro <strong>30 giorni dalla prima consegna</strong>. Dopo tale termine, eventuali modifiche vengono quotate come lavoro extra.</p>
+            </div>
+
+            <div class="section" id="s7">
+                <div class="section-num">07</div>
+                <h2>Tempi di consegna</h2>
+                <p>I tempi indicati sono <strong>orientativi e non contrattuali</strong>, calcolati a partire dalla ricezione dell'acconto e di tutti i materiali necessari dal cliente.</p>
+                <div class="piano-grid">
+                    <div class="piano-card">
+                        <div class="piano-name">// sito vetrina</div>
+                        <div class="piano-prezzo" style="font-size:32px;">5–7gg</div>
+                        <div class="piano-note">lavorativi</div>
+                    </div>
+                    <div class="piano-card featured">
+                        <div class="piano-name">// sito per farti scegliere</div>
+                        <div class="piano-prezzo" style="font-size:32px;">7–10gg</div>
+                        <div class="piano-note">lavorativi</div>
+                    </div>
+                    <div class="piano-card">
+                        <div class="piano-name">// bundle</div>
+                        <div class="piano-prezzo" style="font-size:32px;">7–10gg</div>
+                        <div class="piano-note">lavorativi</div>
+                    </div>
+                </div>
+                <p>I tempi possono allungarsi se il cliente non fornisce i materiali necessari (testi, foto, logo) entro 5 giorni lavorativi dall'avvio. In tal caso, i ritardi non sono imputabili a Zaira Officina.</p>
+            </div>
+
+            <div class="section" id="s8">
+                <div class="section-num">08</div>
+                <h2>Proprietà del codice</h2>
+                <p>Al completamento del saldo, il cliente acquisisce la <strong>piena proprietà dei file sorgente</strong> del sito (HTML, CSS, JS, immagini fornite).</p>
+                <p>Il cliente può modificare, ridistribuire o affidare il sito a terzi senza alcuna restrizione, fermo restando che:</p>
+                <ul>
+                    <li>La proprietà si trasferisce solo dopo il <strong>saldo completo</strong></li>
+                    <li>Zaira Officina non è responsabile di modifiche apportate da terzi dopo la consegna</li>
+                    <li>Template, librerie o componenti open source inclusi nel sito restano soggetti alle rispettive licenze</li>
+                </ul>
+                <div class="highlight">
+                    Prima del saldo, i file rimangono di proprietà di Zaira Officina. Il sito non può essere copiato, modificato o ridistribuito prima del pagamento completo.
+                </div>
+            </div>
+
+            <div class="section" id="s9">
+                <div class="section-num">09</div>
+                <h2>Contenuti del cliente</h2>
+                <p>Testi, fotografie, loghi, marchi e qualsiasi altro contenuto necessario alla realizzazione del sito sono <strong>a carico del cliente</strong>.</p>
+                <p>Il cliente garantisce di avere il diritto di utilizzo su tutti i materiali forniti. Zaira Officina è sollevata da ogni responsabilità per violazioni di diritti di terzi derivanti dai contenuti forniti.</p>
+                <p>I materiali devono essere forniti in formato digitale entro <strong>5 giorni lavorativi dall'acconto</strong>. Ritardi nella fornitura dei contenuti spostano proporzionalmente i tempi di consegna, senza responsabilità di Zaira Officina.</p>
+                <div class="highlight">
+                    Se il cliente non dispone di foto o testi professionali, Zaira Officina può indicare soluzioni esterne (banche immagini, copywriter). La produzione di contenuti originali non è inclusa nel preventivo salvo diverso accordo scritto.
+                </div>
+            </div>
+
+            <div class="section" id="s10">
+                <div class="section-num">10</div>
+                <h2>Manutenzione post-consegna</h2>
+                <p>La manutenzione ordinaria del sito dopo la consegna <strong>non è inclusa</strong> nel prezzo una tantum. Il sito viene consegnato funzionante: tutto ciò che avviene dopo è responsabilità del cliente.</p>
+                <h3>Opzione manutenzione mensile</h3>
+                <p>Il cliente può attivare un piano di manutenzione opzionale a <strong>€29/mese</strong>, che include:</p>
+                <ul>
+                    <li>Aggiornamenti contenuti fino a 1 ora/mese (testi, immagini, recapiti)</li>
+                    <li>Assistenza via WhatsApp o email</li>
+                    <li>Monitoraggio ordinario del sito</li>
+                </ul>
+                <p>La manutenzione non include hosting, dominio, nuove pagine o funzionalità. Può essere attivata o disdetta in qualsiasi momento con 30 giorni di preavviso scritto.</p>
+            </div>
+
+            <div class="section" id="s11">
+                <div class="section-num">11</div>
+                <h2>Garanzie e risultati</h2>
+                <p>Zaira Officina si impegna a realizzare il sito con cura professionale, nel rispetto di quanto concordato nel preventivo.</p>
+                <p><strong>Non vengono garantiti</strong>: risultati commerciali specifici, incrementi di fatturato, aumento di clienti o posizionamenti SEO particolari. I risultati dipendono da molteplici fattori esterni non controllabili.</p>
+                <p>In caso di difetti tecnici imputabili a Zaira Officina riscontrati entro <strong>15 giorni dalla consegna</strong>, questi vengono corretti gratuitamente.</p>
+            </div>
+
+            <div class="section" id="s12">
+                <div class="section-num">12</div>
+                <h2>Responsabilità</h2>
+                <p>Zaira Officina non è responsabile per:</p>
+                <ul>
+                    <li>Disservizi causati dall'hosting o dal registrar scelto dal cliente</li>
+                    <li>Violazioni di norme di legge o diritti di terzi derivanti dai contenuti forniti dal cliente</li>
+                    <li>Modifiche apportate al sito dal cliente o da terzi dopo la consegna</li>
+                    <li>Perdita di dati o contenuti non forniti da Zaira Officina</li>
+                </ul>
+                <p>Il cliente è il solo responsabile dei contenuti pubblicati e della loro conformità alle normative vigenti.</p>
+            </div>
+
+            <div class="section" id="s13">
+                <div class="section-num">13</div>
+                <h2>Privacy e GDPR</h2>
+                <p>Il cliente è <strong>Titolare del trattamento</strong> di tutti i dati personali raccolti tramite il proprio sito (es. moduli di contatto). È sua responsabilità predisporre e pubblicare un'informativa privacy adeguata.</p>
+                <p>Zaira Officina può fornire un <strong>modello generico di informativa privacy</strong> a titolo di supporto operativo. Tale modello non costituisce consulenza legale e non è personalizzato sull'attività del cliente.</p>
+                <div class="highlight">
+                    Il cliente, confermando la pubblicazione dell'informativa privacy sul proprio sito, se ne assume la piena e esclusiva responsabilità legale. Zaira Officina non è responsabile della completezza, correttezza o conformità legale dell'informativa adottata.
+                </div>
+                <p>Zaira Officina tratta i dati del cliente (nome, email, recapiti) esclusivamente per l'esecuzione del servizio e li elimina entro 12 mesi dalla chiusura del rapporto, salvo obblighi di legge.</p>
+            </div>
+
+            <div class="section" id="s14">
+                <div class="section-num">14</div>
+                <h2>Referenza e portfolio</h2>
+                <p>Zaira Officina si riserva il diritto di citare il cliente come referenza e di utilizzare il sito realizzato a fini di portfolio, comunicazione commerciale e promozione del servizio.</p>
+                <p>In particolare, Zaira Officina può:</p>
+                <ul>
+                    <li>Pubblicare screenshot, link o anteprima del sito nel proprio portfolio</li>
+                    <li>Citare il nome o il tipo di attività del cliente come esempio di lavoro svolto</li>
+                    <li>Utilizzare il progetto in presentazioni e materiali promozionali</li>
+                </ul>
+                <div class="highlight">
+                    Il cliente che desidera escludere l'utilizzo a fini di referenza è tenuto a comunicarlo per iscritto prima dell'avvio. Può opporsi in qualsiasi momento scrivendo a <a href="mailto:info@zairaofficina.it" style="color:var(--accent);">info@zairaofficina.it</a>. L'opposizione ha effetto dalla ricezione e non ha carattere retroattivo.
+                </div>
+            </div>
+
+            <div class="section" id="s15">
+                <div class="section-num">15</div>
+                <h2>Legge e foro competente</h2>
+                <p>Il presente accordo è regolato dalla <strong>legge italiana</strong>. Per qualsiasi controversia le parti eleggono come foro competente esclusivo il <strong>Tribunale di Forlì</strong>, salvo norme inderogabili di legge.</p>
+                <p>Le comunicazioni con valore legale devono essere inviate via email a <strong>info@zairaofficina.it</strong> o tramite PEC.</p>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="faq-label">// domande frequenti</div>
+        <h2 class="faq-title">FAQ</h2>
+        <div class="faq-grid">
+
+            <div class="faq-item">
+                <div class="faq-q">Il sito è subito mio?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">La proprietà dei file passa a te dopo il saldo completo (il secondo 50%). Prima di quel momento i file restano di proprietà di Zaira Officina e non possono essere copiati o ridistribuiti.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Hosting e dominio sono inclusi?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">No. Hosting e dominio sono a carico tuo. Ti indico le soluzioni più semplici (es. Vercel + Aruba) e ti aiuto nella configurazione, ma i costi sono tuoi. Se preferisci che gestisca tutto, guarda il piano Sito Attivo.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Quante modifiche posso chiedere?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">Sono inclusi 2 round di revisione dopo la prima consegna. Ogni round è una raccolta consolidata di feedback inviata in un'unica comunicazione. Le revisioni vanno usate entro 30 giorni. Oltre i 2 round o dopo i 30 giorni, le modifiche vengono quotate separatamente.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Cosa succede se non ho foto o testi?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">I contenuti sono a carico tuo. Se non li hai, posso aiutarti a trovare soluzioni (banche immagini gratuite, consigli per i testi). La produzione di contenuti originali non è inclusa nel prezzo e va concordata separatamente.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">C'è assistenza dopo la consegna?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">Non è inclusa nel pagamento una tantum. Puoi attivare il piano di manutenzione opzionale a €29/mese che include 1 ora di modifiche mensili e assistenza via WhatsApp. Puoi attivarlo o disdirlo quando vuoi con 30 giorni di preavviso.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Posso portare il sito da un altro sviluppatore?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">Sì, dopo il saldo i file sono tuoi e puoi fare quello che vuoi. Puoi affidarlo a chiunque, modificarlo tu stesso o lasciarlo così com'è. Non ci sono vincoli.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Posso passare a Sito Attivo in seguito?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">Non direttamente — Sito Attivo è un servizio separato che parte da zero con un nuovo progetto. Se vuoi hosting + manutenzione gestita fin dall'inizio, Sito Attivo è la scelta giusta. Scrivimi e valutiamo insieme.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">I tempi di consegna sono garantiti?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">Sono orientativi, non contrattuali. Dipendono anche da quando mi fornisci i materiali: se arrivano in ritardo, i tempi si spostano proporzionalmente. Lavoro comunque con serietà e ti tengo aggiornato durante lo sviluppo.</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-text">
+            <h2>Hai letto.<br>Hai domande?</h2>
+            <p>Scrivimi prima di partire. Chiarisco tutto, senza impegno.</p>
+        </div>
+        <div>
+            <a href="mailto:info@zairaofficina.it" class="btn">Scrivimi</a>
+            <a href="../index.html#prezzi" class="btn btn-ghost">I prezzi</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">ZAIRA<span>.</span>OFFICINA</div>
+        <div style="text-align: right;">
+            <div class="footer-copy">
+                © <span id="footer-year"></span> — Forlì (FC) — Provincia di Forlì-Cesena, Emilia-Romagna
+            </div>
+            <div style="margin-top: 0.5rem;">
+                <a href="privacy.html" style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'"
+                    onmouseout="this.style.color='var(--muted)'">Privacy Policy</a>
+            </div>
+            <!-- Disclaimer prestazione occasionale — rimuovi quando apri P.IVA -->
+            <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--border); letter-spacing: 0.08em; margin-top: 0.4rem;">
+                Zaira Officina è un'attività freelance indipendente.<br> Collaborazioni svolte come prestazione occasionale ai sensi dell'art. 2222 c.c.
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+    <script>
+        const progress = document.getElementById('progress');
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            progress.style.width = pct + '%';
+            backTop.classList.toggle('visible', window.scrollY > 400);
+        });
+
+        const sections = document.querySelectorAll('.section[id]');
+        const navItems = document.querySelectorAll('.nav-item');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    navItems.forEach(n => n.classList.remove('active'));
+                    const active = document.querySelector(`.nav-item[href="#${e.target.id}"]`);
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { rootMargin: '-30% 0px -60% 0px' });
+        sections.forEach(s => observer.observe(s));
+
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('open');
+            });
+        });
+    </script>
+
+</body>
+</html>

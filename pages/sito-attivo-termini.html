@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termini e Condizioni — Sito Attivo | Zaira Officina</title>
+    <meta name="description" content="Termini e condizioni del servizio Sito Attivo di Zaira Officina. Tutto quello che devi sapere, scritto in modo chiaro.">
+    <link rel="canonical" href="https://zairaofficina.it/pages/sito-attivo-termini.html">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --bg: #111008;
+            --bg2: #181510;
+            --accent: #e8a227;
+            --accent-dim: rgba(232, 162, 39, 0.12);
+            --text: #e8e4d9;
+            --muted: #7a7567;
+            --border: rgba(232, 162, 39, 0.18);
+            --gap: 1px;
+        }
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Barlow', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        /* NOISE TEXTURE */
+        
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.4;
+        }
+        /* MARQUEE */
+        
+        .marquee-strip {
+            background: var(--accent);
+            color: var(--bg);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 13px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 8px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .marquee-inner {
+            display: inline-block;
+            animation: marquee 24s linear infinite;
+        }
+        
+        .marquee-inner span {
+            margin: 0 40px;
+        }
+        
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        /* HEADER */
+        
+        header {
+            position: relative;
+            z-index: 10;
+            border-bottom: var(--gap) solid var(--border);
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 22px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--text);
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .header-badge {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        /* HERO */
+        
+        .hero {
+            position: relative;
+            z-index: 5;
+            padding: 80px 40px 60px;
+            border-bottom: var(--gap) solid var(--border);
+        }
+        
+        .hero-label {
+            font-family: 'Courier Prime', monospace;
+            font-size: 12px;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .hero-label::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 1px;
+            background: var(--accent);
+        }
+        
+        .hero h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: clamp(52px, 8vw, 96px);
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            margin-bottom: 32px;
+        }
+        
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent);
+            display: block;
+        }
+        
+        .hero-intro {
+            max-width: 560px;
+            font-weight: 300;
+            font-size: 17px;
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        
+        .hero-meta {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        
+        .meta-item strong {
+            display: block;
+            color: var(--text);
+            font-size: 13px;
+            margin-top: 2px;
+        }
+        /* IN BREVE BOX */
+        
+        .inbreve {
+            position: relative;
+            z-index: 5;
+            margin: 0;
+            padding: 48px 40px;
+            border-bottom: var(--gap) solid var(--border);
+            background: var(--accent-dim);
+        }
+        
+        .inbreve-label {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        
+        .inbreve-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--gap);
+            background: var(--border);
+        }
+        
+        .inbreve-item {
+            background: var(--bg);
+            padding: 20px 24px;
+            font-size: 15px;
+            font-weight: 300;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .inbreve-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--accent);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.25s ease;
+        }
+        
+        .inbreve-item:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .inbreve-item .check {
+            color: var(--accent);
+            font-family: 'Courier Prime', monospace;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        /* LAYOUT */
+        
+        .page-layout {
+            position: relative;
+            z-index: 5;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            min-height: 100vh;
+            border-bottom: var(--gap) solid var(--border);
+        }
+        /* SIDEBAR */
+        
+        .sidebar {
+            border-right: var(--gap) solid var(--border);
+            padding: 40px 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+        
+        .sidebar::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .sidebar-title {
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0 24px 16px;
+            border-bottom: var(--gap) solid var(--border);
+            margin-bottom: 8px;
+        }
+        
+        .nav-item {
+            display: block;
+            padding: 10px 24px;
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--muted);
+            text-decoration: none;
+            border-left: 2px solid transparent;
+            transition: all 0.2s;
+            line-height: 1.4;
+        }
+        
+        .nav-item:hover,
+        .nav-item.active {
+            color: var(--text);
+            border-left-color: var(--accent);
+            background: var(--accent-dim);
+        }
+        
+        .nav-item .num {
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            color: var(--accent);
+            margin-right: 8px;
+        }
+        /* CONTENT */
+        
+        .content {
+            padding: 60px 56px;
+            max-width: 800px;
+        }
+        
+        .section {
+            margin-bottom: 72px;
+            padding-bottom: 72px;
+            border-bottom: var(--gap) solid var(--border);
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-num {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .section-num::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+        
+        .section h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            line-height: 1;
+            margin-bottom: 28px;
+            color: var(--text);
+        }
+        
+        .section h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            margin: 32px 0 12px;
+        }
+        
+        .section p {
+            color: var(--muted);
+            font-weight: 300;
+            margin-bottom: 16px;
+            font-size: 15.5px;
+        }
+        
+        .section p strong {
+            color: var(--text);
+            font-weight: 500;
+        }
+        
+        .section ul {
+            list-style: none;
+            margin: 16px 0;
+        }
+        
+        .section ul li {
+            padding: 8px 0 8px 20px;
+            position: relative;
+            color: var(--muted);
+            font-weight: 300;
+            font-size: 15px;
+            border-bottom: var(--gap) solid rgba(232, 162, 39, 0.07);
+        }
+        
+        .section ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .section ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-family: 'Courier Prime', monospace;
+        }
+        /* HIGHLIGHT BOX */
+        
+        .highlight {
+            border-left: 3px solid var(--accent);
+            padding: 16px 20px;
+            background: var(--accent-dim);
+            margin: 24px 0;
+            font-size: 14.5px;
+            color: var(--text);
+            font-style: italic;
+            line-height: 1.7;
+        }
+        /* RENT-TO-OWN TIMELINE */
+        
+        .rto-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--gap);
+            background: var(--border);
+            margin: 24px 0;
+        }
+        
+        .rto-card {
+            background: var(--bg2);
+            padding: 24px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.2s;
+        }
+        
+        .rto-card:hover {
+            background: var(--accent-dim);
+        }
+        
+        .rto-mesi {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 48px;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        
+        .rto-label {
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 16px;
+        }
+        
+        .rto-credito {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+        
+        .rto-prezzo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--text);
+        }
+        
+        .rto-prezzo.free {
+            color: var(--accent);
+        }
+        /* PRICING RECAP */
+        
+        .pricing-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: var(--gap) solid var(--border);
+            gap: 16px;
+        }
+        
+        .pricing-row:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-label {
+            font-size: 15px;
+            color: var(--muted);
+            font-weight: 300;
+        }
+        
+        .pricing-val {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+        /* FAQ */
+        
+        .faq-section {
+            position: relative;
+            z-index: 5;
+            padding: 80px 40px;
+            border-top: var(--gap) solid var(--border);
+            background: var(--bg2);
+        }
+        
+        .faq-label {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        
+        .faq-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: clamp(36px, 5vw, 64px);
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 56px;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: var(--gap);
+            background: var(--border);
+        }
+        
+        .faq-item {
+            background: var(--bg);
+            padding: 32px 28px;
+            cursor: pointer;
+            transition: background 0.2s;
+            position: relative;
+        }
+        
+        .faq-item:hover {
+            background: var(--accent-dim);
+        }
+        
+        .faq-q {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: var(--text);
+            margin-bottom: 12px;
+            padding-right: 32px;
+            line-height: 1.2;
+        }
+        
+        .faq-icon {
+            position: absolute;
+            top: 32px;
+            right: 28px;
+            color: var(--accent);
+            font-family: 'Courier Prime', monospace;
+            font-size: 18px;
+            transition: transform 0.2s;
+        }
+        
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-a {
+            font-size: 14.5px;
+            color: var(--muted);
+            font-weight: 300;
+            line-height: 1.75;
+            display: none;
+            margin-top: 8px;
+            border-top: var(--gap) solid var(--border);
+            padding-top: 16px;
+        }
+        
+        .faq-item.open .faq-a {
+            display: block;
+        }
+        /* CTA */
+        
+        .cta-section {
+            position: relative;
+            z-index: 5;
+            padding: 80px 40px;
+            border-top: var(--gap) solid var(--border);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .cta-text h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: clamp(32px, 4vw, 52px);
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+        
+        .cta-text p {
+            color: var(--muted);
+            font-weight: 300;
+            font-size: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 16px 36px;
+            text-decoration: none;
+            background: var(--accent);
+            color: var(--bg);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        
+        .btn:hover {
+            background: var(--text);
+            color: var(--bg);
+        }
+        
+        .btn-ghost {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            margin-left: 12px;
+        }
+        
+        .btn-ghost:hover {
+            background: var(--accent);
+            color: var(--bg);
+        }
+        /* FOOTER */
+        
+        footer {
+            position: relative;
+            z-index: 5;
+            border-top: var(--gap) solid var(--border);
+            padding: 32px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .footer-brand {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 16px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text);
+        }
+        
+        .footer-brand span {
+            color: var(--accent);
+        }
+        
+        .footer-info {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+            text-align: right;
+        }
+        /* SCROLL PROGRESS */
+        
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background: var(--accent);
+            z-index: 100;
+            width: 0%;
+            transition: width 0.1s;
+        }
+        /* BACK TO TOP */
+        
+        .back-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 44px;
+            height: 44px;
+            background: var(--accent);
+            color: var(--bg);
+            border: none;
+            cursor: pointer;
+            font-family: 'Courier Prime', monospace;
+            font-size: 18px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            transition: background 0.2s;
+        }
+        
+        .back-top:hover {
+            background: var(--text);
+        }
+        
+        .back-top.visible {
+            display: flex;
+        }
+        /* MOBILE */
+        
+        @media (max-width: 900px) {
+            .page-layout {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                display: none;
+            }
+            .content {
+                padding: 40px 24px;
+            }
+            header {
+                padding: 16px 24px;
+            }
+            .hero {
+                padding: 56px 24px 40px;
+            }
+            .inbreve {
+                padding: 40px 24px;
+            }
+            .rto-grid {
+                grid-template-columns: 1fr;
+            }
+            .faq-section {
+                padding: 56px 24px;
+            }
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-section {
+                grid-template-columns: 1fr;
+                padding: 56px 24px;
+            }
+            footer {
+                padding: 24px;
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-info {
+                text-align: center;
+            }
+            .hero-meta {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scroll-progress" id="progress"></div>
+
+    <!-- HEADER -->
+    <header>
+    <a href="../index.html" class="logo">Zaira<span>.</span>Officina</a>
+        <span class="header-badge">Documento legale — Rev. Apr 2026</span>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-label">Sito Attivo — Servizio in abbonamento</div>
+        <h1>Termini<br><em>&amp; condizioni</em></h1>
+        <p class="hero-intro">
+            Tutto quello che devi sapere sul piano, scritto in modo chiaro. Niente clausole nascoste, niente tecnicismi inutili. Se hai dubbi, scrivimi prima di partire.
+        </p>
+        <div class="hero-meta">
+            <div class="meta-item">Versione<strong>Aprile 2026</strong></div>
+            <div class="meta-item">Revisione<strong>1.0</strong></div>
+            <div class="meta-item">Aggiornamento<strong>Aprile 2026</strong></div>
+        </div>
+    </div>
+
+    <!-- IN BREVE -->
+    <div class="inbreve">
+        <div class="inbreve-label">// in breve</div>
+        <div class="inbreve-grid">
+            <div class="inbreve-item"><span class="check">€149</span>attivazione iniziale, una sola volta</div>
+            <div class="inbreve-item"><span class="check">€49</span>al mese, tutto incluso</div>
+            <div class="inbreve-item"><span class="check">12</span>mesi di durata minima</div>
+            <div class="inbreve-item"><span class="check">✓</span>Hosting, dominio .it, SSL, assistenza</div>
+            <div class="inbreve-item"><span class="check">2h</span>di modifiche ai contenuti incluse/mese</div>
+            <div class="inbreve-item"><span class="check">€10</span>di credito accumulato ogni mese</div>
+            <div class="inbreve-item"><span class="check">30gg</span>di preavviso per disdire (dopo i 12 mesi)</div>
+            <div class="inbreve-item"><span class="check">→</span>Il dominio è sempre intestato a te</div>
+        </div>
+        <p style="margin-top:28px; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:22px; text-transform:uppercase; letter-spacing:0.03em; color:var(--text);">
+            Non è un sito da comprare una volta.<br>
+            <span style="color:var(--accent);">È un servizio che lavora per te ogni mese.</span>
+        </p>
+    </div>
+
+    <!-- LAYOUT CON SIDEBAR -->
+    <div class="page-layout">
+
+        <!-- SIDEBAR NAVIGAZIONE -->
+        <nav class="sidebar">
+            <div class="sidebar-title">Indice</div>
+            <a href="#s1" class="nav-item"><span class="num">01</span>Destinatari</a>
+            <a href="#s2" class="nav-item"><span class="num">02</span>Cosa paghi</a>
+            <a href="#s3" class="nav-item"><span class="num">03</span>Cosa include</a>
+            <a href="#s4" class="nav-item"><span class="num">04</span>Durata e rinnovo</a>
+            <a href="#s5" class="nav-item"><span class="num">05</span>Revisione prezzi</a>
+            <a href="#s6" class="nav-item"><span class="num">06</span>Hosting e dominio</a>
+            <a href="#s7" class="nav-item"><span class="num">07</span>Scelte dopo 12 mesi</a>
+            <a href="#s8" class="nav-item"><span class="num">08</span>Credito rent-to-own</a>
+            <a href="#s9" class="nav-item"><span class="num">09</span>Modifiche incluse</a>
+            <a href="#s10" class="nav-item"><span class="num">10</span>Livelli di servizio</a>
+            <a href="#s11" class="nav-item"><span class="num">11</span>Proprietà contenuti</a>
+            <a href="#s12" class="nav-item"><span class="num">12</span>Cessione finale</a>
+            <a href="#s13" class="nav-item"><span class="num">13</span>Backup</a>
+            <a href="#s14" class="nav-item"><span class="num">14</span>Pagamenti</a>
+            <a href="#s15" class="nav-item"><span class="num">15</span>Mancato pagamento</a>
+            <a href="#s16" class="nav-item"><span class="num">16</span>Recesso</a>
+            <a href="#s17" class="nav-item"><span class="num">17</span>Exit kit</a>
+            <a href="#s18" class="nav-item"><span class="num">18</span>Garanzie</a>
+            <a href="#s19" class="nav-item"><span class="num">19</span>Privacy e GDPR</a>
+            <a href="#s20" class="nav-item"><span class="num">20</span>Forza maggiore</a>
+            <a href="#s21" class="nav-item"><span class="num">21</span>Responsabilità</a>
+            <a href="#s22" class="nav-item"><span class="num">22</span>Comunicazioni</a>
+            <a href="#s23" class="nav-item"><span class="num">23</span>Modifiche T&C</a>
+            <a href="#s24" class="nav-item"><span class="num">24</span>Foro competente</a>
+            <a href="#s25" class="nav-item"><span class="num">25</span>Referenza e portfolio</a>
+            <a href="#s26" class="nav-item"><span class="num">26</span>Nota finale</a>
+        </nav>
+
+        <!-- CONTENUTO -->
+        <main class="content">
+
+            <div class="section" id="s1">
+                <div class="section-num">01</div>
+                <h2>Destinatari del servizio</h2>
+                <p>Il servizio Sito Attivo è rivolto esclusivamente a <strong>professionisti, titolari di attività commerciali, artigiani, liberi professionisti e persone giuridiche (B2B)</strong>.</p>
+                <p>Non è destinato a consumatori privati ai sensi del Codice del Consumo (D.Lgs. 206/2005). Il cliente, accettando il servizio, dichiara di agire nell'ambito della propria attività professionale o imprenditoriale.</p>
+            </div>
+
+            <div class="section" id="s2">
+                <div class="section-num">02</div>
+                <h2>Cosa paghi</h2>
+                <div class="pricing-row">
+                    <div class="pricing-label">Attivazione iniziale (una sola volta)</div>
+                    <div class="pricing-val">€149</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="pricing-label">Canone mensile ricorrente</div>
+                    <div class="pricing-val">€49/mese</div>
+                </div>
+                <p style="margin-top:20px;">Il servizio ha inizio <strong>esclusivamente dopo la ricezione del pagamento dell'attivazione</strong>. Fino a quel momento non viene avviata alcuna attività di sviluppo o configurazione.</p>
+                <h3>L'attivazione copre</h3>
+                <ul>
+                    <li>Avvio del progetto e impostazione grafica iniziale</li>
+                    <li>Sviluppo del sito e configurazione tecnica di base</li>
+                    <li>Messa online e primo collegamento dominio</li>
+                </ul>
+            </div>
+
+            <div class="section" id="s3">
+                <div class="section-num">03</div>
+                <h2>Cosa include il canone</h2>
+                <ul>
+                    <li>Pubblicazione e gestione tecnica del sito</li>
+                    <li>Hosting su infrastruttura cloud</li>
+                    <li>1 dominio .it (registrazione + rinnovo annuale inclusi)</li>
+                    <li>Certificato SSL</li>
+                    <li>Manutenzione tecnica ordinaria</li>
+                    <li>Backup periodici</li>
+                    <li>Assistenza via WhatsApp o email</li>
+                    <li>Modifiche ai contenuti fino a <strong>2 ore/mese</strong> (testi, immagini, recapiti, orari)</li>
+                    <li>Continuità operativa del sito</li>
+                </ul>
+            </div>
+
+            <div class="section" id="s4">
+                <div class="section-num">04</div>
+                <h2>Durata minima e rinnovo</h2>
+                <p>Il servizio ha una <strong>durata minima obbligatoria di 12 mesi</strong> dalla data di attivazione. Durante il periodo minimo iniziale, il recesso anticipato non è previsto. In caso di interruzione anticipata restano dovuti i canoni maturati
+                    fino alla scadenza del periodo minimo.</p>
+                <div class="highlight">
+                    Salvo disdetta scritta con 30 giorni di preavviso prima della scadenza del 12° mese, il servizio si rinnova automaticamente su base mensile alle stesse condizioni economiche vigenti.
+                </div>
+                <p>Il rinnovo mensile automatico prosegue fino a disdetta scritta con 30 giorni di preavviso, inviata via email o PEC.</p>
+            </div>
+
+            <div class="section" id="s5">
+                <div class="section-num">05</div>
+                <h2>Revisione dei prezzi</h2>
+                <p>Zaira Officina si riserva il diritto di adeguare il canone mensile, con un <strong>preavviso minimo di 60 giorni</strong> comunicato via email.</p>
+                <p>In caso di adeguamento del prezzo, il cliente ha diritto di recedere senza penali entro 30 giorni dalla comunicazione. La mancata disdetta entro tale termine costituisce accettazione del nuovo canone.</p>
+            </div>
+
+            <div class="section" id="s6">
+                <div class="section-num">06</div>
+                <h2>Hosting e dominio</h2>
+                <p>L'hosting è gestito da Zaira Officina tramite <strong>infrastruttura cloud di terze parti</strong>. Il cliente non si occupa di pannelli tecnici o configurazioni.</p>
+                <p>Il dominio viene registrato o collegato da Zaira Officina e <strong>resta intestato al cliente</strong> (nome, CF o P.IVA del cliente), salvo diverso accordo scritto.</p>
+                <div class="highlight">
+                    In caso di cessazione, il trasferimento del dominio verso un altro operatore verrà facilitato entro <strong>10 giorni lavorativi</strong> dalla richiesta scritta. Gli eventuali costi di trasferimento richiesti dal registrar sono a
+                    carico del cliente.
+                </div>
+            </div>
+
+            <div class="section" id="s7">
+                <div class="section-num">07</div>
+                <h2>Scelte dopo i 12 mesi</h2>
+                <h3>Proseguire</h3>
+                <p>Continua a €49/mese. Dal 13° mese inclusi anche: audit SEO trimestrale gratuito e priorità nelle richieste ordinarie.</p>
+                <h3>Acquistare il sito</h3>
+                <p>Cessione finale del progetto a €360 una tantum, al netto del credito rent-to-own maturato. Nessun servizio continuativo incluso.</p>
+                <h3>Disdire</h3>
+                <p>30 giorni di preavviso scritto via email o PEC. Ricevi l'exit kit gratuito per il trasferimento.</p>
+            </div>
+
+            <div class="section" id="s8">
+                <div class="section-num">08</div>
+                <h2>Credito rent-to-own</h2>
+                <p>Ogni mese pagato accumula <strong>€10 di credito</strong> che riduce il costo della cessione finale.</p>
+                <div class="rto-grid">
+                    <div class="rto-card">
+                        <div class="rto-mesi">12</div>
+                        <div class="rto-label">mesi</div>
+                        <div class="rto-credito">Credito €120</div>
+                        <div class="rto-prezzo">€240</div>
+                    </div>
+                    <div class="rto-card">
+                        <div class="rto-mesi">24</div>
+                        <div class="rto-label">mesi</div>
+                        <div class="rto-credito">Credito €240</div>
+                        <div class="rto-prezzo">€120</div>
+                    </div>
+                    <div class="rto-card">
+                        <div class="rto-mesi">36</div>
+                        <div class="rto-label">mesi</div>
+                        <div class="rto-credito">Credito €360</div>
+                        <div class="rto-prezzo free">Gratis</div>
+                    </div>
+                </div>
+                <p>Il credito è valido esclusivamente per l'opzione di acquisto e non è rimborsabile in denaro.</p>
+            </div>
+
+            <div class="section" id="s9">
+                <div class="section-num">09</div>
+                <h2>Modifiche incluse e extra</h2>
+                <p>Nel canone sono incluse le modifiche ordinarie ai contenuti esistenti entro <strong>2 ore/mese</strong>:</p>
+                <ul>
+                    <li>Aggiornamento testi e immagini</li>
+                    <li>Variazione recapiti e orari</li>
+                    <li>Informazioni essenziali già presenti</li>
+                </ul>
+                <p>Oltre le 2 ore mensili, il lavoro extra viene preventivato separatamente e richiede approvazione scritta prima dell'esecuzione.</p>
+                <h3>Mai incluse nel canone</h3>
+                <ul>
+                    <li>Nuove pagine o sezioni</li>
+                    <li>Nuove funzionalità</li>
+                    <li>Redesign completi o parziali</li>
+                    <li>Integrazioni complesse</li>
+                    <li>Interventi straordinari non compatibili con il piano</li>
+                </ul>
+            </div>
+
+            <div class="section" id="s10">
+                <div class="section-num">10</div>
+                <h2>Livelli di servizio</h2>
+                <p>Il servizio <strong>non prevede SLA contrattuali</strong> con penali o garanzie di uptime specifiche. A titolo orientativo e non vincolante:</p>
+                <ul>
+                    <li><strong>Problemi critici</strong> (sito non raggiungibile): intervento entro 24h lavorative</li>
+                    <li><strong>Richieste ordinarie</strong>: evase entro 3–5 giorni lavorativi</li>
+                </ul>
+                <p>I tempi possono variare in caso di dipendenza da fornitori terzi o eventi di forza maggiore.</p>
+            </div>
+
+            <div class="section" id="s11">
+                <div class="section-num">11</div>
+                <h2>Proprietà dei contenuti</h2>
+                <p>Tutti i contenuti forniti dal cliente restano di <strong>proprietà esclusiva del cliente</strong>: testi, fotografie, loghi, marchi, recapiti, listini e ogni altro materiale fornito per la pubblicazione.</p>
+                <p>Il cliente garantisce di avere il diritto di utilizzarli e pubblicarli. Zaira Officina è sollevata da ogni responsabilità per violazioni di diritti di terzi derivanti dai contenuti forniti.</p>
+            </div>
+
+            <div class="section" id="s12">
+                <div class="section-num">12</div>
+                <h2>Proprietà tecnica e cessione finale</h2>
+                <p>In caso di esercizio dell'opzione di acquisto, la cessione finale comprende:</p>
+                <ul>
+                    <li>I file del sito nella versione disponibile</li>
+                    <li>I contenuti presenti</li>
+                    <li>Le informazioni tecniche essenziali per il trasferimento</li>
+                </ul>
+                <h3>Esclusi dalla cessione</h3>
+                <ul>
+                    <li>Strumenti interni di sviluppo e workflow operativi</li>
+                    <li>Account tecnici intestati a Zaira Officina</li>
+                    <li>Servizi terzi non trasferibili</li>
+                </ul>
+                <p>La cessione non include assistenza continuativa, hosting o ulteriori interventi, salvo nuovo accordo scritto.</p>
+            </div>
+
+            <div class="section" id="s13">
+                <div class="section-num">13</div>
+                <h2>Backup e continuità</h2>
+                <p>Zaira Officina esegue backup periodici del sito come misura tecnica di continuità. I backup non sostituiscono l'obbligo del cliente di conservare i propri contenuti originali.</p>
+                <p>In caso di cessazione, i dati vengono conservati per un massimo di <strong>30 giorni</strong> dalla data di termine, dopodiché eliminati. Il cliente può richiedere una copia entro tale periodo.</p>
+            </div>
+
+            <div class="section" id="s14">
+                <div class="section-num">14</div>
+                <h2>Pagamenti</h2>
+                <p>L'attivazione iniziale di <strong>€149</strong> è dovuta alla conferma del servizio, prima dell'avvio di qualsiasi attività.</p>
+                <p>Il canone mensile di <strong>€49</strong> è dovuto il giorno 1 di ogni mese. Il pagamento può avvenire tramite bonifico, link di pagamento o altra modalità concordata per iscritto.</p>
+            </div>
+
+            <div class="section" id="s15">
+                <div class="section-num">15</div>
+                <h2>Mancato pagamento</h2>
+                <ul>
+                    <li><strong>Oltre 10 giorni</strong> di ritardo: sospensione di aggiornamenti e assistenza</li>
+                    <li><strong>Oltre 30 giorni</strong>: sospensione del sito e applicazione interessi di mora (D.Lgs. 231/2002)</li>
+                </ul>
+                <p>Tutti gli importi maturati restano dovuti fino alla data di sospensione o cessazione.</p>
+            </div>
+
+            <div class="section" id="s16">
+                <div class="section-num">16</div>
+                <h2>Recesso e risoluzione</h2>
+                <h3>Recesso ordinario del cliente</h3>
+                <p>Non possibile durante i primi 12 mesi. Dopo il periodo minimo: 30 giorni di preavviso scritto via email o PEC.</p>
+                <h3>Recesso di Zaira Officina</h3>
+                <p>Con 60 giorni di preavviso scritto, garantendo il supporto minimo per il passaggio del sito.</p>
+                <h3>Risoluzione per giusta causa</h3>
+                <p>Zaira Officina può risolvere il contratto con <strong>effetto immediato</strong> in caso di:</p>
+                <ul>
+                    <li>Pubblicazione di contenuti illegali, diffamatori o in violazione di diritti di terzi</li>
+                    <li>Uso del sito per attività fraudolente o illecite</li>
+                    <li>Mancato pagamento protratto oltre 60 giorni</li>
+                    <li>Comportamento abusivo e documentato nei confronti di Zaira Officina</li>
+                </ul>
+                <div class="highlight">In caso di risoluzione per giusta causa imputabile al cliente, tutti gli importi maturati restano dovuti e Zaira Officina potrà limitare o escludere i servizi gratuiti di accompagnamento alla migrazione.</div>
+            </div>
+
+            <div class="section" id="s17">
+                <div class="section-num">17</div>
+                <h2>Exit kit</h2>
+                <p>In caso di disdetta ordinaria dopo il periodo minimo, il cliente riceve gratuitamente:</p>
+                <ul>
+                    <li>Copia dei file del sito nella versione disponibile</li>
+                    <li>Backup disponibile dei contenuti</li>
+                    <li>Guida chiara per la migrazione</li>
+                    <li>Fino a 30 minuti di supporto orientativo</li>
+                </ul>
+                <p>L'exit kit non include sviluppo aggiuntivo, riconfigurazioni complesse o assistenza illimitata. Non è dovuto in caso di risoluzione per giusta causa.</p>
+            </div>
+
+            <div class="section" id="s18">
+                <div class="section-num">18</div>
+                <h2>Garanzie e risultati</h2>
+                <p>Zaira Officina si impegna a realizzare e mantenere il sito con cura professionale.</p>
+                <p><strong>Non vengono garantiti</strong>: risultati commerciali specifici, incrementi di fatturato, aumento di clienti o posizionamenti SEO particolari. I risultati dipendono da molteplici fattori esterni non controllabili.</p>
+            </div>
+
+            <div class="section" id="s19">
+                <div class="section-num">19</div>
+                <h2>Privacy e GDPR</h2>
+                <p>Zaira Officina agisce, ai fini del GDPR, come <strong>Responsabile del trattamento</strong> dei dati tecnici strettamente necessari all'erogazione del servizio (hosting, backup, manutenzione). Il cliente rimane <strong>Titolare del trattamento</strong>                    di tutti i dati personali raccolti o pubblicati tramite il proprio sito.</p>
+                <p>Il cliente è l'unico responsabile del rispetto della normativa vigente, inclusa la corretta informativa agli interessati, l'acquisizione dei consensi e la gestione delle richieste degli interessati.</p>
+                <h3>Informativa privacy sul sito</h3>
+                <p>Zaira Officina può fornire al cliente un <strong>modello generico di informativa privacy</strong> a titolo di supporto operativo. Tale modello non costituisce consulenza legale e non è personalizzato sull'attività del cliente.</p>
+                <p>Il cliente è tenuto a verificarne la conformità, adattarla se necessario e approvarla formalmente via email o scrittura privata prima della pubblicazione.</p>
+                <div class="highlight">
+                    Il cliente, confermando la pubblicazione dell'informativa privacy sul proprio sito, se ne assume la piena e esclusiva responsabilità legale. Zaira Officina non è responsabile della completezza, correttezza o conformità legale dell'informativa adottata.
+                </div>
+                <p>I dati tecnici gestiti da Zaira Officina vengono eliminati entro 30 giorni dalla cessazione del servizio, fatta eccezione per i backup tecnici conservati secondo cicli di rotazione standard (massimo 90 giorni), accessibili solo per esigenze
+                    di ripristino e successivamente sovrascritti in modo sicuro.</p>
+            </div>
+
+            <div class="section" id="s20">
+                <div class="section-num">20</div>
+                <h2>Forza maggiore</h2>
+                <p>Zaira Officina non è responsabile per ritardi o impossibilità di adempimento causati da eventi al di fuori del proprio controllo: interruzioni di servizi terzi, guasti infrastrutturali, calamità naturali, blackout, attacchi informatici
+                    o qualsiasi altro evento di forza maggiore.</p>
+            </div>
+
+            <div class="section" id="s21">
+                <div class="section-num">21</div>
+                <h2>Responsabilità</h2>
+                <p>Zaira Officina non è responsabile per disservizi causati da provider hosting, registrar, servizi DNS o qualsiasi interruzione non direttamente dipendente dalla propria attività.</p>
+                <p>Il cliente è il solo responsabile dei contenuti pubblicati e delle eventuali violazioni di norme di legge o diritti di terzi.</p>
+            </div>
+
+            <div class="section" id="s22">
+                <div class="section-num">22</div>
+                <h2>Comunicazioni ufficiali</h2>
+                <p>Le comunicazioni con valore legale — disdette, recessi, contestazioni, richieste formali — devono essere inviate esclusivamente via:</p>
+                <ul>
+                    <li>Email: <strong><a href="mailto:info@zairaofficina.it">info@zairaofficina.it</a></strong></li>
+                </ul>
+                <p>Le comunicazioni ordinarie (assistenza, aggiornamenti, modifiche) possono avvenire via WhatsApp o email, ma non hanno valore contrattuale ai fini del recesso o di contestazioni formali.</p>
+            </div>
+
+            <div class="section" id="s23">
+                <div class="section-num">23</div>
+                <h2>Modifiche ai termini</h2>
+                <p>Zaira Officina può aggiornare i presenti termini con un preavviso minimo di <strong>30 giorni</strong> comunicato via email. La prosecuzione del servizio dopo l'entrata in vigore delle nuove condizioni costituisce accettazione delle stesse.</p>
+            </div>
+
+            <div class="section" id="s24">
+                <div class="section-num">24</div>
+                <h2>Legge e foro competente</h2>
+                <p>Il presente accordo è regolato dalla <strong>legge italiana</strong>. Per qualsiasi controversia le parti eleggono come foro competente esclusivo il <strong>Tribunale di Forlì</strong>, salvo norme inderogabili di legge.</p>
+            </div>
+
+            <div class="section" id="s25">
+                <div class="section-num">25</div>
+                <h2>Referenza e portfolio</h2>
+                <p>Zaira Officina si riserva il diritto di citare il cliente come referenza e di utilizzare il sito realizzato a fini di portfolio, comunicazione commerciale e promozione del servizio, inclusi sito web, social network e materiali di presentazione.</p>
+                <p>In particolare, Zaira Officina può:</p>
+                <ul>
+                    <li>pubblicare screenshot, link o anteprima del sito nel proprio portfolio</li>
+                    <li>citare il nome o il tipo di attività del cliente come esempio di lavoro svolto</li>
+                    <li>utilizzare il progetto in presentazioni, comunicazioni commerciali e materiali promozionali</li>
+                </ul>
+                <div class="highlight">
+                    Il cliente che desidera escludere fin dall'inizio l'utilizzo a fini di referenza è tenuto a comunicarlo per iscritto prima dell'avvio del servizio. Il cliente può opporsi in qualsiasi momento con comunicazione scritta a <a href="mailto:info@zairaofficina.it">info@zairaofficina.it</a>. L'opposizione ha effetto dalla ricezione e non ha carattere retroattivo sui materiali già pubblicati.
+                </div>
+            </div>
+
+            <div class="section" id="s26">
+                <div class="section-num">26</div>
+                <h2>Nota finale</h2>
+                <p>Sito Attivo non è un semplice acquisto una tantum. È un servizio continuativo pensato per chi vuole un sito sempre online, ordinato, aggiornabile e seguito nel tempo, con un unico referente e un unico canone.</p>
+                <p>L'obiettivo è evitare problemi tecnici, rinnovi sparsi, passaggi complicati e perdite di tempo.</p>
+                <p>Queste condizioni definiscono il funzionamento del servizio Sito Attivo e possono essere integrate da accordi specifici sottoscritti con il cliente.</p>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="faq-label">// domande frequenti</div>
+        <h2 class="faq-title">FAQ</h2>
+        <div class="faq-grid">
+
+            <div class="faq-item">
+                <div class="faq-q">Il sito è mio?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">Durante l'abbonamento il sito è gestito da Zaira Officina nell'ambito del servizio. Dopo 12 mesi puoi acquistarlo a €360 (meno il credito maturato) e puoi richiedere la cessione finale del progetto, ottenendo i file trasferibili e le informazioni
+                    tecniche essenziali per il passaggio. In alternativa, dopo 36 mesi di abbonamento la cessione è gratuita.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Il dominio è mio?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">Sì, sempre. Il dominio viene registrato e gestito tecnicamente da Zaira Officina, ma è intestato a te fin dall'inizio. Se decidi di andartene, te lo trasferisco entro 10 giorni lavorativi senza problemi.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Posso cambiare i contenuti quando voglio?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">Sì. Hai 2 ore al mese di modifiche ordinarie incluse: testi, immagini, recapiti, orari. Mi scrivi e lo faccio io. Se servono modifiche strutturali o nuove pagine, le preventivo separatamente.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Cosa succede se non sono soddisfatto?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">Se hai un problema, scrivimi e lo risolviamo. Detto questo, il periodo minimo di 12 mesi è vincolante: i canoni restano dovuti anche in caso di disdetta anticipata. Dopo i 12 mesi puoi uscire con 30 giorni di preavviso e ricevi l'exit
+                    kit gratuito.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Se disdico, perdo tutto?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">No. Dopo i 12 mesi minimi, in caso di disdetta ordinaria ricevi un exit kit con i file del sito, il backup dei contenuti e una guida per la migrazione. Il dominio resta tuo e te lo trasferisco.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Cosa significa rinnovo automatico?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">Al termine dei 12 mesi, il servizio prosegue automaticamente mese per mese a €49. Per fermarlo ti basta inviare una disdetta scritta con 30 giorni di preavviso. Non ci sono vincoli aggiuntivi dopo il periodo minimo.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Quanto tempo ci vuole per rispondere a una richiesta?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">Per problemi critici (sito giù) intervengo entro 24 ore lavorative. Per richieste ordinarie di modifica o assistenza, solitamente entro 3-5 giorni lavorativi. Non ci sono SLA garantiti contrattualmente, ma lavoro con serietà.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Chi si occupa della privacy del mio sito?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">Posso fornirti un modello generico di informativa privacy come supporto operativo. Ma la responsabilità legale della tua informativa è tua: sei tu il Titolare del trattamento. Prima di pubblicarla, devi verificarla e approvarla formalmente.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Posso pagare in un'unica soluzione?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">La struttura standard prevede €149 di attivazione + €49/mese. Se vuoi un accordo diverso (es. semestrale prepagato), scrivimi e valutiamo insieme.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Il prezzo può cambiare?</div>
+                <div class="faq-icon">+</div>
+                <div class="faq-a">Sì, mi riservo il diritto di adeguare il canone con 60 giorni di preavviso via email. Se non accetti il nuovo prezzo, puoi recedere senza penali entro 30 giorni dalla comunicazione.</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-text">
+            <h2>Hai letto.<br>Hai domande?</h2>
+            <p>Scrivimi prima di partire. Chiarisco tutto, senza impegno.</p>
+        </div>
+        <div>
+            <a href="mailto:info@zairaofficina.it" class="btn">Scrivimi</a>
+            <a href="sito-attivo.html" class="btn btn-ghost">Il servizio</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">ZAIRA<span>.</span>OFFICINA</div>
+        <div style="text-align: right;">
+            <div class="footer-copy">
+                © <span id="footer-year"></span> — Forlì (FC) — Provincia di Forlì-Cesena, Emilia-Romagna
+            </div>
+            <div style="margin-top: 0.5rem;">
+                <a href="privacy.html" style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'"
+                    onmouseout="this.style.color='var(--muted)'">Privacy Policy</a>
+            </div>
+            <!-- Disclaimer prestazione occasionale — rimuovi quando apri P.IVA -->
+            <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--border); letter-spacing: 0.08em; margin-top: 0.4rem;">
+                Zaira Officina è un'attività freelance indipendente.<br> Collaborazioni svolte come prestazione occasionale ai sensi dell'art. 2222 c.c.
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+
+    <script>
+        // Scroll progress
+        const progress = document.getElementById('progress');
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            progress.style.width = pct + '%';
+            backTop.classList.toggle('visible', window.scrollY > 400);
+        });
+
+        // Active nav
+        const sections = document.querySelectorAll('.section[id]');
+        const navItems = document.querySelectorAll('.nav-item');
+        const observer = new IntersectionObserver(entries => {
+                    entries.forEach(e => {
+                                if (e.isIntersecting) {
+                                    navItems.forEach(n => n.classList.remove('active'));
+                                    const active = document.querySelector(`.nav-item[href=

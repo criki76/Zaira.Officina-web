@@ -1010,3 +1010,388 @@ footer {
     color: var(--muted);
     letter-spacing: 0.1em;
 }
+
+
+/* =============================================================================
+   SITO ATTIVO SPOTLIGHT — banda full-width dopo il portfolio
+   ============================================================================= */
+
+.sa-spotlight {
+    background: var(--accent);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 4rem var(--section-pad-h);
+}
+
+.sa-spotlight-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+
+/* ── COLONNA SINISTRA ────────────────────────────────────────────────────── */
+
+.sa-spotlight-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: #111008;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 0.6rem;
+}
+
+.sa-spotlight-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(2.8rem, 4vw, 4rem);
+    text-transform: uppercase;
+    color: #111008;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+}
+
+.sa-spotlight-sub {
+    font-size: 1rem;
+    color: #111008;
+    line-height: 1.7;
+    opacity: 0.75;
+    max-width: 380px;
+    margin-bottom: 2rem;
+}
+
+.sa-spotlight-cta {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--accent);
+    background: #111008;
+    padding: 0.9rem 2rem;
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.sa-spotlight-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #111008;
+    transition: all var(--transition-fast);
+}
+
+.sa-spotlight-cta:hover {
+    background: var(--bg);
+}
+
+.sa-spotlight-cta:hover::after {
+    bottom: -6px;
+    right: -6px;
+}
+
+
+/* ── COLONNA DESTRA ──────────────────────────────────────────────────────── */
+
+.sa-spotlight-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+/* Blocco prezzi affiancati */
+
+.sa-spotlight-price {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(17, 16, 8, 0.08);
+    padding: 1.8rem 2rem;
+    border: 1px solid rgba(17, 16, 8, 0.15);
+}
+
+.sa-sp-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+}
+
+.sa-sp-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #111008;
+    opacity: 0.6;
+}
+
+.sa-sp-num {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 3rem;
+    color: #111008;
+    line-height: 1;
+}
+
+.sa-sp-note {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: #111008;
+    opacity: 0.55;
+}
+
+.sa-sp-sep {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #111008;
+    opacity: 0.35;
+    flex-shrink: 0;
+}
+
+
+/* Lista feature */
+
+.sa-spotlight-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.sa-spotlight-list li {
+    font-size: 0.88rem;
+    color: #111008;
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+.sa-spotlight-list li::before {
+    content: '→';
+    font-weight: 700;
+    color: #111008;
+    flex-shrink: 0;
+}
+
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+    .sa-spotlight-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .sa-spotlight-sub {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .sa-spotlight {
+        padding: 3rem 1.25rem;
+    }
+    .sa-spotlight-title {
+        font-size: 2.4rem;
+    }
+    .sa-spotlight-price {
+        padding: 1.4rem 1.2rem;
+        gap: 1.2rem;
+    }
+    .sa-sp-num {
+        font-size: 2.4rem;
+    }
+    .sa-spotlight-cta {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+/* Link inline nel sottotitolo sezione prezzi */
+
+.pz-sub-link {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+    transition: opacity var(--transition-fast);
+    font-weight: 500;
+}
+
+.pz-sub-link:hover {
+    opacity: 0.7;
+}
+
+
+/* ── SPOTLIGHT: prezzo inline nel titolo ─────────────────────────────────── */
+
+.sa-sp-price-inline {
+    color: #111008;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.sa-sp-mo {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    color: #111008;
+    opacity: 0.6;
+    margin-left: 0.1rem;
+}
+
+
+/* Riga rassicurante sotto CTA */
+
+.sa-spotlight-reassure {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: #111008;
+    opacity: 0.55;
+    letter-spacing: 0.05em;
+    margin-top: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Riga prezzo compatto sotto il titolo (es. "€149 attivazione + €49/mese") */
+.sa-spotlight-mini {
+    font-family:    var(--font-mono);
+    font-size:      0.72rem;
+    color:          #111008;
+    opacity:        0.65;
+    letter-spacing: 0.06em;
+    margin-top:     0.4rem;
+    margin-bottom:  1.2rem;
+}
+
+
+/* Box attivazione (€149 secondario) */
+
+.sa-spotlight-activation {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid rgba(17, 16, 8, 0.2);
+    margin-top: 0.5rem;
+}
+
+.sa-act-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: #111008;
+    opacity: 0.55;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    flex: 1;
+}
+
+.sa-act-value {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: #111008;
+    opacity: 0.5;
+}
+
+
+/* ── BLOCCO PREZZI SECONDARIO (una tantum declassato) ────────────────────── */
+
+.pz-block--secondary {
+    background: var(--bg);
+    /* più scuro/neutro del bg2 */
+    border-color: var(--border);
+}
+
+.pz-block-title--secondary {
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem) !important;
+    color: var(--text-mid) !important;
+}
+
+.pz-block--secondary .pz-block-label {
+    color: var(--muted);
+}
+/* =============================================================================
+   SERVICES ENTRY — Sezione orientamento servizi
+   ============================================================================= */
+
+.services-entry {
+    padding: 100px 40px;
+}
+
+.services-entry-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.services-entry-sub {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.services-entry-grid {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.services-entry-card {
+    border: 1px solid var(--border);
+    padding: 28px;
+    text-decoration: none;
+    color: var(--white);
+    display: block;
+    transition: border-color var(--transition-fast);
+}
+
+.services-entry-card:hover {
+    border-color: var(--accent);
+}
+
+.services-entry-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.services-entry-card h3 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.services-entry-card p {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.services-entry-link {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+}
