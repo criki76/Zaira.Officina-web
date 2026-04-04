@@ -26,23 +26,38 @@ nav {
 
 /* ── LOGO ────────────────────────────────────────────────────────────────── */
 .nav-logo {
+  display:         flex;
+  flex-direction:  column;
+  gap:             2px;
+  text-decoration: none;
+  position:        relative;
+  z-index:         var(--z-nav); /* sopra il menu mobile */
+}
+
+.nav-logo .logo-name {
   font-family:    var(--font-display);
   font-weight:    900;
   font-size:      1.3rem;
   letter-spacing: 0.1em;
   color:          var(--white);
-  text-decoration: none;
   transition:     color var(--transition-fast);
-  position:       relative;
-  z-index:        var(--z-nav); /* sopra il menu mobile */
+  line-height:    1;
 }
 
 /* Il punto nel logo prende il colore accent */
-.nav-logo span {
+.nav-logo .logo-name span {
   color: var(--accent);
 }
 
-.nav-logo:hover {
+.nav-logo .logo-tag {
+  font-family:    var(--font-mono);
+  font-size:      0.58rem;
+  letter-spacing: 0.06em;
+  color:          var(--muted);
+  line-height:    1;
+}
+
+.nav-logo:hover .logo-name {
   color: var(--accent);
 }
 
