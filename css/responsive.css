@@ -118,6 +118,9 @@
         gap: 1rem;
         text-align: center;
     }
+    .footer-right {
+        text-align: center;
+    }
 }
 
 

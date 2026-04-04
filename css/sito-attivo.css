@@ -1602,6 +1602,12 @@ footer {
     text-align: right;
 }
 
+@media (max-width: 768px) {
+    .footer-right {
+        text-align: left;
+    }
+}
+
 .footer-link-wrap {
     margin-top: 0.5rem;
 }
