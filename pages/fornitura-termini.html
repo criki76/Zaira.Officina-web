@@ -11,9 +11,7 @@
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/fonts.css">
     <style>
         :root {
             --bg: #111008;
@@ -1106,6 +1104,12 @@
             });
         });
     </script>
+
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
+
+<script src="../js/main.js"></script>
 
 <!-- Floating bar mobile -->
 <div class="mobile-cta-bar">
