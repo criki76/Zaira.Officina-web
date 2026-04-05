@@ -111,6 +111,22 @@ nav {
 }
 
 
+/* ── BACK LINK (pagine legali) ───────────────────────────────────────────── */
+.nav-back {
+  font-family:     var(--font-mono);
+  font-size:       0.75rem;
+  color:           var(--muted);
+  text-decoration: none;
+  letter-spacing:  0.1em;
+  text-transform:  uppercase;
+  transition:      color var(--transition-fast);
+}
+
+.nav-back:hover {
+  color: var(--accent);
+}
+
+
 /* ── HAMBURGER BUTTON ────────────────────────────────────────────────────── */
 /*
    Nascosto su desktop, visibile su < 900px (vedi responsive.css).
