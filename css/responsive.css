@@ -157,7 +157,7 @@
     }
     /* ═══════════════════ NAV ════════════════════════════════════════════════ */
     nav {
-        padding: 1rem 1.25rem;
+        padding: 1rem 1.25rem; /* su mobile torna al padding fisso */
     }
     .nav-logo .logo-name {
         font-size: 1.1rem;

@@ -13,7 +13,12 @@ nav {
   top:        0;
   width:      100%;
   z-index:    var(--z-nav);
-  padding:    1.2rem 2rem;
+  /* Padding laterale che si allarga su schermi > max-width,
+     allineando logo e link al contenuto della pagina */
+  padding-top:    1.2rem;
+  padding-bottom: 1.2rem;
+  padding-left:  max(2rem, calc((100% - var(--max-width)) / 2 + 2rem));
+  padding-right: max(2rem, calc((100% - var(--max-width)) / 2 + 2rem));
   display:    flex;
   justify-content: space-between;
   align-items:     center;
