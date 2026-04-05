@@ -139,6 +139,9 @@ body::before {
 .hero {
     position: relative;
     z-index: 5;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
     padding: clamp(64px, 10vw, 120px) var(--pad) clamp(56px, 8vw, 96px);
     border-bottom: var(--gap) solid var(--border);
 }
@@ -146,10 +149,11 @@ body::before {
 .hero-grid {
     max-width: var(--max);
     margin: 0 auto;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 56px;
-    align-items: start;
+    align-items: center;
 }
 
 .eyebrow {
