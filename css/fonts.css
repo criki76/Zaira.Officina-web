@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Barlow Condensed';
-    src: url('../fonts/barlow-condensed-400.woff2') format('woff2');
+    src: url('fonts/barlow-condensed-v13-latin-regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Barlow Condensed';
-    src: url('../fonts/barlow-condensed-700.woff2') format('woff2');
+    src: url('fonts/barlow-condensed-v13-latin-700.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'Barlow Condensed';
-    src: url('../fonts/barlow-condensed-900.woff2') format('woff2');
+    src: url('fonts/barlow-condensed-v13-latin-900.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'Barlow';
-    src: url('../fonts/barlow-300.woff2') format('woff2');
+    src: url('fonts/barlow-v13-latin-300.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: 'Barlow';
-    src: url('../fonts/barlow-400.woff2') format('woff2');
+    src: url('fonts/barlow-v13-latin-regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
     font-family: 'Barlow';
-    src: url('../fonts/barlow-500.woff2') format('woff2');
+    src: url('fonts/barlow-v13-latin-500.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -48,7 +48,7 @@
 
 @font-face {
     font-family: 'Courier Prime';
-    src: url('../fonts/courier-prime-400.woff2') format('woff2');
+    src: url('fonts/courier-prime-v11-latin-regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -56,7 +56,7 @@
 
 @font-face {
     font-family: 'Courier Prime';
-    src: url('../fonts/courier-prime-700.woff2') format('woff2');
+    src: url('fonts/courier-prime-v11-latin-700.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;

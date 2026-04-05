@@ -101,6 +101,7 @@
     height: 3px;
     background: var(--accent2);
     animation: strikethrough 0.5s 1.3s ease forwards;
+    will-change: transform;
 }
 
 
@@ -112,6 +113,7 @@
     opacity: 0;
     transform: translateY(60px);
     animation: slideUpSolution 0.6s 2.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    will-change: transform, opacity;
 }
 
 
