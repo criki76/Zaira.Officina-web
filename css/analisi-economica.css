@@ -1,22 +1,10 @@
 /* ─── RESET & VARS ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-:root {
-  --bg:       #111008;
-  --bg2:      #181510;
-  --accent:   #e8a227;
-  --accent-d: rgba(232,162,39,0.12);
-  --text:     #e8e4d9;
-  --muted:    #7a7567;
-  --border:   rgba(232,162,39,0.15);
-  --green:    #6fcf97;
-  --gap:      1px;
-  --max:      1100px;
-  --pad:      clamp(20px, 5vw, 56px);
-}
+
 body {
   background: var(--bg);
-  color: var(--text);
+  color: var(--white);
   font-family: 'Barlow', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -74,7 +62,7 @@ body::before {
   font-size: 20px;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--text);
+  color: var(--white);
 }
 .logo-name span { color: var(--accent); }
 .logo-tag {
@@ -98,7 +86,7 @@ body::before {
   text-decoration: none;
   transition: background .2s;
 }
-.hdr-cta:hover { background: var(--text); }
+.hdr-cta:hover { background: var(--white); }
 
 /* ─── HERO ─── */
 .hero {
@@ -280,12 +268,12 @@ body::before {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 700;
   font-size: 20px;
-  color: var(--text);
+  color: var(--white);
   white-space: nowrap;
 }
 .table-val.accent { color: var(--accent); font-size: 24px; }
 .table-val.green { color: var(--green); }
-.table-total .table-label { color: var(--text); font-weight: 500; }
+.table-total .table-label { color: var(--white); font-weight: 500; }
 .table-total { background: var(--accent-d); padding: 12px 10px; }
 
 .highlight-box {
@@ -293,7 +281,7 @@ body::before {
   padding: 16px 20px;
   background: var(--accent-d);
   font-size: 15px;
-  color: var(--text);
+  color: var(--white);
   font-weight: 300;
   line-height: 1.7;
 }
@@ -339,7 +327,7 @@ body::before {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 900;
   font-size: 24px;
-  color: var(--text);
+  color: var(--white);
 }
 .rto-price.free { color: var(--accent); }
 .rto-note {
@@ -373,14 +361,14 @@ body::before {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 700;
   font-size: 17px;
-  color: var(--text);
+  color: var(--white);
   white-space: nowrap;
 }
 .value-total {
   background: var(--accent-d);
   padding: 13px 10px;
   font-weight: 500;
-  color: var(--text);
+  color: var(--white);
 }
 .val-total {
   font-family: 'Barlow Condensed', sans-serif;
@@ -436,7 +424,7 @@ body::before {
   font-weight: 400;
 }
 .compare-label {
-  color: var(--text) !important;
+  color: var(--white) !important;
   font-weight: 500 !important;
   font-size: 13px !important;
 }
@@ -494,7 +482,7 @@ body::before {
   font-weight: 300;
   line-height: 1.6;
 }
-.pt-text strong { color: var(--text); font-weight: 500; }
+.pt-text strong { color: var(--white); font-weight: 500; }
 
 /* ─── FIT / WARN LISTS ─── */
 .fit-list,
@@ -551,7 +539,7 @@ body::before {
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: 20px;
-  color: var(--text);
+  color: var(--white);
 }
 .verdict-h span { color: var(--accent); }
 .verdict-sub {
@@ -580,7 +568,7 @@ body::before {
   color: var(--bg);
   transition: background .2s;
 }
-.btn-p:hover { background: var(--text); }
+.btn-p:hover { background: var(--white); }
 .btn-s {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 900;
@@ -624,7 +612,7 @@ footer {
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: .08em;
-  color: var(--text);
+  color: var(--white);
 }
 .footer-brand span { color: var(--accent); }
 .footer-links {

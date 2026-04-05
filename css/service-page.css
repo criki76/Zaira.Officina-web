@@ -1,5 +1,5 @@
 .gb-container {
-    width: min(1120px, calc(100% - 48px));
+    width: min(1280px, calc(100% - 48px));
     margin: 0 auto;
 }
 

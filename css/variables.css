@@ -10,13 +10,19 @@
   /* ── COLORI ────────────────────────────────────────────────────────────── */
   --bg:       #111008;     /* sfondo principale (quasi nero caldo) */
   --bg2:      #1a1a12;     /* sfondo alternativo sezioni scure */
+  --bg3:      #1e1b12;     /* sfondo terziario — usato in sito-attivo */
   --accent:   #e8a227;     /* arancio/oro — colore primario brand */
   --accent2:  #c4420f;     /* arancio rosso — usato per strikethrough hero */
+  --accent-d: rgba(232, 162, 39, 0.12); /* accento trasparente */
   --white:    #f0ede6;     /* bianco caldo — testo principale */
   --muted:    #6b6858;     /* grigio caldo — testo secondario / label */
   --border:   #2a2820;     /* colore dei bordi / separatori */
   --text-mid: #9a9580;     /* testo paragrafo, livello intermedio */
   --text-low: #8a8778;     /* testo ancora più sottile, descrizioni */
+  --green:    #6fcf97;     /* verde — usato in analisi-economica */
+  --gap:      1px;         /* gap griglia (separatore sottile) */
+  --max:      1280px;      /* alias --max-width per pagine landing */
+  --pad:      clamp(20px, 5vw, 56px); /* padding orizzontale pagine landing */
 
   /* ── TIPOGRAFIA ────────────────────────────────────────────────────────── */
   --font-display:  'Barlow Condensed', sans-serif;  /* titoli, numeri, UI bold */

@@ -12,23 +12,10 @@ html {
     scroll-behavior: smooth;
 }
 
-:root {
-    --bg: #111008;
-    --bg2: #181510;
-    --bg3: #1e1b12;
-    --accent: #e8a227;
-    --accent-d: rgba(232, 162, 39, 0.12);
-    --text: #e8e4d9;
-    --muted: #7a7567;
-    --border: rgba(232, 162, 39, 0.15);
-    --gap: 1px;
-    --max: 1160px;
-    --pad: clamp(20px, 5vw, 56px);
-}
 
 body {
     background: var(--bg);
-    color: var(--text);
+    color: var(--white);
     font-family: 'Barlow', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -97,7 +84,7 @@ body::before {
     font-size: 20px;
     letter-spacing: .08em;
     text-transform: uppercase;
-    color: var(--text);
+    color: var(--white);
 }
 
 .logo-name span {
@@ -130,7 +117,7 @@ body::before {
 }
 
 .hdr-cta:hover {
-    background: var(--text);
+    background: var(--white);
 }
 
 
@@ -201,7 +188,7 @@ body::before {
 }
 
 .hero-sub strong {
-    color: var(--text);
+    color: var(--white);
     font-weight: 500;
 }
 
@@ -282,7 +269,7 @@ body::before {
 }
 
 .btn-p:hover {
-    background: var(--text);
+    background: var(--white);
 }
 
 .btn-s {
@@ -386,7 +373,7 @@ body::before {
     font-size: 28px;
     text-transform: uppercase;
     line-height: 1.1;
-    color: var(--text);
+    color: var(--white);
     margin-bottom: 24px;
     border-left: 3px solid var(--accent);
     padding-left: 16px;
@@ -415,7 +402,7 @@ body::before {
     padding: 8px 0 8px 20px;
     position: relative;
     font-size: 14px;
-    color: var(--text);
+    color: var(--white);
     font-weight: 300;
     border-bottom: var(--gap) solid rgba(232, 162, 39, .07);
 }
@@ -585,12 +572,12 @@ body::before {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 700;
     font-size: 20px;
-    color: var(--text);
+    color: var(--white);
     white-space: nowrap;
 }
 
 .costi-row.total .costi-row-label {
-    color: var(--text);
+    color: var(--white);
     font-weight: 500;
 }
 
@@ -605,7 +592,7 @@ body::before {
     padding: 16px 20px;
     background: var(--accent-d);
     font-size: 15px;
-    color: var(--text);
+    color: var(--white);
     font-weight: 300;
     line-height: 1.7;
 }
@@ -631,7 +618,7 @@ body::before {
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
-    color: var(--text);
+    color: var(--white);
     margin-bottom: 20px;
     letter-spacing: .03em;
 }
@@ -683,7 +670,7 @@ body::before {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
     font-size: 26px;
-    color: var(--text);
+    color: var(--white);
 }
 
 .rto-prezzo.free {
@@ -750,7 +737,7 @@ body::before {
     font-weight: 900;
     font-size: 18px;
     text-transform: uppercase;
-    color: var(--text);
+    color: var(--white);
     margin-bottom: 8px;
     letter-spacing: .03em;
 }
@@ -883,7 +870,7 @@ body::before {
     font-weight: 900;
     font-size: 24px;
     text-transform: uppercase;
-    color: var(--text);
+    color: var(--white);
     margin-bottom: 16px;
 }
 
@@ -946,7 +933,7 @@ body::before {
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
-    color: var(--text);
+    color: var(--white);
     letter-spacing: .02em;
     line-height: 1.2;
 }
@@ -1052,7 +1039,7 @@ body::before {
 
 .bio-sign-name {
     font-weight: 500;
-    color: var(--text);
+    color: var(--white);
     font-size: 15px;
 }
 
@@ -1096,7 +1083,7 @@ body::before {
 
 .status-text {
     font-size: 14px;
-    color: var(--text);
+    color: var(--white);
     font-weight: 500;
 }
 
@@ -1146,7 +1133,7 @@ body::before {
 }
 
 .cta-sub strong {
-    color: var(--text);
+    color: var(--white);
     font-weight: 500;
 }
 
@@ -1223,7 +1210,7 @@ footer {
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: .08em;
-    color: var(--text);
+    color: var(--white);
 }
 
 .footer-brand span {
@@ -1323,7 +1310,7 @@ footer {
     display: block;
     width: 22px;
     height: 2px;
-    background: var(--text);
+    background: var(--white);
     transition: transform 0.25s ease, opacity 0.2s ease;
     transform-origin: center;
 }
@@ -1375,7 +1362,7 @@ footer {
     font-weight: 900;
     font-size: clamp(2rem, 10vw, 3rem);
     text-transform: uppercase;
-    color: var(--text);
+    color: var(--white);
     text-decoration: none;
     letter-spacing: 0.05em;
     padding: 1rem 2rem;
@@ -1484,7 +1471,7 @@ footer {
 /* Numero grande */
 
 .price-cell-num {
-    font-family: var(--font-title);
+    font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
     font-size: 72px;
     line-height: 1;
@@ -1495,7 +1482,7 @@ footer {
 }
 
 .price-cell-num--text {
-    color: var(--text);
+    color: var(--white);
 }
 
 
@@ -1528,7 +1515,7 @@ footer {
 }
 
 .price-meta-strong {
-    color: var(--text);
+    color: var(--white);
     font-weight: 500;
 }
 
@@ -1566,7 +1553,7 @@ footer {
 }
 
 .price-bottom-strong {
-    color: var(--text);
+    color: var(--white);
     font-weight: 500;
 }
 
