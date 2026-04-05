@@ -33,10 +33,12 @@
 /* ── TABLET PORTRAIT / SMALL DESKTOP (< 900px) ───────────────────────────── */
 
 @media (max-width: 900px) {
-    /* ── NAV: mostra hamburger, nascondi link ── */
+    /* ── NAV: mostra hamburger, nascondi link e CTA desktop ── */
     .nav-links {
         display: none;
-        /* sostituito dal menu mobile in nav.css */
+    }
+    .nav-cta {
+        display: none;
     }
     .hamburger {
         display: flex;

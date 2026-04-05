@@ -91,6 +91,26 @@ nav {
 }
 
 
+/* ── CTA WHATSAPP DESKTOP ────────────────────────────────────────────────── */
+.nav-cta {
+  font-family:     var(--font-display);
+  font-weight:     700;
+  font-size:       0.8rem;
+  letter-spacing:  0.1em;
+  text-transform:  uppercase;
+  text-decoration: none;
+  color:           var(--bg);
+  background:      var(--accent);
+  padding:         0.5rem 1.2rem;
+  white-space:     nowrap;
+  transition:      background var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-cta:hover {
+  background: #f0b030;
+}
+
+
 /* ── HAMBURGER BUTTON ────────────────────────────────────────────────────── */
 /*
    Nascosto su desktop, visibile su < 900px (vedi responsive.css).
