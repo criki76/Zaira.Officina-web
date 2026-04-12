@@ -45,6 +45,7 @@
             font-size: 16px;
             line-height: 1.7;
             overflow-x: hidden;
+            padding-top: 84px; /* compensa la nav fixed */
         }
         /* NOISE TEXTURE */
         
@@ -276,8 +277,8 @@
             border-right: var(--gap) solid var(--border);
             padding: 40px 0;
             position: sticky;
-            top: 0;
-            height: 100vh;
+            top: 84px; /* sotto la nav fixed */
+            height: calc(100vh - 84px);
             overflow-y: auto;
             scrollbar-width: none;
         }
@@ -833,7 +834,7 @@
     <div class="page-layout">
 
         <!-- SIDEBAR NAVIGAZIONE -->
-        <nav class="sidebar">
+        <aside class="sidebar">
             <div class="sidebar-title">Indice</div>
             <a href="#s1" class="nav-item"><span class="num">01</span>Destinatari</a>
             <a href="#s2" class="nav-item"><span class="num">02</span>Cosa paghi</a>
@@ -861,7 +862,7 @@
             <a href="#s24" class="nav-item"><span class="num">24</span>Foro competente</a>
             <a href="#s25" class="nav-item"><span class="num">25</span>Referenza e portfolio</a>
             <a href="#s26" class="nav-item"><span class="num">26</span>Nota finale</a>
-        </nav>
+        </aside>
 
         <!-- CONTENUTO -->
         <main class="content">
