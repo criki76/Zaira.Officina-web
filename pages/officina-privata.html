@@ -1,0 +1,2220 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Officina Privata — Zaira Officina</title>
+  <meta
+    name="robots"
+    content="noindex, nofollow"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* =========================================================
+       RESET
+       ========================================================= */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* =========================================================
+       VARIABILI BRAND
+       ========================================================= */
+    :root {
+      --bg:
+        #0d0c08;
+      --bg-soft:
+        #14120c;
+      --bg-card:
+        #191611;
+      --bg-card-2:
+        #211d15;
+      --bg-elev:
+        #262115;
+
+      --gold:
+        #e8a227;
+      --gold-2:
+        #f0b13d;
+      --gold-dim:
+        #b07c1a;
+
+      --text:
+        #f1eadb;
+      --text-soft:
+        #d5ccb9;
+      --muted:
+        #8f836f;
+      --muted-2:
+        #6f6658;
+
+      --border:
+        #2f291d;
+      --border-2:
+        #3a3224;
+
+      --green:
+        #27ae60;
+      --green-soft:
+        rgba(39, 174, 96, 0.12);
+
+      --blue:
+        #5dade2;
+      --blue-soft:
+        rgba(93, 173, 226, 0.12);
+
+      --danger:
+        #e07060;
+      --danger-soft:
+        rgba(224, 112, 96, 0.1);
+
+      --shadow-soft:
+        0 18px 50px rgba(0, 0, 0, 0.28);
+
+      --radius-sm:
+        12px;
+      --radius-md:
+        18px;
+      --radius-lg:
+        26px;
+
+      --font-d:
+        "Barlow Condensed",
+        sans-serif;
+      --font-b:
+        "Barlow",
+        sans-serif;
+
+      --container:
+        1400px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top right, rgba(232, 162, 39, 0.08), transparent 22%),
+        linear-gradient(180deg, #100f0a 0%, #0d0c08 100%);
+      color: var(--text);
+      font-family: var(--font-b);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       UTILITY
+       ========================================================= */
+    .wrap {
+      width: min(var(--container), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      white-space: nowrap;
+    }
+
+    /* =========================================================
+       LOGIN
+       ========================================================= */
+    #login {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem;
+      background:
+        radial-gradient(circle at top center, rgba(232, 162, 39, 0.12), transparent 26%),
+        linear-gradient(180deg, #100f0a 0%, #0d0c08 100%);
+      z-index: 999;
+    }
+
+    .login-panel {
+      width: min(420px, 100%);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.01)),
+        var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .login-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.3rem 0.7rem;
+      border: 1px solid rgba(232, 162, 39, 0.24);
+      background: rgba(232, 162, 39, 0.06);
+      border-radius: 999px;
+      color: var(--gold);
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    #login .logo {
+      font-family: var(--font-d);
+      font-weight: 900;
+      font-size: clamp(2.6rem, 7vw, 4.4rem);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 0.95;
+      color: var(--gold);
+    }
+
+    #login .logo span {
+      color: var(--text);
+    }
+
+    #login .sub {
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 0.55rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .login-copy {
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      margin-bottom: 1.35rem;
+    }
+
+    #login-form {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .field {
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .field label {
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .password-wrap {
+      position: relative;
+    }
+
+    #login-form input[type="password"],
+    #search-input,
+    #sort-select {
+      width: 100%;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 0.95rem 1rem;
+      outline: none;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    #login-form input[type="password"]:focus,
+    #search-input:focus,
+    #sort-select:focus {
+      border-color: rgba(232, 162, 39, 0.55);
+      box-shadow: 0 0 0 4px rgba(232, 162, 39, 0.08);
+      background: #17140d;
+    }
+
+    #login-form button {
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(180deg, var(--gold-2), var(--gold));
+      color: #161108;
+      font-family: var(--font-d);
+      font-weight: 900;
+      font-size: 1.02rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.92rem 1rem;
+      transition:
+        transform 0.15s ease,
+        filter 0.15s ease;
+    }
+
+    #login-form button:hover {
+      filter: brightness(1.04);
+      transform: translateY(-1px);
+    }
+
+    #login-err {
+      min-height: 1rem;
+      color: var(--danger);
+      font-size: 0.84rem;
+      text-align: center;
+    }
+
+    /* =========================================================
+       APP
+       ========================================================= */
+    #app {
+      display: none;
+      min-height: 100vh;
+    }
+
+    /* =========================================================
+       TOPBAR
+       ========================================================= */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 120;
+      backdrop-filter: blur(14px);
+      background: rgba(13, 12, 8, 0.78);
+      border-bottom: 1px solid rgba(58, 50, 36, 0.85);
+    }
+
+    .topbar-inner {
+      width: min(var(--container), calc(100% - 2rem));
+      margin: 0 auto;
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand-block {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background:
+        radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.12), transparent 35%),
+        linear-gradient(180deg, rgba(232, 162, 39, 0.18), rgba(232, 162, 39, 0.06));
+      border: 1px solid rgba(232, 162, 39, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-d);
+      font-weight: 900;
+      color: var(--gold);
+      font-size: 1.2rem;
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .brand {
+      font-family: var(--font-d);
+      font-weight: 900;
+      font-size: 1.35rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    .brand-sub {
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-top: 0.22rem;
+    }
+
+    .topbar-right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .badge-priv,
+    .badge-total {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      min-height: 38px;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .badge-total b {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .btn-exit {
+      min-height: 38px;
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-soft);
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition:
+        border-color 0.15s ease,
+        color 0.15s ease,
+        background 0.15s ease;
+    }
+
+    .btn-exit:hover {
+      border-color: rgba(232, 162, 39, 0.45);
+      color: var(--gold);
+      background: rgba(232, 162, 39, 0.05);
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+    .hero {
+      padding: 2.3rem 0 1.3rem;
+    }
+
+    .hero-box {
+      width: min(var(--container), calc(100% - 2rem));
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at top right, rgba(232, 162, 39, 0.1), transparent 20%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+        var(--bg-card);
+      padding: 1.8rem;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-box::after {
+      content: "";
+      position: absolute;
+      inset: auto -60px -60px auto;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(232, 162, 39, 0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.9fr;
+      gap: 1.2rem;
+      align-items: end;
+    }
+
+    .hero h1 {
+      font-family: var(--font-d);
+      font-weight: 900;
+      font-size: clamp(3rem, 7vw, 5.4rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .hero h1 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .hero p {
+      margin-top: 0.8rem;
+      max-width: 760px;
+      color: var(--text-soft);
+      font-size: 0.98rem;
+    }
+
+    .hero-meta {
+      display: grid;
+      gap: 0.75rem;
+      justify-items: end;
+    }
+
+    .hero-date,
+    .hero-note {
+      width: 100%;
+      border-radius: 18px;
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .hero-date small,
+    .hero-note small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.28rem;
+    }
+
+    .hero-date strong,
+    .hero-note strong {
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    /* =========================================================
+       STATS
+       ========================================================= */
+    .stats {
+      padding: 1rem 0 0.4rem;
+    }
+
+    .stats-grid {
+      width: min(var(--container), calc(100% - 2rem));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1rem 1rem 0.95rem;
+    }
+
+    .stat-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-family: var(--font-d);
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--gold);
+    }
+
+    .stat-card span {
+      display: block;
+      margin-top: 0.3rem;
+      color: var(--text-soft);
+      font-size: 0.85rem;
+    }
+
+    /* =========================================================
+       TOOLBAR
+       ========================================================= */
+    .toolbar {
+      padding: 1rem 0 0.8rem;
+    }
+
+    .toolbar-box {
+      width: min(var(--container), calc(100% - 2rem));
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--bg-card);
+      padding: 1rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .toolbar-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) 220px;
+      gap: 0.9rem;
+    }
+
+    .search-wrap {
+      position: relative;
+    }
+
+    .search-wrap::before {
+      content: "⌕";
+      position: absolute;
+      left: 0.95rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 1rem;
+      pointer-events: none;
+    }
+
+    #search-input {
+      padding-left: 2.45rem;
+      border-radius: 16px;
+    }
+
+    #sort-select {
+      border-radius: 16px;
+      cursor: pointer;
+    }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .f-btn {
+      min-height: 40px;
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-family: var(--font-d);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .f-btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--border-2);
+      color: var(--text);
+    }
+
+    .f-btn.on {
+      background: linear-gradient(180deg, var(--gold-2), var(--gold));
+      border-color: var(--gold);
+      color: #19130b;
+    }
+
+    .toolbar-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--border);
+      padding-top: 0.95rem;
+    }
+
+    .results {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .results b {
+      color: var(--gold);
+    }
+
+    .active-filter {
+      color: var(--text-soft);
+      font-size: 0.84rem;
+    }
+
+    .active-filter span {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* =========================================================
+       GRIGLIA
+       ========================================================= */
+    .projects {
+      padding: 0.2rem 0 2rem;
+    }
+
+    .grid {
+      width: min(var(--container), calc(100% - 2rem));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1rem;
+    }
+
+    /* =========================================================
+       CARD
+       ========================================================= */
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+      min-height: 100%;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 1.15rem;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+        var(--bg-card);
+      transition:
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        background 0.18s ease;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(232, 162, 39, 0.26);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+        var(--bg-card-2);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.8rem;
+    }
+
+    .tag-settore {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(232, 162, 39, 0.08);
+      border: 1px solid rgba(232, 162, 39, 0.16);
+      color: var(--gold-dim);
+      font-family: var(--font-d);
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .pills {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border-radius: 999px;
+      font-size: 0.63rem;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.2rem 0.58rem;
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+
+    .pill.demo {
+      background: rgba(41, 128, 185, 0.13);
+      color: var(--blue);
+      border-color: rgba(41, 128, 185, 0.26);
+    }
+
+    .pill.cliente {
+      background: rgba(39, 174, 96, 0.12);
+      color: #58d68d;
+      border-color: rgba(39, 174, 96, 0.24);
+    }
+
+    .pill.bozza {
+      background: rgba(122, 112, 96, 0.11);
+      color: #b7aa95;
+      border-color: var(--border);
+    }
+
+    .pill.mostrabile {
+      background: rgba(232, 162, 39, 0.12);
+      color: var(--gold);
+      border-color: rgba(232, 162, 39, 0.28);
+    }
+
+    .pill.solo-io {
+      background: rgba(122, 112, 96, 0.08);
+      color: var(--muted);
+      border-color: var(--border);
+    }
+
+    .card-title {
+      font-family: var(--font-d);
+      font-weight: 900;
+      font-size: 1.95rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      line-height: 0.95;
+    }
+
+    .card-desc {
+      color: var(--text-soft);
+      font-size: 0.91rem;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .meta-box {
+      border-radius: 16px;
+      padding: 0.72rem 0.82rem;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .meta-box small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.64rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+
+    .meta-box p {
+      font-size: 0.84rem;
+      color: var(--text);
+    }
+
+    .card-action {
+      background: rgba(232, 162, 39, 0.06);
+      border: 1px solid rgba(232, 162, 39, 0.14);
+      border-left: 3px solid var(--gold-dim);
+      border-radius: 16px;
+      padding: 0.72rem 0.85rem;
+      font-size: 0.82rem;
+      color: #d4b166;
+    }
+
+    .card-action::before {
+      content: "Prossima mossa";
+      display: block;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+      color: var(--gold-dim);
+    }
+
+    .card-nota {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 0.72rem 0.85rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .card-warn {
+      background: var(--danger-soft);
+      border: 1px solid rgba(224, 112, 96, 0.18);
+      border-radius: 16px;
+      padding: 0.72rem 0.85rem;
+      font-size: 0.76rem;
+      color: #f0a495;
+    }
+
+    .card-warn::before {
+      content: "⚠ ";
+    }
+
+    .card-btns {
+      display: flex;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+      margin-top: auto;
+      padding-top: 0.15rem;
+    }
+
+    .btn-apri,
+    .btn-copia,
+    .btn-scheda {
+      min-height: 44px;
+      border-radius: 14px;
+      padding: 0.72rem 0.95rem;
+      font-family: var(--font-d);
+      font-weight: 800;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition:
+        transform 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease,
+        filter 0.15s ease,
+        background 0.15s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid transparent;
+    }
+
+    .btn-apri {
+      flex: 1 1 150px;
+      background: linear-gradient(180deg, var(--gold-2), var(--gold));
+      color: #171208;
+    }
+
+    .btn-apri:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.04);
+    }
+
+    .btn-copia {
+      background: var(--bg-soft);
+      color: var(--text);
+      border-color: var(--border);
+      flex: 0 0 auto;
+    }
+
+    .btn-copia:hover {
+      border-color: rgba(232, 162, 39, 0.35);
+      color: var(--gold);
+    }
+
+    .btn-copia.ok {
+      color: var(--green);
+      border-color: rgba(39, 174, 96, 0.4);
+      background: var(--green-soft);
+    }
+
+    .btn-scheda {
+      background: transparent;
+      color: var(--muted);
+      border-color: var(--border);
+      flex: 0 0 auto;
+    }
+
+    .btn-scheda:hover {
+      color: var(--text);
+      border-color: var(--border-2);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* =========================================================
+       EMPTY STATE
+       ========================================================= */
+    .empty-state {
+      width: min(var(--container), calc(100% - 2rem));
+      margin: 0 auto;
+      border: 1px dashed var(--border-2);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.015);
+      padding: 2.2rem 1.2rem;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .empty-state strong {
+      display: block;
+      color: var(--text);
+      font-family: var(--font-d);
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.35rem;
+    }
+
+    /* =========================================================
+       MODAL
+       ========================================================= */
+    #overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: rgba(0, 0, 0, 0.74);
+      padding: 1rem;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(8px);
+    }
+
+    #overlay.open {
+      display: flex;
+    }
+
+    #modal {
+      width: min(760px, 100%);
+      max-height: 92vh;
+      overflow-y: auto;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
+        var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      padding: 1.4rem;
+    }
+
+    .m-close {
+      position: sticky;
+      top: 0;
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(13, 12, 8, 0.7);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition:
+        border-color 0.15s ease,
+        color 0.15s ease,
+        background 0.15s ease;
+      z-index: 2;
+    }
+
+    .m-close:hover {
+      border-color: rgba(232, 162, 39, 0.34);
+      color: var(--gold);
+      background: rgba(232, 162, 39, 0.06);
+    }
+
+    #modal-body {
+      display: grid;
+      gap: 1rem;
+      margin-top: 0.55rem;
+    }
+
+    .m-settore {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      width: fit-content;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(232, 162, 39, 0.08);
+      border: 1px solid rgba(232, 162, 39, 0.16);
+      color: var(--gold-dim);
+      font-family: var(--font-d);
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .m-title {
+      font-family: var(--font-d);
+      font-weight: 900;
+      font-size: clamp(2.2rem, 6vw, 3.4rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    .m-desc {
+      color: var(--text-soft);
+      font-size: 0.95rem;
+    }
+
+    .m-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .m-field {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 0.9rem;
+    }
+
+    .m-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .m-field small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.66rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .m-field p {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .m-field .m-url {
+      color: var(--gold-dim);
+      word-break: break-all;
+      font-size: 0.82rem;
+    }
+
+    .m-action {
+      background: rgba(232, 162, 39, 0.06);
+      border: 1px solid rgba(232, 162, 39, 0.14);
+      border-left: 3px solid var(--gold);
+      border-radius: 18px;
+      padding: 0.9rem 1rem;
+      color: #d4b166;
+      font-size: 0.88rem;
+    }
+
+    .m-action::before {
+      content: "Prossima mossa";
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--gold-dim);
+      font-size: 0.66rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .m-nota {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 0.9rem 1rem;
+      font-size: 0.86rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .m-btns {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      padding-top: 0.2rem;
+    }
+
+    /* =========================================================
+       TOAST
+       ========================================================= */
+    #toast {
+      position: fixed;
+      right: 1.1rem;
+      bottom: 1.1rem;
+      z-index: 600;
+      min-width: 180px;
+      max-width: calc(100vw - 2rem);
+      padding: 0.85rem 1.1rem;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #2ab866, #239b56);
+      color: #fff;
+      font-family: var(--font-d);
+      font-weight: 700;
+      font-size: 0.84rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateY(8px);
+      pointer-events: none;
+      transition:
+        opacity 0.18s ease,
+        transform 0.18s ease;
+      box-shadow: var(--shadow-soft);
+    }
+
+    #toast.on {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    .page-footer {
+      padding: 1rem 0 2rem;
+    }
+
+    .page-footer-inner {
+      width: min(var(--container), calc(100% - 2rem));
+      margin: 0 auto;
+      border-top: 1px solid var(--border);
+      padding-top: 1.1rem;
+      color: var(--muted);
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .page-footer a {
+      color: var(--gold-dim);
+      text-decoration: none;
+    }
+
+    .page-footer a:hover {
+      color: var(--gold);
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .toolbar-top,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-meta {
+        justify-items: stretch;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar-inner {
+        padding: 0.75rem 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topbar-right {
+        width: 100%;
+        margin-left: 0;
+        justify-content: flex-start;
+      }
+
+      .hero-box,
+      .toolbar-box,
+      .stat-card,
+      .card,
+      #modal {
+        border-radius: 22px;
+      }
+
+      .m-row {
+        grid-template-columns: 1fr;
+      }
+
+      .card-btns,
+      .m-btns {
+        flex-direction: column;
+      }
+
+      .btn-apri,
+      .btn-copia,
+      .btn-scheda {
+        width: 100%;
+      }
+
+      .page-footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .wrap,
+      .topbar-inner,
+      .hero-box,
+      .stats-grid,
+      .toolbar-box,
+      .grid,
+      .empty-state,
+      .page-footer-inner {
+        width: min(var(--container), calc(100% - 1rem));
+      }
+
+      .hero {
+        padding-top: 1rem;
+      }
+
+      .hero-box,
+      .toolbar-box,
+      .card,
+      #modal,
+      .empty-state {
+        padding: 1rem;
+      }
+
+      .stat-card {
+        padding: 0.95rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 14vw, 4rem);
+      }
+
+      .card-title {
+        font-size: 1.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =======================================================
+       LOGIN
+       ======================================================= -->
+  <div id="login">
+    <div class="login-panel">
+      <div class="login-kicker">Area riservata</div>
+
+      <div class="logo">Zaira<span>.</span></div>
+      <div class="sub">Officina Privata</div>
+
+      <p class="login-copy">
+        Archivio interno dei progetti, demo e lavori cliente.
+      </p>
+
+      <form
+        id="login-form"
+        onsubmit="doLogin(event)"
+      >
+        <div class="field">
+          <label for="pwd">Password</label>
+          <div class="password-wrap">
+            <input
+              type="password"
+              id="pwd"
+              placeholder="Inserisci password"
+              autocomplete="current-password"
+              autofocus
+            />
+          </div>
+        </div>
+
+        <button type="submit">Entra</button>
+        <div id="login-err"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       APP
+       ======================================================= -->
+  <div id="app">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="brand-block">
+          <div class="brand-mark">Z</div>
+
+          <div class="brand-copy">
+            <div class="brand">Zaira<span>.</span></div>
+            <div class="brand-sub">Officina privata</div>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <div class="badge-priv">Uso interno</div>
+          <div class="badge-total">Totale progetti <b id="top-total">0</b></div>
+          <button
+            class="btn-exit"
+            onclick="doLogout()"
+          >
+            Esci
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-box">
+        <div class="hero-grid">
+          <div>
+            <h1>I miei <em>lavori</em></h1>
+            <p>
+              Dashboard privata per tenere sotto controllo demo, clienti,
+              bozze e prossime mosse operative senza perdere tempo.
+            </p>
+          </div>
+
+          <div class="hero-meta">
+            <div class="hero-date">
+              <small>Aggiornato il</small>
+              <strong id="hero-date">—</strong>
+            </div>
+
+            <div class="hero-note">
+              <small>Focus</small>
+              <strong id="hero-focus">Archivio ordinato, pronto da usare</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <small>Progetti totali</small>
+          <strong id="stat-total">0</strong>
+          <span>Archivio completo</span>
+        </div>
+
+        <div class="stat-card">
+          <small>Clienti reali</small>
+          <strong id="stat-clienti">0</strong>
+          <span>Lavori consegnati o attivi</span>
+        </div>
+
+        <div class="stat-card">
+          <small>Demo mostrabili</small>
+          <strong id="stat-demo">0</strong>
+          <span>Utili per outreach e portfolio</span>
+        </div>
+
+        <div class="stat-card">
+          <small>URL da verificare</small>
+          <strong id="stat-url">0</strong>
+          <span>Da controllare su Vercel</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLBAR -->
+    <section class="toolbar">
+      <div class="toolbar-box">
+        <div class="toolbar-top">
+          <div class="search-wrap">
+            <label
+              for="search-input"
+              class="sr-only"
+            >
+              Cerca progetto
+            </label>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Cerca per nome, settore, nota o descrizione..."
+            />
+          </div>
+
+          <div>
+            <label
+              for="sort-select"
+              class="sr-only"
+            >
+              Ordina progetti
+            </label>
+            <select id="sort-select">
+              <option value="nome-asc">Ordina: Nome A-Z</option>
+              <option value="nome-desc">Ordina: Nome Z-A</option>
+              <option value="stato">Ordina: Stato</option>
+              <option value="settore">Ordina: Settore</option>
+              <option value="vis">Ordina: Visibilità</option>
+            </select>
+          </div>
+        </div>
+
+        <div
+          class="filter-row"
+          id="filters"
+        ></div>
+
+        <div class="toolbar-bottom">
+          <div class="results">
+            Visualizzati: <b id="count">0</b> progetti
+          </div>
+
+          <div class="active-filter">
+            Filtro attivo:
+            <span id="active-filter-label">Tutti</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGETTI -->
+    <section class="projects">
+      <div
+        class="grid"
+        id="grid"
+      ></div>
+
+      <div
+        class="empty-state hidden"
+        id="empty-state"
+      >
+        <strong>Nessun progetto trovato</strong>
+        Prova a cambiare filtro o ricerca.
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <div class="page-footer-inner">
+        <div>Zaira Officina · Archivio privato riservato</div>
+        <div>
+          <a
+            href="https://zairaofficina.it"
+            target="_blank"
+            rel="noopener"
+          >
+            zairaofficina.it
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- =======================================================
+       MODAL
+       ======================================================= -->
+  <div
+    id="overlay"
+    onclick="chiudiOverlay(event)"
+  >
+    <div id="modal">
+      <button
+        class="m-close"
+        onclick="chiudiModal()"
+      >
+        ✕ Chiudi
+      </button>
+
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       TOAST
+       ======================================================= -->
+  <div id="toast"></div>
+
+  <script>
+    /* =========================================================
+       CONFIG
+       ATTENZIONE:
+       Password in chiaro = non sicura.
+       Va bene solo come blocco visivo base.
+       ========================================================= */
+    const PWD = "zaira2024";
+
+    /* =========================================================
+       DATI PROGETTI
+       ========================================================= */
+    const PROGETTI = [
+      {
+        nome: "Osteria 365",
+        settore: "ristorazione",
+        stato: "demo",
+        vis: "mostrabile",
+        desc: "Ristorante di pesce al Porto Canale di Cervia. Hero cinematica, menu, sezione eventi.",
+        nota: "In lavorazione — hero completata, in attesa feedback cliente.",
+        azione: "Inviare al cliente per feedback hero section.",
+        url: "https://osteria365.vercel.app/",
+        urlOk: true
+      },
+      {
+        nome: "Da Camporesi",
+        settore: "ristorazione",
+        stato: "cliente",
+        vis: "mostrabile",
+        desc: "Ristorante Forlì, Anna Camporesi. Menu JSON con 30 piatti, design editorial.",
+        nota: "Sito consegnato.",
+        azione: "Chiedere recensione Google o testimonianza.",
+        url: "https://camporesi.vercel.app/",
+        urlOk: true
+      },
+      {
+        nome: "BB Montefratta",
+        settore: "hospitality",
+        stato: "cliente",
+        vis: "mostrabile",
+        desc: "B&B Fratta Terme, Catia e Domenico. Foto reali, immagini ottimizzate AVIF/WebP.",
+        nota: "Sito consegnato.",
+        azione: "Monitorare traffico. Nessuna azione urgente.",
+        url: "https://anteprima-bbmontefratta.vercel.app/",
+        urlOk: true
+      },
+      {
+        nome: "B&B del Borgo",
+        settore: "hospitality",
+        stato: "demo",
+        vis: "mostrabile",
+        desc: "Demo B&B ambientazione Bertinoro.",
+        nota: "Demo fredda — non ancora inviata.",
+        azione: "Usare come esempio per prossimo prospect hospitality.",
+        url: "https://anteprima-bbmontefratta.vercel.app/",
+        urlOk: true
+      },
+      {
+        nome: "Oasi del Capello",
+        settore: "beauty",
+        stato: "cliente",
+        vis: "mostrabile",
+        desc: "Parrucchiera Panighina, Pamela e Massi. Hero rewrite, Prima & Dopo, urgency messaging.",
+        nota: "Sito consegnato — pagina servizi separata.",
+        azione: "Chiedere testimonianza scritta.",
+        url: "https://oasi-del-capello.vercel.app/",
+        urlOk:true
+      },
+      {
+        nome: "Centro Benessere",
+        settore: "beauty",
+        stato: "demo",
+        vis: "mostrabile",
+        desc: "Demo portfolio benessere, layout moderno.",
+        nota: "Demo fredda per settore estetica.",
+        azione: "Usare nell'outreach estetiste Forlì.",
+        url: "https://centrobenessere.vercel.app/",
+        urlOk: true
+      },
+      {
+        nome: "Serendipity",
+        settore: "beauty",
+        stato: "demo",
+        vis: "mostrabile",
+        desc: "Demo estetica, mood soft e contemporaneo.",
+        nota: "Demo fredda.",
+        azione: "Alternativa a Centro Benessere per prospect diverso.",
+        url: "https://serendipity-demo.vercel.app/",
+        urlOk: true
+      },
+      {
+        nome: "Estetica Laura",
+        settore: "beauty",
+        stato: "bozza",
+        vis: "solo-io",
+        desc: "Demo estetica, approccio caldo e personale.",
+        nota: "Da rifinire prima di mostrarla.",
+        azione: "Rivedere hero e CTA prima di inviare.",
+        url: "https://laura-sand.vercel.app//",
+        urlOk: true
+      },
+      {
+        nome: "Studio Olivoni",
+        settore: "professionisti",
+        stato: "cliente",
+        vis: "mostrabile",
+        desc: "Studio tecnico Forlì-Cesena. SEO locale completo, Schema.org. Primo cliente Zaira.",
+        nota: "Consegnato a €690 + €60/mese manutenzione.",
+        azione: "Verificare ottimizzazioni SEO trimestrali.",
+        url: "https://olivoni.vercel.app/",
+        urlOk: true
+      },
+      {
+        nome: "Roberta Zambelli",
+        settore: "professionisti",
+        stato: "demo",
+        vis: "solo-io",
+        desc: "Demo professionista / consulente.",
+        nota: "Demo fredda.",
+        azione: "Valutare se rifinire per outreach professionisti.",
+        url: "https://robertazambelli-demo.vercel.app/",
+        urlOk: true
+      }
+    ];
+
+    /* =========================================================
+       FILTRI
+       ========================================================= */
+    const FILTRI = [
+      {
+        id: "tutti",
+        label: "Tutti",
+        fn: () => true
+      },
+      {
+        id: "ristorazione",
+        label: "Ristorazione",
+        fn: (p) => p.settore === "ristorazione"
+      },
+      {
+        id: "hospitality",
+        label: "Hospitality",
+        fn: (p) => p.settore === "hospitality"
+      },
+      {
+        id: "beauty",
+        label: "Beauty",
+        fn: (p) => p.settore === "beauty"
+      },
+      {
+        id: "professionisti",
+        label: "Professionisti",
+        fn: (p) => p.settore === "professionisti"
+      },
+      {
+        id: "mostrabile",
+        label: "Mostrabile",
+        fn: (p) => p.vis === "mostrabile"
+      },
+      {
+        id: "cliente",
+        label: "Clienti reali",
+        fn: (p) => p.stato === "cliente"
+      },
+      {
+        id: "demo",
+        label: "Solo demo",
+        fn: (p) => p.stato === "demo"
+      },
+      {
+        id: "bozza",
+        label: "Bozze",
+        fn: (p) => p.stato === "bozza"
+      },
+      {
+        id: "solo-io",
+        label: "Solo io",
+        fn: (p) => p.vis === "solo-io"
+      }
+    ];
+
+    const LABEL_SETTORE = {
+      ristorazione: "Ristorazione",
+      hospitality: "Hospitality",
+      beauty: "Beauty",
+      professionisti: "Professionisti"
+    };
+
+    const LABEL_STATO = {
+      demo: "demo",
+      cliente: "cliente",
+      bozza: "bozza"
+    };
+
+    const LABEL_VIS = {
+      "mostrabile": "mostrabile",
+      "solo-io": "solo io"
+    };
+
+    /* =========================================================
+       STATO APP
+       ========================================================= */
+    let filtroAttivo = "tutti";
+    let testoRicerca = "";
+    let ordinamentoAttivo = "nome-asc";
+
+    /* =========================================================
+       INIT
+       ========================================================= */
+    document.addEventListener("DOMContentLoaded", () => {
+      aggiornaHeaderDate();
+      aggiornaStats();
+      costruisciFiltri();
+      agganciaEventiToolbar();
+
+      if (sessionStorage.getItem("z-auth") === "1") {
+        avviaApp();
+      }
+
+      document.getElementById("top-total").textContent = PROGETTI.length;
+    });
+
+    /* =========================================================
+       UI HEADER / STATS
+       ========================================================= */
+    function aggiornaHeaderDate() {
+      const d = new Date();
+
+      document.getElementById("hero-date").textContent =
+        d.toLocaleDateString("it-IT", {
+          day: "2-digit",
+          month: "long",
+          year: "numeric"
+        });
+
+      const urlDaVerificare = PROGETTI.filter((p) => !p.urlOk).length;
+      const focusEl = document.getElementById("hero-focus");
+
+      if (urlDaVerificare > 0) {
+        focusEl.textContent = `${urlDaVerificare} URL da verificare`;
+      } else {
+        focusEl.textContent = "Tutto ordinato e verificato";
+      }
+    }
+
+    function aggiornaStats() {
+      const totali = PROGETTI.length;
+      const clienti = PROGETTI.filter((p) => p.stato === "cliente").length;
+      const demoMostrabili = PROGETTI.filter((p) => p.stato === "demo" && p.vis === "mostrabile").length;
+      const urlKo = PROGETTI.filter((p) => !p.urlOk).length;
+
+      document.getElementById("stat-total").textContent = totali;
+      document.getElementById("stat-clienti").textContent = clienti;
+      document.getElementById("stat-demo").textContent = demoMostrabili;
+      document.getElementById("stat-url").textContent = urlKo;
+    }
+
+    /* =========================================================
+       TOOLBAR
+       ========================================================= */
+    function costruisciFiltri() {
+      const cont = document.getElementById("filters");
+      cont.innerHTML = "";
+
+      FILTRI.forEach((f) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "f-btn" + (f.id === filtroAttivo ? " on" : "");
+        b.textContent = f.label;
+
+        b.addEventListener("click", () => {
+          filtroAttivo = f.id;
+
+          document
+            .querySelectorAll(".f-btn")
+            .forEach((x) => x.classList.remove("on"));
+
+          b.classList.add("on");
+          renderProgetti();
+        });
+
+        cont.appendChild(b);
+      });
+    }
+
+    function agganciaEventiToolbar() {
+      const searchInput = document.getElementById("search-input");
+      const sortSelect = document.getElementById("sort-select");
+
+      searchInput.addEventListener("input", (e) => {
+        testoRicerca = e.target.value.trim().toLowerCase();
+        renderProgetti();
+      });
+
+      sortSelect.addEventListener("change", (e) => {
+        ordinamentoAttivo = e.target.value;
+        renderProgetti();
+      });
+    }
+
+    /* =========================================================
+       LOGIN / LOGOUT
+       ========================================================= */
+    function doLogin(e) {
+      e.preventDefault();
+
+      const pwd = document.getElementById("pwd");
+      const err = document.getElementById("login-err");
+
+      if (pwd.value === PWD) {
+        sessionStorage.setItem("z-auth", "1");
+        avviaApp();
+        return;
+      }
+
+      err.textContent = "Password errata.";
+      pwd.value = "";
+      pwd.focus();
+
+      setTimeout(() => {
+        err.textContent = "";
+      }, 2500);
+    }
+
+    function avviaApp() {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("app").style.display = "block";
+      renderProgetti();
+    }
+
+    function doLogout() {
+      sessionStorage.removeItem("z-auth");
+      location.reload();
+    }
+
+    /* =========================================================
+       FILTRO + RICERCA + ORDINAMENTO
+       ========================================================= */
+    function getListaFiltrata() {
+      const filtro = FILTRI.find((f) => f.id === filtroAttivo) || FILTRI[0];
+
+      let lista = [...PROGETTI].filter((p) => filtro.fn(p));
+
+      if (testoRicerca) {
+        lista = lista.filter((p) => {
+          const blob = [
+            p.nome,
+            p.settore,
+            p.stato,
+            p.vis,
+            p.desc,
+            p.nota,
+            p.azione,
+            p.url
+          ]
+            .join(" ")
+            .toLowerCase();
+
+          return blob.includes(testoRicerca);
+        });
+      }
+
+      lista.sort(ordinaProgetti);
+
+      return lista;
+    }
+
+    function ordinaProgetti(a, b) {
+      switch (ordinamentoAttivo) {
+        case "nome-desc":
+          return b.nome.localeCompare(a.nome, "it");
+        case "stato":
+          return a.stato.localeCompare(b.stato, "it") || a.nome.localeCompare(b.nome, "it");
+        case "settore":
+          return a.settore.localeCompare(b.settore, "it") || a.nome.localeCompare(b.nome, "it");
+        case "vis":
+          return a.vis.localeCompare(b.vis, "it") || a.nome.localeCompare(b.nome, "it");
+        case "nome-asc":
+        default:
+          return a.nome.localeCompare(b.nome, "it");
+      }
+    }
+
+    function renderProgetti() {
+      const lista = getListaFiltrata();
+      renderGrid(lista);
+      aggiornaInfoRisultati(lista);
+    }
+
+    function aggiornaInfoRisultati(lista) {
+      const filtro = FILTRI.find((f) => f.id === filtroAttivo);
+
+      document.getElementById("count").textContent = lista.length;
+      document.getElementById("active-filter-label").textContent = filtro ? filtro.label : "Tutti";
+      document.getElementById("top-total").textContent = PROGETTI.length;
+    }
+
+    /* =========================================================
+       RENDER GRIGLIA
+       ========================================================= */
+    function renderGrid(lista) {
+      const grid = document.getElementById("grid");
+      const empty = document.getElementById("empty-state");
+
+      grid.innerHTML = "";
+
+      if (!lista.length) {
+        empty.classList.remove("hidden");
+        return;
+      }
+
+      empty.classList.add("hidden");
+
+      lista.forEach((p) => {
+        const idx = PROGETTI.indexOf(p);
+        const card = document.createElement("article");
+        card.className = "card";
+
+        card.innerHTML = `
+          <div class="card-head">
+            <div class="tag-settore">${LABEL_SETTORE[p.settore] || p.settore}</div>
+
+            <div class="pills">
+              <span class="pill ${p.stato}">${LABEL_STATO[p.stato] || p.stato}</span>
+              <span class="pill ${p.vis}">${LABEL_VIS[p.vis] || p.vis}</span>
+            </div>
+          </div>
+
+          <div class="card-title">${escapeHtml(p.nome)}</div>
+
+          <div class="card-desc">
+            ${escapeHtml(p.desc)}
+          </div>
+
+          <div class="meta-list">
+            <div class="meta-box">
+              <small>Stato progetto</small>
+              <p>${capitalize(LABEL_STATO[p.stato] || p.stato)} · ${capitalize(LABEL_VIS[p.vis] || p.vis)}</p>
+            </div>
+
+            <div class="card-action">
+              ${escapeHtml(p.azione)}
+            </div>
+
+            ${
+              p.nota
+                ? `
+                  <div class="card-nota">
+                    ${escapeHtml(p.nota)}
+                  </div>
+                `
+                : ""
+            }
+
+            ${
+              !p.urlOk
+                ? `
+                  <div class="card-warn">
+                    URL da verificare nel dashboard Vercel
+                  </div>
+                `
+                : ""
+            }
+          </div>
+
+          <div class="card-btns">
+            <a
+              class="btn-apri"
+              href="${p.url}"
+              target="_blank"
+              rel="noopener"
+            >
+              Apri ↗
+            </a>
+
+            <button
+              class="btn-copia"
+              type="button"
+              onclick="copiaLink(this, '${p.url}')"
+            >
+              Copia link
+            </button>
+
+            <button
+              class="btn-scheda"
+              type="button"
+              onclick="apriModal(${idx})"
+            >
+              Scheda
+            </button>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      });
+    }
+
+    /* =========================================================
+       MODAL
+       ========================================================= */
+    function apriModal(idx) {
+      const p = PROGETTI[idx];
+
+      document.getElementById("modal-body").innerHTML = `
+        <div class="m-settore">${LABEL_SETTORE[p.settore] || p.settore}</div>
+
+        <div class="m-title">${escapeHtml(p.nome)}</div>
+
+        <div class="m-desc">
+          ${escapeHtml(p.desc)}
+        </div>
+
+        <div class="m-row">
+          <div class="m-field">
+            <small>Stato</small>
+            <p>
+              <span class="pill ${p.stato}">
+                ${LABEL_STATO[p.stato] || p.stato}
+              </span>
+            </p>
+          </div>
+
+          <div class="m-field">
+            <small>Visibilità</small>
+            <p>
+              <span class="pill ${p.vis}">
+                ${LABEL_VIS[p.vis] || p.vis}
+              </span>
+            </p>
+          </div>
+
+          <div class="m-field full">
+            <small>URL demo</small>
+            <p class="m-url">${escapeHtml(p.url)}</p>
+          </div>
+        </div>
+
+        <div class="m-action">
+          ${escapeHtml(p.azione)}
+        </div>
+
+        ${
+          p.nota
+            ? `
+              <div class="m-nota">
+                ${escapeHtml(p.nota)}
+              </div>
+            `
+            : ""
+        }
+
+        ${
+          !p.urlOk
+            ? `
+              <div class="card-warn">
+                URL da verificare nel dashboard Vercel
+              </div>
+            `
+            : ""
+        }
+
+        <div class="m-btns">
+          <a
+            class="btn-apri"
+            href="${p.url}"
+            target="_blank"
+            rel="noopener"
+          >
+            Apri demo ↗
+          </a>
+
+          <button
+            class="btn-copia"
+            type="button"
+            onclick="copiaLink(this, '${p.url}')"
+          >
+            Copia link
+          </button>
+        </div>
+      `;
+
+      document.getElementById("overlay").classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function chiudiModal() {
+      document.getElementById("overlay").classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    function chiudiOverlay(e) {
+      if (e.target === document.getElementById("overlay")) {
+        chiudiModal();
+      }
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        chiudiModal();
+      }
+    });
+
+    /* =========================================================
+       COPIA LINK + TOAST
+       ========================================================= */
+    function copiaLink(btn, url) {
+      navigator.clipboard.writeText(url).then(() => {
+        const originalText = btn.textContent;
+
+        btn.textContent = "Copiato ✓";
+        btn.classList.add("ok");
+
+        mostraToast("Link copiato");
+
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.classList.remove("ok");
+        }, 1800);
+      }).catch(() => {
+        mostraToast("Copia non riuscita");
+      });
+    }
+
+    function mostraToast(msg) {
+      const t = document.getElementById("toast");
+      t.textContent = msg;
+      t.classList.add("on");
+
+      clearTimeout(mostraToast._timer);
+
+      mostraToast._timer = setTimeout(() => {
+        t.classList.remove("on");
+      }, 1800);
+    }
+
+    /* =========================================================
+       HELPERS
+       ========================================================= */
+    function capitalize(str) {
+      if (!str) return "";
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    function escapeHtml(str) {
+      if (typeof str !== "string") return "";
+
+      return str
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+  </script>
+</body>
+</html>
