@@ -114,3 +114,7 @@ L'ordine di `<link>` in `index.html` è importante:
 3. Componenti specifici
 4. `animations.css` — deve venire dopo `sections.css` (`.is-visible` sovrascrive `opacity:0`)
 5. `responsive.css` — deve essere ultimo (sovrascrive tutto)
+---
+
+## Contesto progetto e stato attuale
+Vedi `CONTEXT.md` per: prezzi aggiornati, documenti legali, modifiche pendenti su fornitura-termini.html e privacy.html, clienti attivi, note fiscali.
