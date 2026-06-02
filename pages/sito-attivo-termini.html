@@ -717,6 +717,113 @@
             display: flex;
         }
         
+        /* FIRMA */
+        .firma-section {
+            position: relative;
+            z-index: 5;
+            padding: 72px 40px;
+            border-top: var(--gap) solid var(--border);
+            background: var(--bg2);
+        }
+
+        .firma-label {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .firma-intro {
+            color: var(--muted);
+            font-weight: 300;
+            font-size: 15px;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .firma-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 56px;
+        }
+
+        .firma-field-label {
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .firma-line {
+            font-size: 14px;
+            color: var(--text);
+            font-weight: 300;
+            border-bottom: var(--gap) solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        .firma-1341 {
+            border: var(--gap) solid var(--border);
+            border-left: 3px solid var(--accent);
+            padding: 32px 28px;
+            background: var(--bg);
+        }
+
+        .firma-1341-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .firma-1341-intro {
+            color: var(--muted);
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .firma-clausole {
+            list-style: none;
+            margin: 0 0 16px;
+        }
+
+        .firma-clausole li {
+            padding: 7px 0 7px 20px;
+            position: relative;
+            color: var(--muted);
+            font-weight: 300;
+            font-size: 14px;
+            border-bottom: var(--gap) solid rgba(232, 162, 39, 0.07);
+            line-height: 1.5;
+        }
+
+        .firma-clausole li:last-child {
+            border-bottom: none;
+        }
+
+        .firma-clausole li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .firma-clausole li strong {
+            color: var(--text);
+            font-weight: 500;
+        }
+
         @media (max-width: 900px) {
             .page-layout { grid-template-columns: 1fr; }
             .sidebar { display: none; }
@@ -731,6 +838,8 @@
             footer { padding: 24px; flex-direction: column; text-align: center; }
             .footer-info { text-align: center; }
             .hero-meta { gap: 20px; }
+            .firma-section { padding: 48px 24px; }
+            .firma-grid { grid-template-columns: 1fr; gap: 24px; }
         }
     </style>
 </head>
@@ -755,8 +864,8 @@
         </p>
         <div class="hero-meta">
             <div class="meta-item">Versione<strong>Giugno 2026</strong></div>
-            <div class="meta-item">Revisione<strong>1.1</strong></div>
-            <div class="meta-item">Aggiornamento<strong>Giugno 2026</strong></div>
+            <div class="meta-item">Revisione<strong>1.6</strong></div>
+            <div class="meta-item">Articoli<strong>31</strong></div>
         </div>
     </div>
 
@@ -781,37 +890,42 @@
     <div class="page-layout">
 
         <aside class="sidebar">
-            <div class="sidebar-title">Indice</div>
-            <a href="#s1" class="nav-item"><span class="num">01</span>Destinatari</a>
-            <a href="#s2" class="nav-item"><span class="num">02</span>Cosa paghi</a>
-            <a href="#s3" class="nav-item"><span class="num">03</span>Cosa include</a>
-            <a href="#s4" class="nav-item"><span class="num">04</span>Durata e rinnovo</a>
-            <a href="#s5" class="nav-item"><span class="num">05</span>Revisione prezzi</a>
-            <a href="#s6" class="nav-item"><span class="num">06</span>Hosting e dominio</a>
-            <a href="#s7" class="nav-item"><span class="num">07</span>Scelte dopo 12 mesi</a>
-            <a href="#s8" class="nav-item"><span class="num">08</span>Credito rent-to-own</a>
-            <a href="#s9" class="nav-item"><span class="num">09</span>Modifiche incluse</a>
-            <a href="#s10" class="nav-item"><span class="num">10</span>Livelli di servizio</a>
-            <a href="#s11" class="nav-item"><span class="num">11</span>Proprietà contenuti</a>
-            <a href="#s12" class="nav-item"><span class="num">12</span>Cessione finale</a>
-            <a href="#s13" class="nav-item"><span class="num">13</span>Backup</a>
-            <a href="#s14" class="nav-item"><span class="num">14</span>Pagamenti</a>
-            <a href="#s15" class="nav-item"><span class="num">15</span>Mancato pagamento</a>
-            <a href="#s16" class="nav-item"><span class="num">16</span>Recesso</a>
-            <a href="#s17" class="nav-item"><span class="num">17</span>Exit kit</a>
-            <a href="#s18" class="nav-item"><span class="num">18</span>Garanzie</a>
-            <a href="#s19" class="nav-item"><span class="num">19</span>Privacy e GDPR</a>
-            <a href="#s20" class="nav-item"><span class="num">20</span>Forza maggiore</a>
-            <a href="#s21" class="nav-item"><span class="num">21</span>Responsabilità</a>
-            <a href="#s22" class="nav-item"><span class="num">22</span>Comunicazioni</a>
-            <a href="#s23" class="nav-item"><span class="num">23</span>Modifiche T&amp;C</a>
-            <a href="#s24" class="nav-item"><span class="num">24</span>Foro competente</a>
-            <a href="#s25" class="nav-item"><span class="num">25</span>Referenza e portfolio</a>
-            <a href="#s26" class="nav-item"><span class="num">26</span>Nota finale</a>
+            <div class="sidebar-title">Indice — 31 articoli</div>
+            <a href="#s1"  class="nav-item"><span class="num">01</span>Destinatari</a>
+            <a href="#s2"  class="nav-item"><span class="num">02</span>Cosa paghi</a>
+            <a href="#s3"  class="nav-item"><span class="num">03</span>Perimetro del sito</a>
+            <a href="#s4"  class="nav-item"><span class="num">04</span>Cosa include</a>
+            <a href="#s5"  class="nav-item"><span class="num">05</span>Durata e rinnovo</a>
+            <a href="#s6"  class="nav-item"><span class="num">06</span>Revisione prezzi</a>
+            <a href="#s7"  class="nav-item"><span class="num">07</span>Hosting e dominio</a>
+            <a href="#s8"  class="nav-item"><span class="num">08</span>Tempi di consegna</a>
+            <a href="#s9"  class="nav-item"><span class="num">09</span>Silenzio-assenso</a>
+            <a href="#s10" class="nav-item"><span class="num">10</span>Accettazione</a>
+            <a href="#s11" class="nav-item"><span class="num">11</span>Scelte dopo 12 mesi</a>
+            <a href="#s12" class="nav-item"><span class="num">12</span>Credito rent-to-own</a>
+            <a href="#s13" class="nav-item"><span class="num">13</span>Modifiche incluse</a>
+            <a href="#s14" class="nav-item"><span class="num">14</span>Livelli di servizio</a>
+            <a href="#s15" class="nav-item"><span class="num">15</span>Proprietà e manleva</a>
+            <a href="#s16" class="nav-item"><span class="num">16</span>Cessione finale</a>
+            <a href="#s17" class="nav-item"><span class="num">17</span>Backup</a>
+            <a href="#s18" class="nav-item"><span class="num">18</span>Pagamenti</a>
+            <a href="#s20" class="nav-item"><span class="num">20</span>Mancato pagamento</a>
+            <a href="#s21" class="nav-item"><span class="num">21</span>Recesso</a>
+            <a href="#s22" class="nav-item"><span class="num">22</span>Exit kit</a>
+            <a href="#s23" class="nav-item"><span class="num">23</span>Garanzie</a>
+            <a href="#s24" class="nav-item"><span class="num">24</span>Responsabilità</a>
+            <a href="#s25" class="nav-item"><span class="num">25</span>Privacy e GDPR</a>
+            <a href="#s26" class="nav-item"><span class="num">26</span>Forza maggiore</a>
+            <a href="#s27" class="nav-item"><span class="num">27</span>Comunicazioni</a>
+            <a href="#s28" class="nav-item"><span class="num">28</span>Modifiche T&amp;C</a>
+            <a href="#s29" class="nav-item"><span class="num">29</span>Foro competente</a>
+            <a href="#s30" class="nav-item"><span class="num">30</span>Referenza e portfolio</a>
+            <a href="#s31" class="nav-item"><span class="num">31</span>Nota finale</a>
         </aside>
 
         <main class="content">
 
+            <!-- Art. 01 -->
             <div class="section" id="s1">
                 <div class="section-num">01</div>
                 <h2>Destinatari del servizio</h2>
@@ -819,6 +933,7 @@
                 <p>Non è destinato a consumatori privati ai sensi del Codice del Consumo (D.Lgs. 206/2005). Il cliente, accettando il servizio, dichiara di agire nell'ambito della propria attività professionale o imprenditoriale.</p>
             </div>
 
+            <!-- Art. 02 -->
             <div class="section" id="s2">
                 <div class="section-num">02</div>
                 <h2>Cosa paghi</h2>
@@ -831,6 +946,7 @@
                     <div class="pricing-val">€49/mese</div>
                 </div>
                 <p style="margin-top:20px;">Il servizio ha inizio <strong>esclusivamente dopo la ricezione del pagamento dell'attivazione</strong>. Fino a quel momento non viene avviata alcuna attività di sviluppo o configurazione.</p>
+                <p>Le condizioni economiche specifiche possono variare per accordo scritto tra le parti. In caso di difformità tra il presente documento e l'accordo individuale sottoscritto, prevale quest'ultimo.</p>
                 <h3>L'attivazione copre</h3>
                 <ul>
                     <li>Avvio del progetto e impostazione grafica iniziale</li>
@@ -839,8 +955,26 @@
                 </ul>
             </div>
 
+            <!-- Art. 03 -->
             <div class="section" id="s3">
                 <div class="section-num">03</div>
+                <h2>Perimetro del sito incluso</h2>
+                <p>Salvo diverso accordo scritto, il servizio comprende la realizzazione di un sito vetrina composto da <strong>massimo 5 pagine o sezioni informative</strong>.</p>
+                <h3>Sono esclusi e mai inclusi nel canone base</h3>
+                <ul>
+                    <li>E-commerce e sistemi di pagamento online</li>
+                    <li>Aree riservate e accesso con credenziali</li>
+                    <li>Sistemi di prenotazione avanzati</li>
+                    <li>Gestionali, CRM e automazioni complesse</li>
+                    <li>Integrazioni personalizzate con sistemi terzi</li>
+                    <li>Funzionalità non espressamente concordate per iscritto</li>
+                </ul>
+                <p>Eventuali funzionalità aggiuntive rispetto al perimetro base devono essere concordate e preventivate separatamente prima dell'esecuzione.</p>
+            </div>
+
+            <!-- Art. 04 -->
+            <div class="section" id="s4">
+                <div class="section-num">04</div>
                 <h2>Cosa include il canone</h2>
                 <ul>
                     <li>Pubblicazione e gestione tecnica del sito</li>
@@ -855,8 +989,9 @@
                 </ul>
             </div>
 
-            <div class="section" id="s4">
-                <div class="section-num">04</div>
+            <!-- Art. 05 -->
+            <div class="section" id="s5">
+                <div class="section-num">05</div>
                 <h2>Durata minima e rinnovo</h2>
                 <p>Il servizio ha una <strong>durata minima obbligatoria di 12 mesi</strong> dalla data di attivazione. Il periodo minimo rappresenta un impegno contrattuale vincolante per entrambe le parti.</p>
                 <p>I canoni relativi ai mesi residui in caso di comunicazione di interruzione anticipata sono dovuti a titolo di <strong>corrispettivo per la disponibilità del servizio</strong>, indipendentemente dall'utilizzo effettivo da parte del cliente. Il sito rimane attivo e il servizio disponibile per l'intera durata del periodo minimo.</p>
@@ -869,25 +1004,63 @@
                 <p>Il rinnovo mensile automatico prosegue fino a disdetta scritta con 30 giorni di preavviso, inviata via email o PEC.</p>
             </div>
 
-            <div class="section" id="s5">
-                <div class="section-num">05</div>
+            <!-- Art. 06 -->
+            <div class="section" id="s6">
+                <div class="section-num">06</div>
                 <h2>Revisione dei prezzi</h2>
                 <p>Zaira Officina si riserva il diritto di adeguare il canone mensile, con un <strong>preavviso minimo di 60 giorni</strong> comunicato via email.</p>
                 <p>In caso di adeguamento del prezzo, il cliente ha diritto di recedere senza penali entro 30 giorni dalla comunicazione. La mancata disdetta entro tale termine costituisce accettazione del nuovo canone.</p>
             </div>
 
-            <div class="section" id="s6">
-                <div class="section-num">06</div>
-                <h2>Hosting e dominio</h2>
-                <p>L'hosting è gestito da Zaira Officina tramite <strong>infrastruttura cloud di terze parti</strong>. Il cliente non si occupa di pannelli tecnici o configurazioni.</p>
+            <!-- Art. 07 -->
+            <div class="section" id="s7">
+                <div class="section-num">07</div>
+                <h2>Hosting, dominio e infrastruttura</h2>
+                <p>L'hosting è gestito da Zaira Officina tramite <strong>infrastruttura cloud di terze parti</strong> (provider di hosting, registrar DNS, servizi email transazionali). Il cliente non si occupa di pannelli tecnici o configurazioni.</p>
+                <p>L'elenco aggiornato dei principali sub-responsabili tecnici è disponibile su richiesta scritta.</p>
                 <p>Il dominio viene registrato o collegato da Zaira Officina e <strong>resta intestato al cliente</strong> (nome, CF o P.IVA del cliente), salvo diverso accordo scritto.</p>
+                <h3>Dominio già esistente</h3>
+                <p>In caso di dominio già intestato al cliente, Zaira Officina provvede alla sola configurazione DNS. I costi di rinnovo del dominio preesistente rimangono a carico del cliente.</p>
                 <div class="highlight">
                     In caso di cessazione, il trasferimento del dominio verso un altro operatore verrà facilitato entro <strong>10 giorni lavorativi</strong> dalla richiesta scritta. Gli eventuali costi di trasferimento richiesti dal registrar sono a carico del cliente.
                 </div>
             </div>
 
-            <div class="section" id="s7">
-                <div class="section-num">07</div>
+            <!-- Art. 08 -->
+            <div class="section" id="s8">
+                <div class="section-num">08</div>
+                <h2>Tempi di consegna e obblighi del cliente</h2>
+                <p>I tempi di consegna indicativi variano in base al piano scelto e sono comunicati al cliente in fase di preventivo o conferma d'ordine. I tempi decorrono dalla data di ricezione di tutti i materiali necessari forniti dal cliente e non dalla data di attivazione.</p>
+                <p>Il cliente si impegna a fornire testi, immagini, loghi e ogni altro materiale necessario entro i tempi concordati. Ritardi imputabili al cliente non sono addebitabili a Zaira Officina e possono posticipare i tempi di consegna senza diritto a rimborso o penale da parte del cliente.</p>
+                <div class="highlight">
+                    Qualora il cliente rimanga non raggiungibile o non fornisca i materiali richiesti per oltre 30 giorni dalla richiesta scritta di Zaira Officina, il progetto potrà essere sospeso. La sospensione non interrompe il decorso del periodo minimo né la maturazione dei canoni dovuti.
+                </div>
+            </div>
+
+            <!-- Art. 09 -->
+            <div class="section" id="s9">
+                <div class="section-num">09</div>
+                <h2>Approvazione e silenzio-assenso</h2>
+                <p>Bozze, modifiche, testi, grafiche e versioni intermedie inviate al cliente si intendono approvate se il cliente non formula osservazioni scritte entro <strong>7 giorni lavorativi</strong> dall'invio.</p>
+                <p>L'approvazione tacita per decorrenza dei termini non esonera il cliente dalla responsabilità per eventuali errori o inesattezze nei contenuti di propria competenza (testi, dati, immagini, informazioni commerciali).</p>
+            </div>
+
+            <!-- Art. 10 -->
+            <div class="section" id="s10">
+                <div class="section-num">10</div>
+                <h2>Modalità di accettazione</h2>
+                <p>Il presente contratto si intende accettato dal cliente al verificarsi di una delle seguenti condizioni:</p>
+                <ul>
+                    <li>firma del presente documento</li>
+                    <li>conferma scritta via email o PEC</li>
+                    <li>pagamento dell'attivazione iniziale, che costituisce accettazione integrale dei presenti Termini e Condizioni</li>
+                </ul>
+                <p>In tutti i casi, l'accettazione ha pieno valore contrattuale.</p>
+            </div>
+
+            <!-- Art. 11 -->
+            <div class="section" id="s11">
+                <div class="section-num">11</div>
                 <h2>Scelte dopo i 12 mesi</h2>
                 <h3>Proseguire</h3>
                 <p>Continua a €49/mese. Dal 13° mese inclusi anche: audit SEO trimestrale gratuito e priorità nelle richieste ordinarie.</p>
@@ -897,8 +1070,9 @@
                 <p>30 giorni di preavviso scritto via email o PEC. Ricevi l'exit kit gratuito per il trasferimento.</p>
             </div>
 
-            <div class="section" id="s8">
-                <div class="section-num">08</div>
+            <!-- Art. 12 -->
+            <div class="section" id="s12">
+                <div class="section-num">12</div>
                 <h2>Credito rent-to-own</h2>
                 <p>Ogni mese pagato accumula <strong>€10 di credito</strong> che riduce il costo della cessione finale.</p>
                 <div class="rto-grid">
@@ -924,8 +1098,9 @@
                 <p>Il credito è valido esclusivamente per l'opzione di acquisto e non è rimborsabile in denaro.</p>
             </div>
 
-            <div class="section" id="s9">
-                <div class="section-num">09</div>
+            <!-- Art. 13 -->
+            <div class="section" id="s13">
+                <div class="section-num">13</div>
                 <h2>Modifiche incluse e extra</h2>
                 <p>Nel canone sono incluse le modifiche ordinarie ai contenuti esistenti entro <strong>2 ore/mese</strong>:</p>
                 <ul>
@@ -944,8 +1119,9 @@
                 </ul>
             </div>
 
-            <div class="section" id="s10">
-                <div class="section-num">10</div>
+            <!-- Art. 14 -->
+            <div class="section" id="s14">
+                <div class="section-num">14</div>
                 <h2>Livelli di servizio</h2>
                 <p>Il servizio <strong>non prevede SLA contrattuali</strong> con penali o garanzie di uptime specifiche. A titolo orientativo e non vincolante:</p>
                 <ul>
@@ -955,15 +1131,18 @@
                 <p>I tempi possono variare in caso di dipendenza da fornitori terzi o eventi di forza maggiore.</p>
             </div>
 
-            <div class="section" id="s11">
-                <div class="section-num">11</div>
-                <h2>Proprietà dei contenuti</h2>
+            <!-- Art. 15 -->
+            <div class="section" id="s15">
+                <div class="section-num">15</div>
+                <h2>Proprietà dei contenuti e manleva</h2>
                 <p>Tutti i contenuti forniti dal cliente restano di <strong>proprietà esclusiva del cliente</strong>: testi, fotografie, loghi, marchi, recapiti, listini e ogni altro materiale fornito per la pubblicazione.</p>
-                <p>Il cliente garantisce di avere il diritto di utilizzarli e pubblicarli. Zaira Officina è sollevata da ogni responsabilità per violazioni di diritti di terzi derivanti dai contenuti forniti.</p>
+                <p>Il cliente garantisce di avere il diritto di utilizzarli e pubblicarli e <strong>si impegna a manlevare e tenere indenne Zaira Officina</strong> da qualsiasi richiesta, sanzione, danno, costo o contestazione di terzi derivante da contenuti, immagini, marchi, testi, dati personali, informazioni commerciali o materiali forniti dal cliente stesso.</p>
+                <p>Zaira Officina è sollevata da ogni responsabilità per violazioni di diritti di terzi derivanti dai contenuti forniti dal cliente.</p>
             </div>
 
-            <div class="section" id="s12">
-                <div class="section-num">12</div>
+            <!-- Art. 16 -->
+            <div class="section" id="s16">
+                <div class="section-num">16</div>
                 <h2>Proprietà tecnica e cessione finale</h2>
                 <p>In caso di esercizio dell'opzione di acquisto, la cessione finale comprende:</p>
                 <ul>
@@ -980,37 +1159,44 @@
                 <p>La cessione non include assistenza continuativa, hosting o ulteriori interventi, salvo nuovo accordo scritto.</p>
             </div>
 
-            <div class="section" id="s13">
-                <div class="section-num">13</div>
+            <!-- Art. 17 -->
+            <div class="section" id="s17">
+                <div class="section-num">17</div>
                 <h2>Backup e continuità</h2>
                 <p>Zaira Officina esegue backup periodici del sito come misura tecnica di continuità. I backup non sostituiscono l'obbligo del cliente di conservare i propri contenuti originali.</p>
                 <p>In caso di cessazione, i dati vengono conservati per un massimo di <strong>30 giorni</strong> dalla data di termine, dopodiché eliminati. Il cliente può richiedere una copia entro tale periodo.</p>
             </div>
 
-            <div class="section" id="s14">
-                <div class="section-num">14</div>
+            <!-- Art. 18 -->
+            <div class="section" id="s18">
+                <div class="section-num">18</div>
                 <h2>Pagamenti</h2>
                 <p>L'attivazione iniziale di <strong>€149</strong> è dovuta alla conferma del servizio, prima dell'avvio di qualsiasi attività.</p>
                 <p>Il canone mensile di <strong>€49</strong> è dovuto il giorno 1 di ogni mese. Il pagamento può avvenire tramite bonifico, link di pagamento o altra modalità concordata per iscritto.</p>
+                <p>La fatturazione avverrà secondo il regime fiscale applicabile al Fornitore e secondo le modalità previste dalla normativa vigente.</p>
             </div>
 
-            <div class="section" id="s15">
-                <div class="section-num">15</div>
+            <!-- Art. 19 — SOSPESO: da aggiungere quando P.IVA attiva (regime forfettario L. 190/2014) -->
+
+            <!-- Art. 20 -->
+            <div class="section" id="s20">
+                <div class="section-num">20</div>
                 <h2>Mancato pagamento</h2>
                 <ul>
                     <li><strong>Oltre 10 giorni</strong> di ritardo: sospensione di aggiornamenti e assistenza</li>
                     <li><strong>Oltre 30 giorni</strong>: sospensione del sito e applicazione interessi di mora (D.Lgs. 231/2002)</li>
                 </ul>
-                <p>Tutti gli importi maturati restano dovuti fino alla data di sospensione o cessazione.</p>
+                <p>Tutti gli importi maturati restano dovuti fino alla data di sospensione o cessazione. La sospensione del servizio per mancato pagamento non comporta rinuncia ai canoni dovuti, inclusi quelli relativi al periodo minimo contrattuale di 12 mesi.</p>
             </div>
 
-            <div class="section" id="s16">
-                <div class="section-num">16</div>
+            <!-- Art. 21 -->
+            <div class="section" id="s21">
+                <div class="section-num">21</div>
                 <h2>Recesso e risoluzione</h2>
                 <h3>Recesso ordinario del cliente</h3>
-                <p>Non possibile durante i primi 12 mesi. In caso di comunicazione di interruzione anticipata si applicano le disposizioni di cui all'articolo 4. Dopo il periodo minimo: 30 giorni di preavviso scritto via email o PEC.</p>
+                <p>Non possibile durante i primi 12 mesi. In caso di comunicazione di interruzione anticipata si applicano le disposizioni di cui all'articolo 5. Dopo il periodo minimo: 30 giorni di preavviso scritto via email o PEC.</p>
                 <h3>Recesso di Zaira Officina</h3>
-                <p>Con 60 giorni di preavviso scritto, garantendo il supporto minimo per il passaggio del sito.</p>
+                <p>Con <strong>60 giorni di preavviso scritto</strong>, garantendo il supporto minimo per il passaggio del sito.</p>
                 <h3>Risoluzione per giusta causa</h3>
                 <p>Zaira Officina può risolvere il contratto con <strong>effetto immediato</strong> in caso di:</p>
                 <ul>
@@ -1022,8 +1208,9 @@
                 <div class="highlight">In caso di risoluzione per giusta causa imputabile al cliente, tutti gli importi maturati restano dovuti e Zaira Officina potrà limitare o escludere i servizi gratuiti di accompagnamento alla migrazione.</div>
             </div>
 
-            <div class="section" id="s17">
-                <div class="section-num">17</div>
+            <!-- Art. 22 -->
+            <div class="section" id="s22">
+                <div class="section-num">22</div>
                 <h2>Exit kit</h2>
                 <p>In caso di disdetta ordinaria dopo il periodo minimo, il cliente riceve gratuitamente:</p>
                 <ul>
@@ -1035,64 +1222,78 @@
                 <p>L'exit kit non include sviluppo aggiuntivo, riconfigurazioni complesse o assistenza illimitata. Non è dovuto in caso di risoluzione per giusta causa.</p>
             </div>
 
-            <div class="section" id="s18">
-                <div class="section-num">18</div>
+            <!-- Art. 23 -->
+            <div class="section" id="s23">
+                <div class="section-num">23</div>
                 <h2>Garanzie e risultati</h2>
                 <p>Zaira Officina si impegna a realizzare e mantenere il sito con cura professionale.</p>
                 <p><strong>Non vengono garantiti</strong>: risultati commerciali specifici, incrementi di fatturato, aumento di clienti o posizionamenti SEO particolari. I risultati dipendono da molteplici fattori esterni non controllabili.</p>
             </div>
 
-            <div class="section" id="s19">
-                <div class="section-num">19</div>
+            <!-- Art. 24 -->
+            <div class="section" id="s24">
+                <div class="section-num">24</div>
+                <h2>Limitazione di responsabilità</h2>
+                <p>Salvo dolo o colpa grave, la responsabilità complessiva di Zaira Officina verso il cliente <strong>non potrà in nessun caso eccedere l'importo dei canoni effettivamente pagati dal cliente nei 12 mesi precedenti</strong> l'evento che ha generato il danno.</p>
+                <p>Sono in ogni caso esclusi: danni indiretti, perdita di profitto, perdita di chance, interruzione dell'attività commerciale e danni reputazionali, anche qualora Zaira Officina fosse stata informata della possibilità di tali danni.</p>
+                <p>Zaira Officina non è responsabile per disservizi causati da provider hosting, registrar, servizi DNS o qualsiasi interruzione non direttamente dipendente dalla propria attività.</p>
+            </div>
+
+            <!-- Art. 25 -->
+            <div class="section" id="s25">
+                <div class="section-num">25</div>
                 <h2>Privacy e GDPR</h2>
                 <p>Zaira Officina agisce, ai fini del GDPR, come <strong>Responsabile del trattamento</strong> dei dati tecnici strettamente necessari all'erogazione del servizio (hosting, backup, manutenzione). Il cliente rimane <strong>Titolare del trattamento</strong> di tutti i dati personali raccolti o pubblicati tramite il proprio sito.</p>
                 <p>Il cliente è l'unico responsabile del rispetto della normativa vigente, inclusa la corretta informativa agli interessati, l'acquisizione dei consensi e la gestione delle richieste degli interessati.</p>
+                <p>Ove il servizio comporti trattamento di dati personali per conto del Cliente, le parti sottoscriveranno separato atto di nomina a Responsabile del trattamento ai sensi dell'art. 28 GDPR.</p>
+                <h3>Form di contatto e servizi email</h3>
+                <p>Ove presente, il form di contatto del sito utilizza servizi email transazionali di terze parti per il recapito dei messaggi. I dati inseriti dagli utenti finali nel form vengono trasmessi al cliente tramite tali servizi e non sono conservati da Zaira Officina oltre il tempo tecnico necessario alla consegna. Il cliente è responsabile dell'adeguata informativa agli utenti finali circa tale trattamento.</p>
                 <h3>Informativa privacy sul sito</h3>
                 <p>Zaira Officina può fornire al cliente un <strong>modello generico di informativa privacy</strong> a titolo di supporto operativo. Tale modello non costituisce consulenza legale e non è personalizzato sull'attività del cliente.</p>
-                <p>Il cliente è tenuto a verificarne la conformità, adattarla se necessario e approvarla formalmente via email o scrittura privata prima della pubblicazione.</p>
+                <p>Il cliente è tenuto a verificarne la conformità, adattarla se necessario e approvarla formalmente via email o PEC prima della pubblicazione.</p>
                 <div class="highlight">
                     Il cliente, confermando la pubblicazione dell'informativa privacy sul proprio sito, se ne assume la piena e esclusiva responsabilità legale. Zaira Officina non è responsabile della completezza, correttezza o conformità legale dell'informativa adottata.
                 </div>
                 <p>I dati tecnici gestiti da Zaira Officina vengono eliminati entro 30 giorni dalla cessazione del servizio, fatta eccezione per i backup tecnici conservati secondo cicli di rotazione standard (massimo 90 giorni), accessibili solo per esigenze di ripristino e successivamente sovrascritti in modo sicuro.</p>
             </div>
 
-            <div class="section" id="s20">
-                <div class="section-num">20</div>
+            <!-- Art. 26 -->
+            <div class="section" id="s26">
+                <div class="section-num">26</div>
                 <h2>Forza maggiore</h2>
                 <p>Zaira Officina non è responsabile per ritardi o impossibilità di adempimento causati da eventi al di fuori del proprio controllo: interruzioni di servizi terzi, guasti infrastrutturali, calamità naturali, blackout, attacchi informatici o qualsiasi altro evento di forza maggiore.</p>
             </div>
 
-            <div class="section" id="s21">
-                <div class="section-num">21</div>
-                <h2>Responsabilità</h2>
-                <p>Zaira Officina non è responsabile per disservizi causati da provider hosting, registrar, servizi DNS o qualsiasi interruzione non direttamente dipendente dalla propria attività.</p>
-                <p>Il cliente è il solo responsabile dei contenuti pubblicati e delle eventuali violazioni di norme di legge o diritti di terzi.</p>
-            </div>
-
-            <div class="section" id="s22">
-                <div class="section-num">22</div>
+            <!-- Art. 27 -->
+            <div class="section" id="s27">
+                <div class="section-num">27</div>
                 <h2>Comunicazioni ufficiali</h2>
-                <p>Le comunicazioni con valore legale — disdette, recessi, contestazioni, richieste formali — devono essere inviate esclusivamente via:</p>
+                <p>Le comunicazioni con valore legale — disdette, recessi, contestazioni, richieste formali — devono essere inviate esclusivamente tramite:</p>
                 <ul>
                     <li>Email: <strong><a href="mailto:info@zairaofficina.it">info@zairaofficina.it</a></strong></li>
+                    <li>PEC: <strong><a href="mailto:cristianvitali@pec.it">cristianvitali@pec.it</a></strong></li>
                 </ul>
+                <p>Le comunicazioni si considerano ricevute alla data di effettiva ricezione all'indirizzo email o PEC indicato.</p>
                 <p>Le comunicazioni ordinarie (assistenza, aggiornamenti, modifiche) possono avvenire via WhatsApp o email, ma non hanno valore contrattuale ai fini del recesso o di contestazioni formali.</p>
             </div>
 
-            <div class="section" id="s23">
-                <div class="section-num">23</div>
+            <!-- Art. 28 -->
+            <div class="section" id="s28">
+                <div class="section-num">28</div>
                 <h2>Modifiche ai termini</h2>
                 <p>Zaira Officina può aggiornare i presenti termini con un preavviso minimo di <strong>60 giorni</strong> comunicato via email. La prosecuzione del servizio dopo l'entrata in vigore delle nuove condizioni costituisce accettazione delle stesse. Il cliente che non intenda accettare le modifiche può recedere senza penali entro 30 giorni dalla comunicazione.</p>
             </div>
 
-            <div class="section" id="s24">
-                <div class="section-num">24</div>
+            <!-- Art. 29 -->
+            <div class="section" id="s29">
+                <div class="section-num">29</div>
                 <h2>Legge e foro competente</h2>
                 <p>Il presente accordo è regolato dalla <strong>legge italiana</strong>. Per qualsiasi controversia le parti eleggono come foro competente esclusivo il <strong>Tribunale di Forlì</strong>, salvo norme inderogabili di legge.</p>
             </div>
 
-            <div class="section" id="s25">
-                <div class="section-num">25</div>
+            <!-- Art. 30 -->
+            <div class="section" id="s30">
+                <div class="section-num">30</div>
                 <h2>Referenza e portfolio</h2>
                 <p>Zaira Officina si riserva il diritto di citare il cliente come referenza e di utilizzare il sito realizzato a fini di portfolio, comunicazione commerciale e promozione del servizio, inclusi sito web, social network e materiali di presentazione.</p>
                 <p>In particolare, Zaira Officina può:</p>
@@ -1101,21 +1302,72 @@
                     <li>citare il nome o il tipo di attività del cliente come esempio di lavoro svolto</li>
                     <li>utilizzare il progetto in presentazioni, comunicazioni commerciali e materiali promozionali</li>
                 </ul>
+                <p>Zaira Officina si impegna a non pubblicare informazioni riservate, dati di accesso, dati personali non pubblici o materiali non destinati alla diffusione.</p>
                 <div class="highlight">
                     Il cliente che desidera escludere fin dall'inizio l'utilizzo a fini di referenza è tenuto a comunicarlo per iscritto prima dell'avvio del servizio. Il cliente può opporsi in qualsiasi momento con comunicazione scritta a <a href="mailto:info@zairaofficina.it">info@zairaofficina.it</a>. L'opposizione ha effetto dalla ricezione e non ha carattere retroattivo sui materiali già pubblicati.
                 </div>
             </div>
 
-            <div class="section" id="s26">
-                <div class="section-num">26</div>
+            <!-- Art. 31 -->
+            <div class="section" id="s31">
+                <div class="section-num">31</div>
                 <h2>Nota finale</h2>
                 <p>Sito Attivo non è un semplice acquisto una tantum. È un servizio continuativo pensato per chi vuole un sito sempre online, ordinato, aggiornabile e seguito nel tempo, con un unico referente e un unico canone.</p>
                 <p>L'obiettivo è evitare problemi tecnici, rinnovi sparsi, passaggi complicati e perdite di tempo.</p>
                 <p>Queste condizioni definiscono il funzionamento del servizio Sito Attivo e possono essere integrate da accordi specifici sottoscritti con il cliente.</p>
+                <p>Il cliente dichiara di aver letto e accettato integralmente i presenti Termini e Condizioni.</p>
             </div>
 
         </main>
     </div>
+
+    <!-- FIRMA -->
+    <section class="firma-section">
+        <div class="firma-label">// sottoscrizione</div>
+        <p class="firma-intro">Il cliente dichiara di aver letto e accettato integralmente i presenti Termini e Condizioni.</p>
+        <div class="firma-grid">
+            <div class="firma-field">
+                <div class="firma-field-label">Luogo e data</div>
+                <div class="firma-line">Forlimpopoli, ___________________________________</div>
+            </div>
+            <div class="firma-field">
+                <div class="firma-field-label">Firma del cliente</div>
+                <div class="firma-line">___________________________________</div>
+            </div>
+        </div>
+
+        <div class="firma-1341">
+            <div class="firma-1341-title">Approvazione specifica ai sensi degli artt. 1341 e 1342 c.c.</div>
+            <p class="firma-1341-intro">Il Cliente dichiara di avere letto attentamente e di approvare specificamente, ai sensi e per gli effetti degli artt. 1341 e 1342 del Codice Civile, le seguenti clausole:</p>
+            <ul class="firma-clausole">
+                <li><strong>Art. 05</strong> — Durata minima e rinnovo (obbligo di pagamento canoni residui in caso di recesso anticipato)</li>
+                <li><strong>Art. 06</strong> — Revisione dei prezzi (adeguamento unilaterale del canone con preavviso)</li>
+                <li><strong>Art. 09</strong> — Approvazione e silenzio-assenso (approvazione tacita per decorrenza termini)</li>
+                <li><strong>Art. 10</strong> — Modalità di accettazione (accettazione per comportamento concludente / pagamento)</li>
+                <li><strong>Art. 14</strong> — Livelli di servizio (esclusione di SLA e garanzie di uptime)</li>
+                <li><strong>Art. 15</strong> — Proprietà dei contenuti e manleva (impegno di manleva e indennizzo a carico del cliente)</li>
+                <li><strong>Art. 20</strong> — Mancato pagamento (sospensione servizio e mantenimento obbligo canoni periodo minimo)</li>
+                <li><strong>Art. 21</strong> — Recesso e risoluzione (limitazioni al recesso anticipato e risoluzione per giusta causa)</li>
+                <li><strong>Art. 22</strong> — Exit kit (definizione e limiti del servizio di accompagnamento alla migrazione)</li>
+                <li><strong>Art. 23</strong> — Garanzie e risultati (esclusione garanzie su risultati commerciali e SEO)</li>
+                <li><strong>Art. 24</strong> — Limitazione di responsabilità (cap ai canoni degli ultimi 12 mesi, esclusione danni indiretti)</li>
+                <li><strong>Art. 26</strong> — Forza maggiore (esclusione responsabilità per eventi non controllabili)</li>
+                <li><strong>Art. 28</strong> — Modifiche ai termini (aggiornamento unilaterale con preavviso)</li>
+                <li><strong>Art. 29</strong> — Foro competente (foro esclusivo di Forlì)</li>
+                <li><strong>Art. 30</strong> — Referenza e portfolio (utilizzo del progetto a fini promozionali)</li>
+            </ul>
+            <div class="firma-grid" style="margin-top:32px;">
+                <div class="firma-field">
+                    <div class="firma-field-label">Luogo e data</div>
+                    <div class="firma-line">Forlimpopoli, ___________________________________</div>
+                </div>
+                <div class="firma-field">
+                    <div class="firma-field-label">Firma del cliente</div>
+                    <div class="firma-line">___________________________________</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="faq-section">
         <div class="faq-label">// domande frequenti</div>

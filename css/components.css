@@ -167,4 +167,14 @@
   color:      #fff;
 }
 
+/* ── CONSEGNA DISCLAIMER ─────────────────────────────────────────────────── */
+/* Nota sui tempi di consegna sotto le card piano in fornitura-termini.html  */
+.consegna-disclaimer {
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  margin-top: 10px;
+}
+
 /* Bundle e pricing — vedi sections.css */
