@@ -4,16 +4,13 @@
 
 ---
 
-## ⏸ IN ATTESA — ATTIVAZIONE P.IVA
+## ✅ COMPLETATO — P.IVA attiva (16/06/2026)
 
-Queste modifiche vanno fatte **dopo conferma di Loris Ricci** con numero P.IVA reale.
+P.IVA: **04871150407** — Cristian Vitali — ATECO 62.10.00 (Programmazione informatica) — data inizio attività 15/06/2026.
 
-| File | Cosa fare | Dove |
-|------|-----------|------|
-| `pages/fornitura-termini.html` | Sostituire footer disclaimer "prestazione occasionale art. 2222 c.c." con "Zaira Officina — P.IVA [numero] — Regime forfettario L. 190/2014" | `<div class="footer-disclaimer">` |
-| `pages/privacy.html` | Aggiornare riga "Regime fiscale" in tabella titolare | `<td>Regime fiscale</td>` |
-| `pages/sito-attivo-termini.html` | Aggiungere Art. 19 — Regime fiscale e fatturazione (testo già pronto nel documento v1.6) | Dopo `<!-- Art. 19 — SOSPESO -->` |
-| `index.html` (footer) | Aggiornare footer sito principale con P.IVA | Da verificare |
+- [x] Footer disclaimer aggiornato su tutte le pagine (`index.html`, `pages/fornitura-termini.html`, `pages/analisi-economica.html`, `servizi/siti-web-forli.html`, `servizi/rifacimento-sito-web.html`, `servizi/google-business-profile.html`) → "Zaira Officina di Cristian Vitali — P.IVA 04871150407 — Regime forfettario L. 190/2014"
+- [x] `pages/privacy.html` — tabella titolare: aggiunta riga "Titolare" con P.IVA, riga "Regime fiscale" aggiornata a regime forfettario
+- [x] `pages/sito-attivo-termini.html` — Art. 19 "Regime fiscale e fatturazione" aggiunto (era SOSPESO), voce sidebar aggiunta
 
 ---
 

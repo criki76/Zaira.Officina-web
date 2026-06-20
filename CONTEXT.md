@@ -10,7 +10,7 @@ Stai lavorando con **Cristian Vitali** — artigiano digitale, Forlimpopoli (FC)
 - Email: criki76@gmail.com — PEC: cristianvitali@pec.it
 - Attività: **Zaira Officina** (zairaofficina.it) — siti web per attività locali (artigiani, ristoranti, negozi, professionisti), provincia Forlì-Cesena
 - Stack: HTML/CSS/JS vanilla, Vercel (deploy), Aruba (DNS/domini), Resend API (form email)
-- P.IVA in apertura (regime forfettario) — commercialista: Loris Ricci
+- P.IVA attiva: **04871150407** — Cristian Vitali — ATECO 62.10.00 — regime forfettario — inizio attività 15/06/2026 — commercialista: Loris Ricci
 
 ---
 
@@ -202,12 +202,12 @@ Stai lavorando con **Cristian Vitali** — artigiano digitale, Forlimpopoli (FC)
 
 ## NOTE FISCALI (IMPORTANTE)
 
-- P.IVA in apertura — regime forfettario
+- P.IVA attiva: 04871150407 — Cristian Vitali — regime forfettario
+- ATECO: 62.10.00 (Programmazione informatica)
+- Data inizio attività: 15/06/2026
 - Commercialista: Loris Ricci
-- ATECO: web design
-- **Non affermare dati fiscali senza verifica** — sempre controllare con Loris prima di inserire in documenti
-- Finché P.IVA non è attiva: i contratti vanno firmati con nome/CF, non P.IVA
-- Quando P.IVA attiva: aggiornare footer sito, privacy.html, fornitura-termini.html
+- I contratti vanno firmati con P.IVA, non più con nome/CF
+- Footer sito, privacy.html, fornitura-termini.html, sito-attivo-termini.html già aggiornati (16/06/2026)
 
 ---
 
