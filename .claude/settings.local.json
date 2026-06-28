@@ -65,7 +65,8 @@
       "Bash(grep -o '<style:style style:name=\"T[1-6]\"[^/]*\\\\/style:style>' content.xml)",
       "Bash(grep -o '<style:style style:name=\"P11\"[^/]*\\\\/style:style>' content.xml)",
       "Bash(grep -o '<style:style style:name=\"P9\"[^/]*\\\\/style:style>' content.xml)",
-      "Bash(grep -o '<style:style style:name=\"P4\"[^/]*\\\\/style:style>' content.xml)"
+      "Bash(grep -o '<style:style style:name=\"P4\"[^/]*\\\\/style:style>' content.xml)",
+      "WebFetch(domain:www.spazioseiterapie.it)"
     ],
     "additionalDirectories": [
       "c:\\xampp\\htdocs\\Zaira.Officina web\\servizi"
