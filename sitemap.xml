@@ -1,51 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- =============================================================================
+     ZAIRA OFFICINA — sitemap.xml
+     ─────────────────────────────────────────────────────────────────────────────
+     REGOLA: qui vanno SOLO le pagine con <meta name="robots" content="index...">
+     Una pagina noindex dentro la sitemap manda a Google due ordini opposti
+     ("indicizzala" / "non indicizzarla") e finisce nel report
+     "Rilevata, ma attualmente non indicizzata" senza uscirne più.
+
+     ESCLUSE VOLUTAMENTE (sono noindex — è corretto così, non è un bug):
+       pages/privacy.html
+       pages/sito-attivo-termini.html
+       pages/fornitura-termini.html
+       pages/officina-privata.html
+
+     Host canonico: apex senza www (https://zairaofficina.it/).
+     Il www risponde 308 verso l'apex — deve restare così, altrimenti
+     si riapre il loop canonical/redirect che ha bloccato l'indicizzazione
+     dal 05/04/2026 al 07/08/2026.
+
+     <lastmod> = data reale dell'ultima modifica al contenuto (da git log).
+     Non va aggiornata "a mano per far sembrare il sito fresco": Google
+     ignora le sitemap in cui la data è palesemente inattendibile.
+
+     Aggiornato: 07/08/2026
+     ============================================================================= -->
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- ── Home ──────────────────────────────────────────────────────────── -->
     <url>
         <loc>https://zairaofficina.it/</loc>
-        <lastmod>2026-03-01</lastmod>
+        <lastmod>2026-06-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
+
+    <!-- ── Pagine servizio (intento commerciale) ─────────────────────────── -->
     <url>
-        <loc>https://zairaofficina.it/pages/sito-attivo.html</loc>
-        <lastmod>2026-04-03</lastmod>
+        <loc>https://zairaofficina.it/servizi/siti-web-forli.html</loc>
+        <lastmod>2026-06-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
+
     <url>
-        <loc>https://zairaofficina.it/pages/analisi-economica.html</loc>
-        <lastmod>2026-04-03</lastmod>
+        <loc>https://zairaofficina.it/pages/sito-attivo.html</loc>
+        <lastmod>2026-04-05</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
-    <url>
-        <loc>https://zairaofficina.it/servizi/siti-web-forli.html</loc>
-        <lastmod>2026-04-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
+
     <url>
         <loc>https://zairaofficina.it/servizi/google-business-profile.html</loc>
-        <lastmod>2026-04-03</lastmod>
+        <lastmod>2026-06-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+
     <url>
         <loc>https://zairaofficina.it/servizi/rifacimento-sito-web.html</loc>
-        <lastmod>2026-04-03</lastmod>
+        <lastmod>2026-06-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+
+    <!-- ── Pagine di supporto alla conversione ──────────────────────────── -->
     <url>
-        <loc>https://zairaofficina.it/pages/sito-attivo-termini.html</loc>
-        <lastmod>2026-04-03</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
+        <loc>https://zairaofficina.it/pages/portfolio.html</loc>
+        <lastmod>2026-06-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
+
     <url>
-        <loc>https://zairaofficina.it/pages/privacy.html</loc>
-        <lastmod>2026-04-03</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
+        <loc>https://zairaofficina.it/pages/analisi-economica.html</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
+
 </urlset>
