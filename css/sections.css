@@ -497,6 +497,13 @@
     text-align: right;
 }
 
+/* .card-link e' display:block (a piena larghezza) perche' dentro le
+   portfolio-card fa da bottone pieno. Qui invece deve restringersi al
+   proprio testo, altrimenti il text-align:right del wrapper non ha effetto. */
+.portfolio-all-link .card-link {
+    display: inline-block;
+}
+
 
 /* ═══════════════════════════════════════════════════════════════════════════
    PRICING — "Chiari e trasparenti" — 3 card prezzi
