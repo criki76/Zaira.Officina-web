@@ -1,9 +1,17 @@
 /* =============================================================================
-   ZAIRA OFFICINA — Sezione Prezzi (nuova versione)
+   ZAIRA OFFICINA — Sezione Prezzi
    ─────────────────────────────────────────────────────────────────────────────
-   Due blocchi separati:
-     .pz-block         — acquisto una tantum
-     .pz-block--sub    — abbonamento mensile
+   Unica sezione commerciale della home, in tre livelli di peso decrescente:
+
+     .pz-intro    — le 3 strade d'ingresso, fanno da filtro
+     .pz-main     — Sito Attivo (abbonamento): la proposta principale
+     .pz-owner    — riga singola verso il pagamento una tantum
+     .pz-side     — Visibilità Locale, servizio a sé
+
+   La gerarchia e' voluta: una sola proposta forte, il resto subordinato.
+   Chi arriva qui non deve confrontare cinque opzioni, deve capirne una.
+
+   Le condizioni di fornitura (.pz-conditions-*) stanno in sections.css.
    ============================================================================= */
 
 
@@ -16,121 +24,114 @@
 }
 
 
-/* ── HEADER SEZIONE ──────────────────────────────────────────────────────── */
+/* =============================================================================
+   INTRO — le 3 strade d'ingresso
+   ============================================================================= */
 
-.pz-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: end;
-    gap: 4rem;
+.pz-intro {
     margin-bottom: 3.5rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid var(--border);
 }
 
-.pz-header-left {
-    /* titolo grande a sinistra */
-}
-
-.pz-header-right {
-    display: flex;
-    flex-direction: column;
-    gap: 1.8rem;
-    padding-left: 2rem;
-    border-left: 1px solid var(--border);
-}
-
 .pz-title {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: clamp(2.8rem, 4vw, 4rem);
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 0.95;
     text-transform: uppercase;
-    line-height: 1;
-    letter-spacing: -0.01em;
     color: var(--white);
-    margin-top: 0.5rem;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.2rem;
 }
 
 .pz-title span {
     color: var(--accent);
 }
 
-.pz-sub {
+.pz-intro-sub {
+    font-family: var(--font-body);
     font-size: 0.95rem;
     color: var(--text-mid);
-    line-height: 1.8;
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 2.5rem;
 }
 
 
-/* Box CTA verso landing Sito Attivo */
+/* ── GRIGLIA DELLE 3 STRADE ──────────────────────────────────────────────── */
+/* Il gap di 1px sopra lo sfondo --border disegna i separatori senza bordi
+   doppi fra una card e l'altra. */
 
-.pz-sub-cta {
-    display: block;
-    text-decoration: none;
+.pz-entry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
     border: 1px solid var(--border);
-    padding: 1.2rem 1.5rem;
-    background: var(--bg2);
-    transition: border-color var(--transition-fast), background var(--transition-fast);
-    position: relative;
 }
 
-.pz-sub-cta::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3px;
-    height: 100%;
-    background: var(--accent);
-}
-
-.pz-sub-cta:hover {
-    border-color: var(--accent);
-    background: #1f1e15;
-}
-
-.pz-sub-cta-label {
+.pz-entry-card {
     display: block;
+    background: var(--bg);
+    padding: 1.8rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: background var(--transition-fast);
+}
+
+.pz-entry-card:hover {
+    background: var(--bg2);
+}
+
+.pz-entry-label {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
-    color: var(--muted);
-    letter-spacing: 0.15em;
+    font-size: 0.66rem;
+    color: var(--accent);
+    letter-spacing: 0.16em;
     text-transform: uppercase;
+    margin-bottom: 0.9rem;
+}
+
+.pz-entry-card h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    line-height: 1.15;
+    color: var(--white);
     margin-bottom: 0.5rem;
 }
 
-.pz-sub-cta-text {
-    display: block;
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 1.1rem;
+.pz-entry-card p {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-low);
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+.pz-entry-link {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
     color: var(--accent);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 
-/* ── BLOCCO (contenitore A o B) ──────────────────────────────────────────── */
+/* =============================================================================
+   BLOCCO PRINCIPALE — Sito Attivo
+   ============================================================================= */
 
 .pz-block {
     border: 1px solid var(--border);
     background: var(--bg2);
     padding: 2.5rem 2.5rem 2.8rem;
-    margin-bottom: 0;
 }
 
-
-/* Blocco abbonamento: bordo accent in cima */
-
+/* Bordo accent in cima: segnala che questo e' il blocco da leggere per primo */
 .pz-block--sub {
     border-top: 2px solid var(--accent);
-}
-
-
-/* ── INTESTAZIONE BLOCCO ─────────────────────────────────────────────────── */
-
-.pz-block-header {
-    margin-bottom: 2.5rem;
 }
 
 .pz-block-label {
@@ -142,213 +143,268 @@
     margin-bottom: 0.6rem;
 }
 
-.pz-block-title {
+.pz-main-head {
+    margin-bottom: 2.2rem;
+}
+
+.pz-main-title {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: clamp(1.6rem, 2.2vw, 2rem);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 0.7rem;
+}
+
+.pz-main-claim {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+    max-width: 520px;
+}
+
+
+/* ── CORPO: prezzo a sinistra, cosa comprende a destra ───────────────────── */
+
+.pz-main-body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    align-items: start;
+    padding-bottom: 2.2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.pz-main-price-main {
+    display: flex;
+    align-items: baseline;
+}
+
+.pz-main-price-num {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(3.4rem, 7vw, 5rem);
+    color: var(--accent);
+    line-height: 0.9;
+}
+
+.pz-main-price-mo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-left: 0.2rem;
+}
+
+.pz-main-price-act {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-mid);
+    letter-spacing: 0.06em;
+    margin-top: 0.8rem;
+    white-space: nowrap;
+}
+
+.pz-main-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pz-main-list li {
+    position: relative;
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.pz-main-list li:last-child {
+    margin-bottom: 0;
+}
+
+.pz-main-list li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-weight: 700;
+}
+
+
+/* ── RISCATTO ────────────────────────────────────────────────────────────── */
+/* Risponde all'obiezione "e poi il sito non e' mio". Deve leggersi come
+   parte dell'offerta, non come una postilla: fondo pieno e barra accent. */
+
+.pz-riscatto {
+    background: var(--accent-d);
+    border-left: 3px solid var(--accent);
+    padding: 1.4rem 1.6rem;
+    margin-top: 2.2rem;
+}
+
+.pz-riscatto-text {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--white);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.pz-riscatto-text strong {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.pz-riscatto-link {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-mid);
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    margin-top: 0.9rem;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.pz-riscatto-link:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+
+/* ── CTA ─────────────────────────────────────────────────────────────────── */
+
+/* Due azioni affiancate, due pesi diversi: il pieno per chi e' pronto a
+   scrivere, il contorno per chi vuole prima capire il riscatto.
+   Il gap tiene conto dell'ombra a filo di .pz-btn--primary (offset 4px,
+   6px all'hover), che altrimenti toccherebbe il bottone accanto. */
+.pz-main-cta {
+    display: flex;
+    align-items: stretch;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2.2rem;
+}
+
+
+
+/* =============================================================================
+   RIGA PROPRIETÀ IMMEDIATA
+   ─────────────────────────────────────────────────────────────────────────────
+   Deliberatamente una riga di testo e non un blocco: resta raggiungibile
+   senza mettersi in concorrenza visiva con l'abbonamento.
+   ============================================================================= */
+
+.pz-owner {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text-low);
+    text-align: center;
+    line-height: 1.7;
+    margin: 1.6rem 0 0;
+}
+
+.pz-owner-link {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--transition-fast);
+}
+
+.pz-owner-link:hover {
+    border-bottom-color: var(--accent);
+}
+
+
+/* =============================================================================
+   SERVIZIO A SÉ — Visibilità Locale
+   ─────────────────────────────────────────────────────────────────────────────
+   Stesso linguaggio del blocco principale ma senza bordo accent, con meno
+   padding e corpi piu' piccoli: si legge come subordinato.
+   ============================================================================= */
+
+.pz-side {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2.5rem;
+    align-items: center;
+    border: 1px solid var(--border);
+    padding: 1.8rem 2rem;
+    margin-top: 2.5rem;
+}
+
+.pz-side-label {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    color: var(--muted);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.pz-side-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.4rem;
     text-transform: uppercase;
     color: var(--white);
     line-height: 1.1;
     margin-bottom: 0.5rem;
 }
 
-.pz-block-desc {
-    font-size: 0.88rem;
-    color: var(--text-mid);
-    line-height: 1.75;
-    max-width: 520px;
-    margin-top: 0.6rem;
-}
-
-
-/* ── GRIGLIA CARD ────────────────────────────────────────────────────────── */
-
-.pz-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-}
-
-
-/* ── SINGOLA CARD ────────────────────────────────────────────────────────── */
-
-.pz-card {
-    background: var(--bg);
-    padding: 2.2rem 2rem;
-    position: relative;
-    transition: background var(--transition-medium);
-    /* Animazione scroll-in */
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.pz-card:hover {
-    background: #161610;
-}
-
-
-/* ── CARD FEATURED (una tantum) ──────────────────────────────────────────── */
-
-.pz-card--featured {
-    background: var(--accent) !important;
-}
-
-
-/* Tutti i testi dentro la card featured diventano scuri */
-
-.pz-card--featured * {
-    color: #111008 !important;
-}
-
-
-/* Eccezione: il btn-dark ha sfondo scuro → testo deve restare chiaro */
-
-.pz-card--featured .pz-btn--dark {
-    background: #111008 !important;
-    color: var(--accent) !important;
-    border-color: #111008 !important;
-}
-
-.pz-card--featured .pz-btn--dark:hover {
-    background: var(--bg) !important;
-    color: var(--accent) !important;
-}
-
-
-/* Badge "Il più scelto" */
-
-.pz-badge {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #111008;
-    background: transparent;
-    border: 1px solid #111008;
-    display: inline-block;
-    padding: 0.2rem 0.7rem;
-    margin-bottom: 1rem;
-}
-
-
-
-
-/* ── TOP CARD: nome + prezzo ─────────────────────────────────────────────── */
-
-.pz-card-top {
-    margin-bottom: 1.8rem;
-    padding-bottom: 1.6rem;
-    border-bottom: 1px solid var(--border);
-}
-
-.pz-card--featured .pz-card-top {
-    border-bottom-color: rgba(17, 16, 8, 0.2);
-}
-
-.pz-card-name {
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    color: var(--white);
-    line-height: 1.05;
-    margin-bottom: 1.2rem;
-}
-
-
-/* Prezzo una tantum */
-
-.pz-price-num {
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 2.8rem;
-    color: var(--accent);
-    line-height: 1;
-    display: block;
-}
-
-.pz-price-note {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-    margin-top: 0.2rem;
-    display: block;
-}
-
-
-/* Prezzo abbonamento */
-
-.pz-price-act {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--muted);
-    letter-spacing: 0.05em;
-    display: block;
-    margin-bottom: 0.2rem;
-}
-
-.pz-price-monthly {
-    display: flex;
-    align-items: baseline;
-    gap: 0.15rem;
-    line-height: 1;
-}
-
-.pz-price-mo {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--muted);
-    margin-left: 0.1rem;
-}
-
-
-/* ── FEATURE LIST ────────────────────────────────────────────────────────── */
-
-.pz-features {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    margin-bottom: 2rem;
-}
-
-.pz-features li {
+.pz-side-desc {
+    font-family: var(--font-body);
     font-size: 0.86rem;
-    color: var(--text-mid);
-    display: flex;
-    gap: 0.65rem;
-    align-items: flex-start;
-    line-height: 1.4;
+    color: var(--text-low);
+    line-height: 1.7;
+    max-width: 520px;
 }
 
-.pz-features li::before {
-    content: '→';
+.pz-side-aside {
+    text-align: right;
+}
+
+.pz-side-price-num {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 2.2rem;
     color: var(--accent);
-    font-weight: 700;
-    flex-shrink: 0;
+    line-height: 1;
 }
 
-.pz-card--featured .pz-features li::before {
-    color: #111008;
-}
-
-
-/* ── CONSEGNA ────────────────────────────────────────────────────────────── */
-
-.pz-delivery {
+.pz-side-price-note {
+    display: block;
     font-family: var(--font-mono);
     font-size: 0.62rem;
     color: var(--muted);
     letter-spacing: 0.1em;
-    margin-bottom: 1.4rem;
+    margin-top: 0.3rem;
+}
+
+.pz-side-delivery {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin: 0.8rem 0 1rem;
 }
 
 
-/* ── BOTTONI ─────────────────────────────────────────────────────────────── */
+/* =============================================================================
+   BOTTONI
+   ============================================================================= */
 
 .pz-btn {
     display: block;
@@ -370,6 +426,7 @@
     border: 1px solid var(--accent);
     color: var(--accent);
     background: transparent;
+    white-space: nowrap;
 }
 
 .pz-btn--outline:hover {
@@ -377,15 +434,20 @@
     color: #111008;
 }
 
-.pz-btn--dark {
-    background: #111008;
-    color: var(--accent);
-    border: 1px solid #111008;
-}
 
-.pz-btn--dark:hover {
-    background: var(--bg);
-    color: var(--accent);
+/* Ghost: stesso ingombro del primario ma senza riempimento, cosi' resta
+   chiaramente la seconda scelta pur essendo toccabile quanto la prima. */
+.pz-btn--ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    /* Corpo e padding piu' stretti del primario: il testo del ghost e' piu'
+       lungo e senza questo lo supererebbe in larghezza, invertendo la
+       gerarchia. L'altezza resta la stessa, cosi' il target di tocco non
+       ci rimette. */
+    font-size: 0.8rem;
+    padding: 1rem 1.5rem;
 }
 
 .pz-btn--primary {
@@ -399,6 +461,7 @@
     position: relative;
 }
 
+/* Ombra a filo, coerente col resto del sito: nessun raggio, solo offset */
 .pz-btn--primary::after {
     content: '';
     position: absolute;
@@ -420,95 +483,9 @@
 }
 
 
-/* ── BUNDLE ──────────────────────────────────────────────────────────────── */
-
-.pz-bundle {
-    margin-top: 1px;
-    /* si attacca alla griglia */
-    background: var(--bg2);
-    border: 1px solid var(--accent);
-    border-top: 2px solid var(--accent);
-    padding: 1.8rem 2.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
-
-.pz-bundle-label {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    color: var(--accent);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    margin-bottom: 0.4rem;
-}
-
-.pz-bundle-name {
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.3rem;
-}
-
-.pz-bundle-desc {
-    font-size: 0.86rem;
-    color: var(--text-low);
-    line-height: 1.65;
-}
-
-.pz-bundle-desc strong {
-    color: var(--white);
-}
-
-.pz-bundle-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 1rem;
-    flex-shrink: 0;
-}
-
-.pz-bundle-prices {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-}
-
-.pz-bundle-old {
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    color: var(--muted);
-    text-decoration: line-through;
-}
-
-.pz-bundle-new {
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 2.6rem;
-    color: var(--accent);
-    line-height: 1;
-}
-
-
-
-/* ── NOTA ABBONAMENTO ────────────────────────────────────────────────────── */
-
-.pz-sub-note {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    color: var(--accent);
-    letter-spacing: 0.1em;
-    text-align: center;
-    margin-top: 2rem;
-    opacity: 0.8;
-}
-
-
-/* ── FRASE PSICOLOGICA FINALE ────────────────────────────────────────────── */
+/* =============================================================================
+   CHIUSURA
+   ============================================================================= */
 
 .pz-closer {
     display: flex;
@@ -541,51 +518,40 @@
    ============================================================================= */
 
 
-/* ── Tablet (≤ 1024px) ─────────────────────────────────────────────────────── */
-
-@media (max-width: 1024px) {
-    .pz-cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-
-/* ── Tablet stretto / landscape mobile (≤ 900px) ───────────────────────────── */
+/* ── Tablet (≤ 900px) ──────────────────────────────────────────────────────── */
 
 @media (max-width: 900px) {
-    .pz-header {
+    .pz-entry-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .pz-header-right {
-        padding-left: 0;
-        border-left: none;
-        border-top: 1px solid var(--border);
-        padding-top: 2rem;
     }
     .pz-block {
         padding: 2rem 1.8rem 2.2rem;
     }
-    .pz-cards {
-        grid-template-columns: 1fr 1fr;
+    /* Prezzo e lista si impilano: affiancati non c'e' piu' spazio utile */
+    .pz-main-body {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
     }
-    /* Su tablet la card featured si allarga a larghezza piena */
-    .pz-card--featured {
-        grid-column: span 2;
-    }
-    .pz-bundle {
-        flex-direction: column;
-        align-items: flex-start;
+    .pz-side {
+        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    .pz-bundle-right {
-        align-items: flex-start;
-        width: 100%;
+    .pz-side-aside {
+        text-align: left;
     }
     .pz-btn--primary {
         width: 100%;
         text-align: center;
         display: block;
+    }
+    /* Impilati a piena larghezza: il primario resta sopra per ordine DOM */
+    .pz-main-cta {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    .pz-btn--ghost {
+        width: 100%;
     }
     .pz-closer {
         flex-direction: column;
@@ -608,23 +574,14 @@
     .pz-block {
         padding: 1.8rem 1.25rem 2rem;
     }
-    .pz-cards {
-        grid-template-columns: 1fr;
-    }
-    .pz-card--featured {
-        grid-column: span 1;
-    }
-    .pz-card {
-        padding: 1.8rem 1.5rem;
-    }
-    .pz-price-num {
-        font-size: 2.4rem;
-    }
-    .pz-bundle {
+    .pz-entry-card {
         padding: 1.5rem 1.25rem;
     }
-    .pz-bundle-new {
-        font-size: 2.2rem;
+    .pz-riscatto {
+        padding: 1.2rem 1.2rem;
+    }
+    .pz-side {
+        padding: 1.5rem 1.25rem;
     }
     .pz-closer-text {
         font-size: 0.75rem;
@@ -632,3 +589,31 @@
 }
 
 
+/* ── Mobile stretto (≤ 380px) ──────────────────────────────────────────────── */
+/* Sotto questa soglia la nota di attivazione non sta piu' su una riga:
+   le si toglie il white-space:nowrap e si stringono i corpi maggiori. */
+
+@media (max-width: 380px) {
+    .pz-block {
+        padding: 1.5rem 1rem 1.8rem;
+    }
+    .pz-main-price-act {
+        white-space: normal;
+        line-height: 1.5;
+    }
+    .pz-main-price-mo {
+        font-size: 1.1rem;
+    }
+    .pz-riscatto {
+        padding: 1rem;
+    }
+    .pz-riscatto-text {
+        font-size: 0.88rem;
+    }
+    .pz-btn--primary,
+    .pz-btn--ghost {
+        padding: 0.9rem 1rem;
+        font-size: 0.82rem;
+        letter-spacing: 0.1em;
+    }
+}

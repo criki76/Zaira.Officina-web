@@ -22,10 +22,7 @@ const ANIMATED_SELECTORS = [
     '.manifesto-card',
     '.step',
     '.review-card',
-    '.price-card',
-    '.pricing-bundle',
     '.portfolio-card',
-    '.pz-card',
 ];
 
 const OBSERVER_OPTIONS = {

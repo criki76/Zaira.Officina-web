@@ -365,57 +365,164 @@
     </section>
     <!-- /portfolio -->
 
-
     <!-- ════════════════════════════════════════════════════════════════════════
-       SITO ATTIVO — Spotlight canone mensile
+       PREZZI — unica sezione commerciale della home.
+       Ordine: le 3 strade fanno da filtro d'ingresso, poi il blocco principale
+       (Sito Attivo, in abbonamento), poi le alternative in ordine di peso
+       decrescente. Una sola proposta forte, il resto subordinato.
        ════════════════════════════════════════════════════════════════════════ -->
-    <section class="sa-spotlight">
-        <div class="sa-spotlight-inner">
+    <section id="prezzi" class="pz">
 
-            <div class="sa-spotlight-left">
-                <div class="sa-spotlight-label">// sito attivo</div>
+        <!-- INTRO: le 3 strade d'ingresso -->
+        <div class="pz-intro">
 
-                <h2 class="sa-spotlight-title">
-                    Parti da<br>
-                    <span class="sa-sp-price-inline">€49</span><span class="sa-sp-mo">/mese</span>
-                </h2>
+            <div class="section-label" data-num="03">Servizi</div>
 
-                <p class="sa-spotlight-mini">€149 di attivazione iniziale + €49/mese</p>
+            <h2 class="pz-title">
+                Non tutte le attività<br>
+                <span>partono dallo stesso punto</span>
+            </h2>
 
-                <p class="sa-spotlight-sub">
-                    Un ingresso semplice per partire bene online.<br> Il tuo sito attivo in pochi giorni, senza complicazioni.
-                </p>
+            <p class="pz-intro-sub">
+                Ti lascio tre strade semplici. Parti da quella giusta per te.
+            </p>
 
-                <a href="pages/sito-attivo.html" class="sa-spotlight-cta">Scopri il sito web in abbonamento →</a>
+            <div class="pz-entry-grid">
 
-                <p class="sa-spotlight-reassure">
-                    Ti dico subito se è la formula giusta per la tua attività.
-                </p>
-            </div>
+                <!-- 1. NON HAI SITO -->
+                <a href="servizi/siti-web-forli.html" class="pz-entry-card">
+                    <div class="pz-entry-label">// parti da zero</div>
+                    <h3>Ti serve un sito</h3>
+                    <p>Vuoi esserci online in modo chiaro e professionale.</p>
+                    <span class="pz-entry-link">Vai al servizio →</span>
+                </a>
 
-            <div class="sa-spotlight-right">
+                <!-- 2. HAI GIÀ UN SITO -->
+                <a href="servizi/rifacimento-sito-web.html" class="pz-entry-card">
+                    <div class="pz-entry-label">// hai già qualcosa</div>
+                    <h3>Il sito non funziona</h3>
+                    <p>È lento, confuso o non porta contatti.</p>
+                    <span class="pz-entry-link">Rifacciamolo →</span>
+                </a>
 
-                <ul class="sa-spotlight-list">
-                    <li>Sito professionale e mobile-first</li>
-                    <li>Hosting, dominio e assistenza inclusi</li>
-                    <li>Attivazione iniziale leggera</li>
-                    <li>Online in pochi giorni</li>
-                </ul>
-
-                <div class="sa-spotlight-activation">
-                    <span class="sa-act-label">Attivazione iniziale</span>
-                    <span class="sa-act-value">€149 una sola volta</span>
-                </div>
+                <!-- 3. VUOI PARTIRE LEGGERO -->
+                <a href="servizi/google-business-profile.html" class="pz-entry-card">
+                    <div class="pz-entry-label">// vuoi partire semplice</div>
+                    <h3>Vuoi farti trovare su Google</h3>
+                    <p>Prima sistemiamo la visibilità locale.</p>
+                    <span class="pz-entry-link">Scopri come →</span>
+                </a>
 
             </div>
 
         </div>
+        <!-- /pz-intro -->
+
+        <!-- BLOCCO PRINCIPALE — SITO ATTIVO (abbonamento) -->
+        <div class="pz-block pz-block--sub pz-main">
+
+            <div class="pz-main-head">
+                <div class="pz-block-label">// la formula consigliata</div>
+                <h3 class="pz-main-title">Sito Attivo</h3>
+                <p class="pz-main-claim">
+                    Il tuo sito online in pochi giorni, senza tirare fuori tutto subito.
+                </p>
+            </div>
+
+            <div class="pz-main-body">
+
+                <!-- Prezzo -->
+                <div class="pz-main-price">
+                    <div class="pz-main-price-main">
+                        <span class="pz-main-price-num">€49</span><span class="pz-main-price-mo">/mese</span>
+                    </div>
+                    <div class="pz-main-price-act">+ €149 di attivazione, una sola volta</div>
+                </div>
+
+                <!-- Cosa comprende -->
+                <ul class="pz-main-list">
+                    <li>Sito professionale, mobile-first su ogni schermo</li>
+                    <li>Hosting, dominio e assistenza inclusi</li>
+                    <li>Online in pochi giorni</li>
+                </ul>
+
+            </div>
+
+            <!-- Riscatto: risponde all'obiezione "poi il sito non è mio".
+                 Deve restare visibile, non nascosto in fondo alla pagina.
+                 Formulazione allineata a pages/sito-attivo-termini.html:
+                 e' un'opzione di acquisto, non un passaggio automatico. -->
+            <div class="pz-riscatto">
+                <p class="pz-riscatto-text">
+                    <strong>Il sito puoi comprarlo.</strong> Ogni mese pagato maturi €10 di credito
+                    sulla cessione: a 12 mesi lo riscatti a €240, a 36 la cessione è gratuita.
+                </p>
+            </div>
+
+            <!-- CTA -->
+            <div class="pz-main-cta">
+                <a href="https://wa.me/393930719544?text=Ciao%20Cristian,%20vorrei%20capire%20se%20Sito%20Attivo%20va%20bene%20per%20la%20mia%20attivit%C3%A0." class="pz-btn pz-btn--primary" target="_blank" rel="noopener">Scrivimi su WhatsApp →</a>
+                <a href="pages/sito-attivo.html" class="pz-btn pz-btn--outline pz-btn--ghost">Come funziona Sito Attivo →</a>
+            </div>
+
+        </div>
+        <!-- /blocco principale -->
+
+        <!-- ALTERNATIVA PROPRIETÀ IMMEDIATA — riga singola, non un blocco:
+             resta disponibile senza competere con l'abbonamento. -->
+        <p class="pz-owner">
+            Preferisci essere proprietario subito?
+            <a href="servizi/siti-web-forli.html" class="pz-owner-link">Da €690 una tantum →</a>
+        </p>
+
+        <!-- SERVIZIO A SÉ — visivamente più leggero dell'abbonamento -->
+        <div class="pz-side">
+
+            <div class="pz-side-main">
+                <div class="pz-side-label">// servizio a sé</div>
+                <h3 class="pz-side-title">Visibilità Locale</h3>
+                <p class="pz-side-desc">
+                    Google Business Profile ottimizzato: categorie, foto, servizi e ricerca locale.
+                    Se non ti serve ancora un sito, si parte da qui.
+                </p>
+            </div>
+
+            <div class="pz-side-aside">
+                <div class="pz-side-price">
+                    <span class="pz-side-price-num">€390</span>
+                    <span class="pz-side-price-note">// una volta</span>
+                </div>
+                <div class="pz-side-delivery">// consegna 48–72 ore</div>
+                <a href="servizi/google-business-profile.html" class="pz-btn pz-btn--outline">Scopri il servizio →</a>
+            </div>
+
+        </div>
+        <!-- /pz-side -->
+
+        <!-- CHIUSURA — toglie attrito sul contatto, non aiuta più a scegliere
+             fra piani: di piani da confrontare non ce ne sono più. -->
+        <div class="pz-closer">
+            <span class="pz-closer-line"></span>
+            <p class="pz-closer-text">Non sei sicuro? Scrivimi e ti dico in due minuti<br>se è la formula giusta per la tua attività.</p>
+            <span class="pz-closer-line"></span>
+        </div>
+
+        <!-- LINK CONDIZIONI — i due modelli hanno pari trattamento: prima
+             l'abbonamento, che e' la proposta principale della sezione. -->
+        <div class="pz-conditions-wrap">
+            <span class="pz-conditions-label">Condizioni:</span>
+            <a href="pages/sito-attivo-termini.html" class="pz-conditions-link">abbonamento →</a>
+            <span class="pz-conditions-sep">·</span>
+            <a href="pages/fornitura-termini.html" class="pz-conditions-link">una tantum →</a>
+        </div>
+
     </section>
-    <!-- /sito-attivo -->
+    <!-- /prezzi -->
+
 
     <!-- MANIFESTO -->
     <section id="manifesto" class="manifesto">
-        <div class="section-label" data-num="03">Filosofia</div>
+        <div class="section-label" data-num="04">Filosofia</div>
         <h2 class="section-title">
             La filosofia<br>
             <span>di Zaira Officina</span>
@@ -463,189 +570,11 @@
     </section>
     <!-- /manifesto -->
 
-    <!-- services-entry -->
-    <section class="services-entry">
-
-        <div class="services-entry-inner">
-
-            <div class="section-label" data-num="04">Servizi</div>
-
-            <h2 class="section-title">
-                Non tutte le attività<br>
-                <span>partono dallo stesso punto</span>
-            </h2>
-
-            <p class="services-entry-sub">
-                Ti lascio tre strade semplici. Parti da quella giusta per te.
-            </p>
-
-            <div class="services-entry-grid">
-
-                <!-- 1. NON HAI SITO -->
-                <a href="servizi/siti-web-forli.html" class="services-entry-card">
-                    <div class="services-entry-label">// parti da zero</div>
-                    <h3>Ti serve un sito</h3>
-                    <p>Vuoi esserci online in modo chiaro e professionale.</p>
-                    <span class="services-entry-link">Vai al servizio →</span>
-                </a>
-
-                <!-- 2. HAI GIÀ UN SITO -->
-                <a href="servizi/rifacimento-sito-web.html" class="services-entry-card">
-                    <div class="services-entry-label">// hai già qualcosa</div>
-                    <h3>Il sito non funziona</h3>
-                    <p>È lento, confuso o non porta contatti.</p>
-                    <span class="services-entry-link">Rifacciamolo →</span>
-                </a>
-
-                <!-- 3. VUOI PARTIRE LEGGERO -->
-                <a href="servizi/google-business-profile.html" class="services-entry-card">
-                    <div class="services-entry-label">// vuoi partire semplice</div>
-                    <h3>Vuoi farti trovare su Google</h3>
-                    <p>Prima sistemiamo la visibilità locale.</p>
-                    <span class="services-entry-link">Scopri come →</span>
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-    <!-- /services-entry -->
-
-    <!-- prezzi -->
-    <section id="prezzi" class="pz">
-
-        <!-- HEADER -->
-        <div class="pz-header">
-            <div class="pz-header-left">
-                <div class="section-label" data-num="05">Servizi</div>
-                <h2 class="pz-title">Scegli come<br><span>vuoi partire</span></h2>
-            </div>
-            <div class="pz-header-right">
-                <p class="pz-sub">Nessun canone mensile: paghi una volta,<br>il sito è tuo.</p>
-                <a href="pages/sito-attivo.html" class="pz-sub-cta">
-                    <span class="pz-sub-cta-label">// preferisci partire subito?</span>
-                    <span class="pz-sub-cta-text">Scopri il sito web in abbonamento →</span>
-                </a>
-            </div>
-        </div>
-        <!-- /pz-header -->
-
-        <!-- BLOCCO A — PAGAMENTO UNA TANTUM -->
-        <div class="pz-block pz-block--secondary">
-
-            <div class="pz-block-header">
-                <div class="pz-block-label">// alternativa — pagamento unico</div>
-                <h3 class="pz-block-title pz-block-title--secondary">Preferisci un pagamento unico?</h3>
-            </div>
-
-            <div class="pz-cards">
-
-                <!-- Sito Vetrina -->
-                <div class="pz-card">
-                    <div class="pz-card-top">
-                        <div class="pz-card-name">Sito<br>Vetrina</div>
-                        <div class="pz-price">
-                            <span class="pz-price-num">€690</span>
-                            <span class="pz-price-note">// una volta, nessun canone</span>
-                        </div>
-                    </div>
-                    <ul class="pz-features">
-                        <li>Sito veloce — HTML, CSS, JS puro</li>
-                        <li>Mobile-first su ogni schermo</li>
-                        <li>Chi sei, cosa fai, dove trovarti</li>
-                        <li>WhatsApp cliccabile + Google Maps</li>
-                        <li>Modulo contatto + SEO base</li>
-                    </ul>
-                    <div class="pz-delivery">// consegna 5–7 giorni</div>
-                    <a href="servizi/siti-web-forli.html" class="pz-btn pz-btn--outline">Scopri il servizio →</a>
-                </div>
-
-                <!-- Sito per farti scegliere — FEATURED -->
-                <div class="pz-card pz-card--featured">
-                    <div class="pz-badge">Il più scelto</div>
-                    <div class="pz-card-top">
-                        <div class="pz-card-name">Sito per<br>farti scegliere</div>
-                        <div class="pz-price">
-                            <span class="pz-price-num">€990</span>
-                            <span class="pz-price-note">// una volta, nessun canone</span>
-                        </div>
-                    </div>
-                    <ul class="pz-features">
-                        <li>Tutto del piano Essenziale</li>
-                        <li>Homepage studiata per convertire</li>
-                        <li>Sezione servizi o offerte dedicata</li>
-                        <li>Recensioni integrate + CTA studiata</li>
-                        <li>SEO locale + Google Business collegato</li>
-                    </ul>
-                    <div class="pz-delivery">// consegna 7–10 giorni</div>
-                    <a href="servizi/siti-web-forli.html#pro" class="pz-btn pz-btn--dark">Vedi il piano completo →</a>
-                </div>
-
-                <!-- Visibilità Locale -->
-                <div class="pz-card">
-                    <div class="pz-card-top">
-                        <div class="pz-card-name">Visibilità<br>Locale</div>
-                        <div class="pz-price">
-                            <span class="pz-price-num">€390</span>
-                            <span class="pz-price-note">// una volta, nessun canone</span>
-                        </div>
-                    </div>
-                    <ul class="pz-features">
-                        <li>Google Business Profile ottimizzato</li>
-                        <li>Categorie, descrizione e foto SEO</li>
-                        <li>Servizi e prodotti inseriti</li>
-                        <li>Ottimizzazione ricerca locale</li>
-                        <li>Guida per raccogliere recensioni</li>
-                    </ul>
-                    <div class="pz-delivery">// consegna 48–72 ore</div>
-                    <a href="servizi/google-business-profile.html" class="pz-btn pz-btn--outline">Scopri il servizio →</a>
-                </div>
-
-            </div>
-            <!-- /pz-cards -->
-
-            <!-- Bundle -->
-            <div class="pz-bundle">
-                <div class="pz-bundle-left">
-                    <div class="pz-bundle-label">// offerta completa</div>
-                    <div class="pz-bundle-name">Sito + Google Business</div>
-                    <div class="pz-bundle-desc"><strong>Sito che porta clienti</strong> + <strong>Visibilità Locale</strong> insieme. Partenza completa.</div>
-                </div>
-                <div class="pz-bundle-right">
-                    <div class="pz-bundle-prices">
-                        <span class="pz-bundle-old">€1.380</span>
-                        <span class="pz-bundle-new">€1.190</span>
-                    </div>
-                    <a href="#contatti" class="pz-btn pz-btn--primary">Voglio questo →</a>
-                </div>
-            </div>
-            <!-- /bundle -->
-
-        </div>
-        <!-- /blocco A -->
-
-
-        <!-- FRASE PSICOLOGICA -->
-        <div class="pz-closer">
-            <span class="pz-closer-line"></span>
-            <p class="pz-closer-text">Se non sei sicuro, scegli il piano centrale:<br>è quello che funziona per la maggior parte delle attività locali.</p>
-            <span class="pz-closer-line"></span>
-        </div>
-
-        <!-- LINK CONDIZIONI -->
-        <div class="pz-conditions-wrap">
-            <a href="pages/fornitura-termini.html" class="pz-conditions-link">
-                Leggi le condizioni di fornitura →
-            </a>
-        </div>
-
-    </section>
-    <!-- /prezzi -->
 
 
     <!-- RECENSIONI -->
     <!-- RECENSIONI (temporaneamente commentata)
+         NB: se la riattivi, questa torna 05 e Contatti va riportata a 06.
     <section class="reviews">
       <div class="reviews-inner">
         <div class="section-label" data-num="05">Recensioni reali</div>
@@ -687,7 +616,7 @@
 
     <!-- CONTATTI -->
     <section id="contatti" class="contact">
-        <div class="section-label" data-num="06">Contatti</div>
+        <div class="section-label" data-num="05">Contatti</div>
         <h2 class="section-title">
             Parliamo del<br>
             <span>tuo progetto</span>

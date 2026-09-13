@@ -438,6 +438,13 @@ body::before {
     border-bottom: var(--gap) solid var(--border);
 }
 
+/* La nav e' fixed e alta 87px: senza questo, atterrando su un'ancora
+   (#costi dai link interni della pagina) il titolo della sezione finisce
+   nascosto sotto la nav — su mobile restano 13px scoperti. */
+.section[id] {
+    scroll-margin-top: 100px;
+}
+
 .section-label {
     font-family: 'Courier Prime', monospace;
     font-size: 11px;
