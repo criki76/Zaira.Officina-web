@@ -44,6 +44,10 @@ nav {
   font-weight:    900;
   font-size:      1.6rem;
   letter-spacing: 0.12em;
+  /* Tutto maiuscolo: ZAIRA.OFFICINA si legge come un marchio, mentre
+     Zaira.Officina si legge come una parola. Coerente con .footer-logo,
+     che il maiuscolo ce l'ha scritto direttamente nel markup. */
+  text-transform: uppercase;
   color:          var(--white);
   transition:     color var(--transition-fast);
   line-height:    1;
@@ -178,4 +182,17 @@ nav {
 /* Colore barre in stato aperto */
 .hamburger.is-open .hamburger-bar {
   background: var(--accent);
+}
+
+
+/* ── LOGO SU SCHERMI STRETTI ──────────────────────────────────────────────── */
+/* Sotto i 400px il payoff va su due righe e finisce a ridosso
+   dell'hamburger: a quella larghezza il nome da solo comunica meglio di un
+   nome piu' un sottotitolo spezzato. La larghezza del blocco logo torna a
+   essere dettata dal nome, non dal payoff. */
+
+@media (max-width: 400px) {
+  .nav-logo .logo-tag {
+    display: none;
+  }
 }
