@@ -341,3 +341,41 @@
         text-align: center;
     }
 }
+
+
+/* ── ALTRA FORMULA ───────────────────────────────────────────────────────── */
+/* Riga che nomina Sito Attivo subito sotto il prezzo una tantum. Sta dentro
+   la sezione del prezzo perche' e' li' che il visitatore valuta la spesa:
+   in fondo alla pagina l'avrebbe letta solo chi arriva in fondo.
+   Deliberatamente una riga di testo e non un bottone, per non contendere
+   la CTA principale della sezione. */
+
+.gb-alt {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--text-low);
+}
+
+.gb-alt-link {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(232, 162, 39, 0.35);
+    transition: border-color var(--transition-fast);
+    white-space: nowrap;
+}
+
+.gb-alt-link:hover {
+    border-bottom-color: var(--accent);
+}
+
+@media (max-width: 640px) {
+    .gb-alt-link {
+        /* Su schermi stretti la riga deve poter andare a capo: tenuta su una
+           riga sola sforerebbe il contenitore. */
+        white-space: normal;
+    }
+}
+
