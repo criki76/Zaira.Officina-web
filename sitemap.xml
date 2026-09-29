@@ -23,7 +23,7 @@
      Non va aggiornata "a mano per far sembrare il sito fresco": Google
      ignora le sitemap in cui la data è palesemente inattendibile.
 
-     Aggiornato: 07/08/2026
+     Aggiornato: 29/09/2026
      ============================================================================= -->
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -37,6 +37,13 @@
     </url>
 
     <!-- ── Pagine servizio (intento commerciale) ─────────────────────────── -->
+    <url>
+        <loc>https://zairaofficina.it/servizi/progetti-su-misura.html</loc>
+        <lastmod>2026-09-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
     <url>
         <loc>https://zairaofficina.it/servizi/siti-web-forli.html</loc>
         <lastmod>2026-06-20</lastmod>
